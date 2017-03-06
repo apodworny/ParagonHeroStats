@@ -7,7 +7,7 @@ var ApplicationAdapter = DS.RESTAdapter.extend({
         'X-Epic-ApiKey': 'fffcb8995c85473c9b7b33a2991a123c'
     },
     pathForType: function(hero){
-        return "hero";
+        return "heroes/complete";
     }
     /*host: 'https://jsonplaceholder.typicode.com',
     pathForType: function () {
