@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-var ApplicationAdapter = DS.RESTAdapter.extend({
+export default DS.RESTAdapter.extend({
     host: 'https://developer-paragon.epicgames.com',
     namespace: 'v1',
     headers: {
@@ -14,5 +14,3 @@ var ApplicationAdapter = DS.RESTAdapter.extend({
         return 'posts';
     }*/
 });
-
-export default ApplicationAdapter;
