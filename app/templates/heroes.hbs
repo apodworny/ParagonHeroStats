@@ -1,2 +1,19 @@
 <h1>Heroes</h1>
 <p>Target: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:\Users\Alex\AppData\Local\Google\Chrome\User Data\Default"</p>
+<div class="heroes">
+    {{#each model as |hero|}}
+    <div class="hero">
+        <div class="basics">
+            <div class="portrait">
+                <img src="{{hero.images}}" alt="Hero image">
+            </div>
+            <div class="name">
+                <p>{{hero.name}}</p>
+            </div>
+        </div>
+        <div class="basics">
+            
+        </div>
+    </div>
+    {{/each}}
+</div>
