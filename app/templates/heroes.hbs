@@ -1,5 +1,5 @@
 <h1>Heroes</h1>
-<p>Target: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:\Users\Alex\AppData\Local\Google\Chrome\User Data\Default"</p>
+<p>Target: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:\Users\apodworny\AppData\Local\Google\Chrome\User Data\Default"</p>
 <div class="heroes">
     {{#each model as |hero|}}
     <div class="hero">
@@ -12,7 +12,9 @@
             </div>
         </div>
         <div class="basics">
-            
+            {{#each hero.attributesByLevel as |stat|}}
+            <p>{{stat.BaseAttackTime}}</p>
+            {{/each}}
         </div>
     </div>
     {{/each}}
