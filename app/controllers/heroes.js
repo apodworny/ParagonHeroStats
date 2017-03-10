@@ -9,10 +9,11 @@ export default Ember.Controller.extend({
             attackSpeed: ''
         }];
 
+        
+
         Ember.run.next(function(){
             var heroes = that.get('model').forEach(function(hero, index, self) {
                 //var index = this.indexOf(hero);
-                debugger
                 heroAttackSpeeds[index].name = hero.get('name');
                 console.log(heroAttackSpeeds[index].name);
                 console.log(hero.get('name'));
