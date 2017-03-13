@@ -15,9 +15,13 @@ export default Ember.Controller.extend({
             
         });
 
+        
+
 
         Ember.run.next(function(){
             heroes = that.get('model').get('content');
+
+            var testStat;
 
             for (var i = 0; i < heroes.length; i++) {
                 heroes[i]._data.AttacksPerSecond = 1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100));
@@ -49,6 +53,8 @@ export default Ember.Controller.extend({
 
                     heroes[i]._data.BurstDamage += heroes[i]._data.abilities[4].modifiersByLevel[2].damage;
                 }
+                
+
                 //dpsArray[(heroes[i].id).toString()]['Name'] = heroes[i]._data.name;
 
                 //dpsArray[heroes[i].id]['DamagePerSecond'] = heroes[i]._data.DamagePerSecond;
@@ -66,6 +72,8 @@ export default Ember.Controller.extend({
                 console.log(heroes[i]._data.AttacksPerSecond);
                 console.log(heroes[i]._data.DamagePerSecond);
                 console.log(heroes[i]._data.BurstDamage);
+
+                //I need an object that has multiple instances that can be accessed from a template
                 
             }
         });
