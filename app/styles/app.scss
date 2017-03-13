@@ -2,6 +2,7 @@ html, body {
     background-color: #111;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 .heroes {
@@ -19,5 +20,14 @@ html, body {
     color: #fff;
     .portrait img {
         width: 15px;
+    }
+}
+
+.bar-stat {
+    width: 100%;
+    height: 20px;
+    .bar {
+        height: 20px;
+        color: red;
     }
 }

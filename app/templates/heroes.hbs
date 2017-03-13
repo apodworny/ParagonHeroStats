@@ -14,20 +14,25 @@
 <p>Wild</p>
 <p>Zoner</p>
 <div class="heroes">
-    {{#each model as |hero|}}
+    {{#each testArray1 as |hero index|}}
     <div class="hero">
         <div class="basics">
             <div class="portrait">
-                <img src="{{hero.images}}" alt="Hero image">
+                <img src="{{hero._data.images}}" alt="Hero image">
             </div>
             <div class="name">
-                <p>{{hero.name}}</p>
+                <p>{{hero.id}}</p>
+                <p>{{hero._data.name}}</p>
             </div>
         </div>
-        <div class="basics">
-            {{#each hero.attributesByLevel as |stat|}}
+        <div class="advanced">
+            {{heroes-bar-stat aps=hero._data.AttacksPerSecond}}
+            <p>Attacks per second: {{hero._data.AttacksPerSecond}}</p>
+            <p>Damage per second: {{hero._data.DamagePerSecond}}</p>
+            <p>Burst Damage: {{hero._data.BurstDamage}}</p>
+            <!--#each hero._data.attributesByLevel as |stat|
             <p>{{stat.BaseAttackTime}}</p>
-            {{/each}}
+            /each-->
         </div>
     </div>
     {{/each}}
