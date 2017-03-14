@@ -13,6 +13,7 @@
 <p>Sieger</p>
 <p>Wild</p>
 <p>Zoner</p>
+<p>Be able to order heroes by attack speed and other traits</p>
 <div class="heroes">
     {{#each testArray1 as |hero index|}}
     <div class="hero">
@@ -26,7 +27,7 @@
             </div>
         </div>
         <div class="advanced">
-            {{heroes-bar-stat aps=hero._data.AttacksPerSecond}}
+            {{heroes-bar-stat aps=hero._data.AttacksPerSecond maxAps=maxAps minAps=minAps}}
             <p>Attacks per second: {{hero._data.AttacksPerSecond}}</p>
             <p>Damage per second: {{hero._data.DamagePerSecond}}</p>
             <p>Burst Damage: {{hero._data.BurstDamage}}</p>

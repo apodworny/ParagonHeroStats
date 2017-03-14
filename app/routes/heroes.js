@@ -9,10 +9,22 @@ export default Ember.Route.extend({
 
         var heroes = model.get('content');
 
-        var testStat;
+        var highestAPS = 0;
+        var lowestAPS = 10;
+
+
 
         for (var i = 0; i < heroes.length; i++) {
+            //Get Attacks per second
             heroes[i]._data.AttacksPerSecond = 1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100));
+
+            //Determine highest aps hero
+            if (heroes[i]._data.AttacksPerSecond >= highestAPS) {
+                highestAPS = heroes[i]._data.AttacksPerSecond;
+            }
+            if (heroes[i]._data.AttacksPerSecond <= lowestAPS) {
+                lowestAPS = heroes[i]._data.AttacksPerSecond;
+            }
 
             //DPS with basic attacks only
             heroes[i]._data.DamagePerSecond = (heroes[i]._data.AttacksPerSecond * heroes[i]._data.abilities[0].modifiersByLevel[14].damage);
@@ -57,6 +69,9 @@ export default Ember.Route.extend({
             //I need an object that has multiple instances that can be accessed from a template
             
         }
+
+        controller.set('maxAps', highestAPS);
+        controller.set('minAps', lowestAPS);
         controller.set('testArray1', heroes);
     }
 });

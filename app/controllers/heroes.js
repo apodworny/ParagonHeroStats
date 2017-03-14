@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     testArray1: null,
+    maxAps: null,
+    minAps: null,
     init: function() {
         var that = this;
 

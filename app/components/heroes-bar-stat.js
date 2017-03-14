@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    didReceiveAttrs() {
+    didInsertElement() {
         this._super(...arguments);
-        const attacksPerSecond = this.get('aps');
+        var attacksPerSecond = this.get('aps');
+        var maxAps = this.get('maxAps');
+        var minAps = this.get('minAps');
         console.log("ASDSADSA: " + attacksPerSecond);
 
+        var domEle = this.$('.bar-stat');
+        domEle.children().css("width", (attacksPerSecond-minAps)/(maxAps-minAps)*100 + "%");
 
         //can use a percentage for the bar graph, whereas 100 is 0, and the highest number is 100%
 
