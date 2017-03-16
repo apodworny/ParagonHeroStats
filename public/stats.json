@@ -1317,7 +1317,7 @@
             },
             {
                 "name": "Boulder Throw",
-                "description": "Rampage throws a boulder that deals {damage} {attr:endmg} and stuns enemy heroes for {stunduration} seconds. Enemy minions hit by the boulder will be displaced. ",
+                "description": "Rampage throws a boulder that deals {damage} {attr:endmg} and stuns enemy heroes for 1.4/1.6/1.8/2 seconds. Enemy minions hit by the boulder will be displaced. On activation Rampage has 5 seconds to confirm the ability if not confirmed in the time window the ability will cancel automatically. Canceling the ability will consume the energy cost.",
                 "shortDescription": "• Boulder: {damage} {attr:endmg}\r\n• Stun on hit for {stunduration}s\r\n• Knockaway Minions on hit",
                 "type": "Primary",
                 "binding": "Q",
@@ -1463,7 +1463,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.0,
                 "AbilityResistanceRating": 20.0,
-                "MaxHealth": 550.0,
+                "MaxHealth": 506.0,
                 "BasicResistanceRating": 14.0,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 100.0,
@@ -1476,7 +1476,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.3,
                 "AbilityResistanceRating": 20.75,
-                "MaxHealth": 624.2,
+                "MaxHealth": 574.264,
                 "BasicResistanceRating": 15.25,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 101.4,
@@ -1489,7 +1489,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.6,
                 "AbilityResistanceRating": 21.5,
-                "MaxHealth": 698.4,
+                "MaxHealth": 642.528,
                 "BasicResistanceRating": 16.5,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 102.8,
@@ -1502,7 +1502,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.9,
                 "AbilityResistanceRating": 22.25,
-                "MaxHealth": 772.6,
+                "MaxHealth": 710.792,
                 "BasicResistanceRating": 17.75,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 104.2,
@@ -1515,7 +1515,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.2,
                 "AbilityResistanceRating": 23.0,
-                "MaxHealth": 846.8,
+                "MaxHealth": 779.056,
                 "BasicResistanceRating": 19.0,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 105.6,
@@ -1528,7 +1528,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.5,
                 "AbilityResistanceRating": 23.75,
-                "MaxHealth": 921.0,
+                "MaxHealth": 847.32,
                 "BasicResistanceRating": 20.25,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 107.0,
@@ -1541,7 +1541,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.8,
                 "AbilityResistanceRating": 24.5,
-                "MaxHealth": 995.2,
+                "MaxHealth": 915.584,
                 "BasicResistanceRating": 21.5,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 108.4,
@@ -1554,7 +1554,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.1,
                 "AbilityResistanceRating": 25.25,
-                "MaxHealth": 1069.4,
+                "MaxHealth": 983.848,
                 "BasicResistanceRating": 22.75,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 109.8,
@@ -1567,7 +1567,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.4,
                 "AbilityResistanceRating": 26.0,
-                "MaxHealth": 1143.6,
+                "MaxHealth": 1052.11,
                 "BasicResistanceRating": 24.0,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 111.2,
@@ -1580,7 +1580,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.7,
                 "AbilityResistanceRating": 26.75,
-                "MaxHealth": 1217.8,
+                "MaxHealth": 1120.38,
                 "BasicResistanceRating": 25.25,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 112.6,
@@ -1593,7 +1593,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 5.0,
                 "AbilityResistanceRating": 27.5,
-                "MaxHealth": 1292.0,
+                "MaxHealth": 1188.64,
                 "BasicResistanceRating": 26.5,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 114.0,
@@ -1606,7 +1606,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 5.3,
                 "AbilityResistanceRating": 28.25,
-                "MaxHealth": 1366.2,
+                "MaxHealth": 1256.9,
                 "BasicResistanceRating": 27.75,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 115.4,
@@ -1619,7 +1619,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 5.6,
                 "AbilityResistanceRating": 29.0,
-                "MaxHealth": 1440.4,
+                "MaxHealth": 1325.17,
                 "BasicResistanceRating": 29.0,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 116.8,
@@ -1632,7 +1632,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 5.9,
                 "AbilityResistanceRating": 29.75,
-                "MaxHealth": 1514.6,
+                "MaxHealth": 1393.43,
                 "BasicResistanceRating": 30.25,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 118.2,
@@ -1645,7 +1645,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 6.2,
                 "AbilityResistanceRating": 30.5,
-                "MaxHealth": 1588.8,
+                "MaxHealth": 1461.7,
                 "BasicResistanceRating": 31.5,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 119.6,
@@ -1663,78 +1663,78 @@
                 "maxLevel": 15,
                 "modifiersByLevel": [
                     {
-                        "damage": 64.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 58.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.2
                     },
                     {
-                        "damage": 66.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 59.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.18343
                     },
                     {
-                        "damage": 67.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 60.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.16732
                     },
                     {
-                        "damage": 69.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 61.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.15163
                     },
                     {
-                        "damage": 70.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 62.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.13636
                     },
                     {
-                        "damage": 72.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 63.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.1215
                     },
                     {
-                        "damage": 73.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 64.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.10701
                     },
                     {
-                        "damage": 75.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 65.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.0929
                     },
                     {
-                        "damage": 76.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 66.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.07914
                     },
                     {
-                        "damage": 78.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 67.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.06572
                     },
                     {
-                        "damage": 79.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 68.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.05263
                     },
                     {
-                        "damage": 81.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 69.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.03986
                     },
                     {
-                        "damage": 82.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 70.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.0274
                     },
                     {
-                        "damage": 84.0,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 71.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.01523
                     },
                     {
-                        "damage": 85.5,
-                        "attackratingcoefficient": 0.6,
+                        "damage": 72.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 1.00334
                     }
                 ],
@@ -1789,28 +1789,28 @@
                         "damage": 40.0,
                         "movespeed": 1200.0,
                         "attackratingcoefficient": 0.35,
-                        "cooldown": 20.0,
+                        "cooldown": 22.0,
                         "energycost": -80.0
                     },
                     {
                         "damage": 80.0,
                         "movespeed": 1300.0,
                         "attackratingcoefficient": 0.35,
-                        "cooldown": 18.0,
+                        "cooldown": 20.0,
                         "energycost": -80.0
                     },
                     {
                         "damage": 120.0,
                         "movespeed": 1400.0,
                         "attackratingcoefficient": 0.35,
-                        "cooldown": 16.0,
+                        "cooldown": 18.0,
                         "energycost": -80.0
                     },
                     {
                         "damage": 160.0,
                         "movespeed": 1500.0,
                         "attackratingcoefficient": 0.35,
-                        "cooldown": 14.0,
+                        "cooldown": 16.0,
                         "energycost": -80.0
                     }
                 ],
@@ -1820,7 +1820,7 @@
             },
             {
                 "name": "Hoarfrost",
-                "description": "Aurora creates a ring of hoarfrost on the ground around her. Touching the ring deals {damage} {attr:endmg} and applies a {status:root} for 1.25/1.5/1.75/2 seconds. \r\n\r\nThe ring remains in the world for 4.5/5/5.5/6 seconds",
+                "description": "Aurora creates a ring of hoarfrost on the ground around her. Touching the ring deals {damage} {attr:endmg} and applies a {status:root} for 0.75/1/1.25/1.5 seconds. \r\n\r\nThe ring remains in the world for {shield} seconds",
                 "shortDescription": "• AOE Ring: {damage} {attr:endmg} and {movespeed}s {status:root} if touched \r\n• Ring duration: {shield}s ",
                 "type": "Secondary",
                 "binding": "E",
@@ -1829,35 +1829,35 @@
                 "modifiersByLevel": [
                     {
                         "damage": 75.0,
-                        "movespeed": 1.25,
-                        "shield": 4.5,
-                        "attackratingcoefficient": 0.6,
-                        "cooldown": 14.0,
-                        "energycost": -50.0
-                    },
-                    {
-                        "damage": 125.0,
-                        "movespeed": 1.5,
-                        "shield": 5.0,
-                        "attackratingcoefficient": 0.6,
-                        "cooldown": 14.0,
-                        "energycost": -55.0
-                    },
-                    {
-                        "damage": 175.0,
-                        "movespeed": 1.75,
-                        "shield": 5.5,
+                        "movespeed": 0.75,
+                        "shield": 4.0,
                         "attackratingcoefficient": 0.6,
                         "cooldown": 14.0,
                         "energycost": -60.0
                     },
                     {
-                        "damage": 225.0,
-                        "movespeed": 2.0,
-                        "shield": 6.0,
+                        "damage": 125.0,
+                        "movespeed": 1.0,
+                        "shield": 4.0,
                         "attackratingcoefficient": 0.6,
                         "cooldown": 14.0,
                         "energycost": -65.0
+                    },
+                    {
+                        "damage": 175.0,
+                        "movespeed": 1.25,
+                        "shield": 4.0,
+                        "attackratingcoefficient": 0.6,
+                        "cooldown": 14.0,
+                        "energycost": -70.0
+                    },
+                    {
+                        "damage": 225.0,
+                        "movespeed": 1.5,
+                        "shield": 4.0,
+                        "attackratingcoefficient": 0.6,
+                        "cooldown": 14.0,
+                        "energycost": -75.0
                     }
                 ],
                 "images": {
@@ -1874,7 +1874,7 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "damage": 180.0,
+                        "damage": 160.0,
                         "movespeed": 1.5,
                         "shield": -300.0,
                         "attackratingcoefficient": 0.75,
@@ -1884,7 +1884,7 @@
                         "energycost": -75.0
                     },
                     {
-                        "damage": 230.0,
+                        "damage": 200.0,
                         "movespeed": 1.5,
                         "shield": -300.0,
                         "attackratingcoefficient": 0.75,
@@ -1894,7 +1894,7 @@
                         "energycost": -75.0
                     },
                     {
-                        "damage": 280.0,
+                        "damage": 240.0,
                         "movespeed": 1.5,
                         "shield": -300.0,
                         "attackratingcoefficient": 0.75,
@@ -2372,21 +2372,21 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "damage": 46.875,
+                        "damage": 55.0,
                         "attackratingcoefficient": 0.328125,
                         "stackduration": 7.0,
                         "cooldown": 90.0,
                         "energycost": -100.0
                     },
                     {
-                        "damage": 60.625,
+                        "damage": 80.0,
                         "attackratingcoefficient": 0.328125,
                         "stackduration": 7.0,
                         "cooldown": 75.0,
                         "energycost": -100.0
                     },
                     {
-                        "damage": 74.375,
+                        "damage": 105.0,
                         "attackratingcoefficient": 0.328125,
                         "stackduration": 7.0,
                         "cooldown": 60.0,
@@ -2811,35 +2811,35 @@
                 "maxLevel": 4,
                 "modifiersByLevel": [
                     {
-                        "duration": 3.5,
+                        "duration": 1.0,
                         "damage": 50.0,
-                        "movespeed": 35.0,
+                        "movespeed": 125.0,
                         "attackratingcoefficient": 0.625,
                         "cooldown": 22.0,
                         "energycost": -40.0
                     },
                     {
-                        "duration": 3.5,
+                        "duration": 1.0,
                         "damage": 90.0,
-                        "movespeed": 50.0,
+                        "movespeed": 125.0,
                         "attackratingcoefficient": 0.625,
-                        "cooldown": 19.0,
+                        "cooldown": 18.0,
                         "energycost": -40.0
                     },
                     {
-                        "duration": 3.5,
+                        "duration": 1.0,
                         "damage": 130.0,
-                        "movespeed": 65.0,
+                        "movespeed": 125.0,
                         "attackratingcoefficient": 0.625,
-                        "cooldown": 16.0,
+                        "cooldown": 14.0,
                         "energycost": -40.0
                     },
                     {
-                        "duration": 3.5,
+                        "duration": 1.0,
                         "damage": 170.0,
-                        "movespeed": 80.0,
+                        "movespeed": 125.0,
                         "attackratingcoefficient": 0.625,
-                        "cooldown": 13.0,
+                        "cooldown": 10.0,
                         "energycost": -40.0
                     }
                 ],
@@ -2849,8 +2849,8 @@
             },
             {
                 "name": "Tesla Dome",
-                "description": "Gadget's Tesla Dome deals {damage} {attr:endmg} over {duration} seconds to all enemies in the area.",
-                "shortDescription": "• AOE: {damage} {attr:endmg} over {duration}s",
+                "description": "Gadget's Tesla Dome applies five ticks of damage over {duration} seconds to all enemies in the area totaling {damage} {attr:endmg} and slowing them by {movespeed} {attr:spd} for {maxhealth} seconds per tick. After each tick, the damage is increased by 75%.",
+                "shortDescription": "• AOE: {damage} {attr:endmg} over {duration}s\r\n• {status:slow} ({movespeed} {attr:spd})  for {maxhealth} seconds on damage tick\r\n• Damage increased by 75% per tick",
                 "type": "Ultimate",
                 "binding": "R",
                 "damageType": "Ability",
@@ -2858,23 +2858,29 @@
                 "modifiersByLevel": [
                     {
                         "duration": 4.0,
-                        "damage": 350.0,
+                        "damage": 375.0,
+                        "movespeed": -350.0,
                         "attackratingcoefficient": 3.125,
+                        "maxhealth": 0.25,
                         "cooldown": 110.0,
                         "energycost": -100.0
                     },
                     {
                         "duration": 4.0,
-                        "damage": 540.0,
+                        "damage": 575.0,
+                        "movespeed": -350.0,
                         "attackratingcoefficient": 3.125,
-                        "cooldown": 90.0,
+                        "maxhealth": 0.25,
+                        "cooldown": 95.0,
                         "energycost": -125.0
                     },
                     {
                         "duration": 4.0,
-                        "damage": 730.0,
+                        "damage": 775.0,
+                        "movespeed": -350.0,
                         "attackratingcoefficient": 3.125,
-                        "cooldown": 70.0,
+                        "maxhealth": 0.25,
+                        "cooldown": 80.0,
                         "energycost": -150.0
                     }
                 ],
@@ -3662,8 +3668,8 @@
             },
             {
                 "name": "Ambush",
-                "description": "Khaimera leaps to a target enemy hero, dealing {damage} {attr:endmg} and applying a {movespeed} {attr:spd} {status:slow} in a small AOE.",
-                "shortDescription": "• Leap to Targeted Enemy Hero: {damage} {attr:endmg} in AOE\r\n• {status:slow} ({movespeed} {attr:spd}) for {duration}s",
+                "description": "Khaimera leaps to a target enemy hero, dealing {damage} {attr:endmg} and applying a {movespeed} {attr:spd} {status:slow} in a small AOE. Khaimera is granted 4 stacks of Spirit Regeneration upon activation.",
+                "shortDescription": "• Leap to Targeted Enemy Hero: {damage} {attr:endmg} in AOE\r\n• {status:slow} ({movespeed} {attr:spd}) for {duration}s\r\n• Grants 4 Stacks of Spirit Regeneration",
                 "type": "Alternate",
                 "binding": "RMB",
                 "damageType": "Ability",
@@ -3780,8 +3786,8 @@
             },
             {
                 "name": "Cull",
-                "description": "After a brief channel, Khaimera stuns and causes {damage} {attr:endmg} to a targeted enemy hero. Nearby enemies are displaced and receive a 60% {attr:spd} {status:slow} for {slowlong} seconds. ",
-                "shortDescription": "• Stun targeted Enemy Hero for {damage} {attr:endmg}\r\n• Knockaway and {status:slow} (60% {attr:spd}) others for {slowlong}s",
+                "description": "After a brief channel, Khaimera stuns and causes {damage} {attr:endmg} to a targeted enemy hero. Nearby enemies are displaced and receive a 60% {attr:spd} {status:slow} for {slowlong} seconds. Khaimera is granted 7 stacks of Spirit Regeneration upon activation.",
+                "shortDescription": "• Stun targeted Enemy Hero for {damage} {attr:endmg}\r\n• Knockaway and {status:slow} (60% {attr:spd}) others for {slowlong}s\r\n• Grants 7 Stacks of Spirit Regeneration",
                 "type": "Ultimate",
                 "binding": "R",
                 "damageType": "Ability",
@@ -4131,8 +4137,8 @@
             },
             {
                 "name": "Bulwark",
-                "description": "Steel deploys his shield, crouching behind it for {duration} seconds. He can move with the shield deployed, but cannot change direction. The shield blocks 60/70/80/90% of all incoming damage that passes through the shield. AoE {attr:endmg} is not blocked.\r\n\r\nRetriggering or attacking will cancel the ability early. ",
-                "shortDescription": "• Block {maxhealthpercent}% incoming non-AoE Damage for {duration}s\r\n• Can move normally while deployed, but not turn",
+                "description": "Steel deploys his shield, crouching behind it for {duration} seconds. The shield blocks 60/70/80/90% of all incoming damage that passes through the shield. AoE {attr:endmg} is not blocked.\r\n\r\nRetriggering or attacking will cancel the ability early. ",
+                "shortDescription": "• Block {maxhealthpercent}% incoming non-AoE Damage for {duration}s",
                 "type": "Alternate",
                 "binding": "RMB",
                 "damageType": null,
@@ -4775,6 +4781,463 @@
         ]
     },
     {
+        "id": "4be101fc8e82688086b1a205aa24d2d8",
+        "name": "Yin",
+        "attack": "Melee",
+        "traits": [
+            "Marauder",
+            "Attacker",
+            "Elusive",
+            "Assassin"
+        ],
+        "scale": "PhysicalDamage",
+        "releaseDate": "2017-03-14T00:00:00.000Z",
+        "affinities": [
+            "Growth",
+            "Fury"
+        ],
+        "difficulty": 2,
+        "stats": {
+            "Mobility": 6,
+            "BasicAttack": 9,
+            "Durability": 5,
+            "AbilityAttack": 3
+        },
+        "images": {
+            "icon": "//developer-paragon-cdn.epicgames.com/Images/3F69B8FB8CFC1076009E9E48517F3AF8082BCBAE.png"
+        },
+        "attributesByLevel": [
+            {
+                "MaxEnergy": 225.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.25,
+                "AbilityResistanceRating": 20.0,
+                "MaxHealth": 475.0,
+                "BasicResistanceRating": 18.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 0.8
+            },
+            {
+                "MaxEnergy": 273.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.45,
+                "AbilityResistanceRating": 20.75,
+                "MaxHealth": 539.03,
+                "BasicResistanceRating": 20.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 102.8,
+                "EnergyRegenRate": 0.92
+            },
+            {
+                "MaxEnergy": 321.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.65,
+                "AbilityResistanceRating": 21.5,
+                "MaxHealth": 603.06,
+                "BasicResistanceRating": 22.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 105.6,
+                "EnergyRegenRate": 1.04
+            },
+            {
+                "MaxEnergy": 369.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.85,
+                "AbilityResistanceRating": 22.25,
+                "MaxHealth": 667.09,
+                "BasicResistanceRating": 24.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 108.4,
+                "EnergyRegenRate": 1.16
+            },
+            {
+                "MaxEnergy": 417.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.05,
+                "AbilityResistanceRating": 23.0,
+                "MaxHealth": 731.12,
+                "BasicResistanceRating": 26.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 111.2,
+                "EnergyRegenRate": 1.28
+            },
+            {
+                "MaxEnergy": 465.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.25,
+                "AbilityResistanceRating": 23.75,
+                "MaxHealth": 795.15,
+                "BasicResistanceRating": 28.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 114.0,
+                "EnergyRegenRate": 1.4
+            },
+            {
+                "MaxEnergy": 513.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.45,
+                "AbilityResistanceRating": 24.5,
+                "MaxHealth": 859.18,
+                "BasicResistanceRating": 30.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 116.8,
+                "EnergyRegenRate": 1.52
+            },
+            {
+                "MaxEnergy": 561.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.65,
+                "AbilityResistanceRating": 25.25,
+                "MaxHealth": 923.21,
+                "BasicResistanceRating": 32.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 119.6,
+                "EnergyRegenRate": 1.64
+            },
+            {
+                "MaxEnergy": 609.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.85,
+                "AbilityResistanceRating": 26.0,
+                "MaxHealth": 987.24,
+                "BasicResistanceRating": 34.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 122.4,
+                "EnergyRegenRate": 1.76
+            },
+            {
+                "MaxEnergy": 657.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.05,
+                "AbilityResistanceRating": 26.75,
+                "MaxHealth": 1051.27,
+                "BasicResistanceRating": 36.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 125.2,
+                "EnergyRegenRate": 1.88
+            },
+            {
+                "MaxEnergy": 705.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.25,
+                "AbilityResistanceRating": 27.5,
+                "MaxHealth": 1115.3,
+                "BasicResistanceRating": 38.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 128.0,
+                "EnergyRegenRate": 2.0
+            },
+            {
+                "MaxEnergy": 753.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.45,
+                "AbilityResistanceRating": 28.25,
+                "MaxHealth": 1179.33,
+                "BasicResistanceRating": 40.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 130.8,
+                "EnergyRegenRate": 2.12
+            },
+            {
+                "MaxEnergy": 801.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.65,
+                "AbilityResistanceRating": 29.0,
+                "MaxHealth": 1243.36,
+                "BasicResistanceRating": 42.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 133.6,
+                "EnergyRegenRate": 2.24
+            },
+            {
+                "MaxEnergy": 849.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.85,
+                "AbilityResistanceRating": 29.75,
+                "MaxHealth": 1307.39,
+                "BasicResistanceRating": 44.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 136.4,
+                "EnergyRegenRate": 2.36
+            },
+            {
+                "MaxEnergy": 897.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 4.05,
+                "AbilityResistanceRating": 30.5,
+                "MaxHealth": 1371.42,
+                "BasicResistanceRating": 46.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 139.2,
+                "EnergyRegenRate": 2.48
+            }
+        ],
+        "abilities": [
+            {
+                "name": "Whip Crack",
+                "description": "Melee basic attack dealing {damage} {attr:physdmg}. Yin's whip has a longer range and narrower width than common melee attacks.",
+                "shortDescription": "• Basic Attack: {damage} {attr:physdmg}",
+                "type": "Basic",
+                "binding": "LMB",
+                "damageType": "Basic",
+                "maxLevel": 15,
+                "modifiersByLevel": [
+                    {
+                        "damage": 55.0,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 56.6,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.16732
+                    },
+                    {
+                        "damage": 58.2,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.13636
+                    },
+                    {
+                        "damage": 59.8,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.10701
+                    },
+                    {
+                        "damage": 61.4,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.07914
+                    },
+                    {
+                        "damage": 63.0,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.05263
+                    },
+                    {
+                        "damage": 64.6,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.0274
+                    },
+                    {
+                        "damage": 66.2,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 1.00334
+                    },
+                    {
+                        "damage": 67.8,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.980392
+                    },
+                    {
+                        "damage": 69.4,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.958467
+                    },
+                    {
+                        "damage": 71.0,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.9375
+                    },
+                    {
+                        "damage": 72.6,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.917431
+                    },
+                    {
+                        "damage": 74.2,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.898204
+                    },
+                    {
+                        "damage": 75.8,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.879765
+                    },
+                    {
+                        "damage": 77.4,
+                        "attackratingcoefficient": 0.85,
+                        "cooldown": 0.862069
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/1A7B4E0742F7B5C3A87FCCD5765C18ADA1593CAF.png"
+                }
+            },
+            {
+                "name": "Backlash",
+                "description": "Yin cracks her whip, creating a sphere of pressure around her. If enemy projectiles hit the sphere, they are reflected back toward the enemy who fired them. Has a {cooldown} second cooldown.",
+                "shortDescription": "• Reflects enemy projectiles\r\n• {cooldown}s cooldown",
+                "type": "Alternate",
+                "binding": "RMB",
+                "damageType": null,
+                "maxLevel": 4,
+                "modifiersByLevel": [
+                    {
+                        "cooldown": 16.0,
+                        "energycost": -60.0
+                    },
+                    {
+                        "cooldown": 12.0,
+                        "energycost": -65.0
+                    },
+                    {
+                        "cooldown": 8.0,
+                        "energycost": -70.0
+                    },
+                    {
+                        "cooldown": 4.0,
+                        "energycost": -75.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/7D35AE4FCF5A7DFC2BBAC40DFE38F62A1710DAA5.png"
+                }
+            },
+            {
+                "name": "Lash Kick",
+                "description": "Yin swings her whip {movespeed} units to pull herself to a target, jumps off of their head for {damage} {attr:endmg}, then lands in the direction of her choice. This can be performed on Allies, Minions, and Enemies.",
+                "shortDescription": "• Leap to Target: {damage} {attr:endmg}\r\n• Jump off target within {movespeed} units in chosen direction\r\n• Uses Allies, Minions, and Enemies",
+                "type": "Primary",
+                "binding": "Q",
+                "damageType": "Ability",
+                "maxLevel": 4,
+                "modifiersByLevel": [
+                    {
+                        "damage": 80.0,
+                        "movespeed": 650.0,
+                        "attackratingcoefficient": 0.5,
+                        "cooldown": 11.0,
+                        "energycost": -55.0
+                    },
+                    {
+                        "damage": 130.0,
+                        "movespeed": 650.0,
+                        "attackratingcoefficient": 0.5,
+                        "cooldown": 11.0,
+                        "energycost": -55.0
+                    },
+                    {
+                        "damage": 180.0,
+                        "movespeed": 650.0,
+                        "attackratingcoefficient": 0.5,
+                        "cooldown": 11.0,
+                        "energycost": -55.0
+                    },
+                    {
+                        "damage": 230.0,
+                        "movespeed": 650.0,
+                        "attackratingcoefficient": 0.5,
+                        "cooldown": 11.0,
+                        "energycost": -55.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/DD9B95A99AFD0BCEBB9208CCA9DF1B58123EE236.png"
+                }
+            },
+            {
+                "name": "Windburn",
+                "description": "Yin extends her whip, increasing the range of her basic attack to {movespeed} units and gains 100% Cleave for {maxhealth} seconds.",
+                "shortDescription": "• Extend Basic Attack range to {movespeed}u\r\n• Gain 100% Cleave\r\n• {maxhealth}s duration and {cooldown}s cooldown",
+                "type": "Secondary",
+                "binding": "E",
+                "damageType": null,
+                "maxLevel": 4,
+                "modifiersByLevel": [
+                    {
+                        "movespeed": 1050.0,
+                        "maxhealth": 6.0,
+                        "cooldown": 20.0,
+                        "energycost": -20.0
+                    },
+                    {
+                        "movespeed": 1050.0,
+                        "maxhealth": 6.0,
+                        "cooldown": 16.0,
+                        "energycost": -20.0
+                    },
+                    {
+                        "movespeed": 1050.0,
+                        "maxhealth": 6.0,
+                        "cooldown": 12.0,
+                        "energycost": -20.0
+                    },
+                    {
+                        "movespeed": 1050.0,
+                        "maxhealth": 6.0,
+                        "cooldown": 8.0,
+                        "energycost": -20.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/F4F19725E303B2CFE609C2DC9F604DEDB0588963.png"
+                }
+            },
+            {
+                "name": "Quelling Gale",
+                "description": "Yin surrounds herself in gale winds, displacing all enemies within range. For {maxhealth} seconds after, the AOE will apply a {movespeed} {attr:spd} slow to enemies. Projectiles that travel through it are halted. ",
+                "shortDescription": "• AOE Knockaway\r\n• Slow ({movespeed} {attr:spd})  enemies and projectiles\r\n• Lasts {maxhealth}s",
+                "type": "Ultimate",
+                "binding": "R",
+                "damageType": null,
+                "maxLevel": 3,
+                "modifiersByLevel": [
+                    {
+                        "movespeed": -150.0,
+                        "maxhealth": 5.0,
+                        "cooldown": 90.0,
+                        "energycost": -75.0
+                    },
+                    {
+                        "movespeed": -200.0,
+                        "maxhealth": 5.5,
+                        "cooldown": 65.0,
+                        "energycost": -75.0
+                    },
+                    {
+                        "movespeed": -250.0,
+                        "maxhealth": 6.0,
+                        "cooldown": 40.0,
+                        "energycost": -75.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/2B0A4D2C61C3583A03CC85AF907747C09177AF27.png"
+                }
+            }
+        ]
+    },
+    {
         "id": "4f1658f6bb26fb1426aa2cbe103c42b3",
         "name": "Iggy & Scorch",
         "attack": "Ranged",
@@ -5096,25 +5559,25 @@
                 "maxLevel": 4,
                 "modifiersByLevel": [
                     {
-                        "movespeed": 20.0,
+                        "movespeed": 100.0,
                         "maxhealth": 2.0,
                         "cooldown": 18.0,
                         "energycost": -40.0
                     },
                     {
-                        "movespeed": 30.0,
+                        "movespeed": 100.0,
                         "maxhealth": 2.66666,
                         "cooldown": 16.0,
                         "energycost": -40.0
                     },
                     {
-                        "movespeed": 40.0,
+                        "movespeed": 100.0,
                         "maxhealth": 3.33332,
                         "cooldown": 14.0,
                         "energycost": -40.0
                     },
                     {
-                        "movespeed": 50.0,
+                        "movespeed": 100.0,
                         "maxhealth": 3.99998,
                         "cooldown": 12.0,
                         "energycost": -40.0
@@ -5135,7 +5598,7 @@
                 "modifiersByLevel": [
                     {
                         "duration": 10.0,
-                        "damage": 150.0,
+                        "damage": 300.0,
                         "movespeed": 1.0,
                         "attackratingcoefficient": 2.5,
                         "cooldown": 4.0,
@@ -5143,7 +5606,7 @@
                     },
                     {
                         "duration": 10.0,
-                        "damage": 280.0,
+                        "damage": 450.0,
                         "movespeed": 2.0,
                         "attackratingcoefficient": 2.5,
                         "cooldown": 4.0,
@@ -5151,7 +5614,7 @@
                     },
                     {
                         "duration": 10.0,
-                        "damage": 410.0,
+                        "damage": 600.0,
                         "movespeed": 2.0,
                         "attackratingcoefficient": 2.5,
                         "cooldown": 4.0,
@@ -5159,7 +5622,7 @@
                     },
                     {
                         "duration": 10.0,
-                        "damage": 540.0,
+                        "damage": 750.0,
                         "movespeed": 3.0,
                         "attackratingcoefficient": 2.5,
                         "cooldown": 4.0,
@@ -5287,7 +5750,7 @@
                 "EnergyRegenRate": 0.7
             },
             {
-                "MaxEnergy": 236.0,
+                "MaxEnergy": 245.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5300,7 +5763,7 @@
                 "EnergyRegenRate": 0.79
             },
             {
-                "MaxEnergy": 272.0,
+                "MaxEnergy": 290.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5313,7 +5776,7 @@
                 "EnergyRegenRate": 0.88
             },
             {
-                "MaxEnergy": 308.0,
+                "MaxEnergy": 335.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5326,7 +5789,7 @@
                 "EnergyRegenRate": 0.97
             },
             {
-                "MaxEnergy": 344.0,
+                "MaxEnergy": 380.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5339,7 +5802,7 @@
                 "EnergyRegenRate": 1.06
             },
             {
-                "MaxEnergy": 380.0,
+                "MaxEnergy": 425.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5352,7 +5815,7 @@
                 "EnergyRegenRate": 1.15
             },
             {
-                "MaxEnergy": 416.0,
+                "MaxEnergy": 470.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5365,7 +5828,7 @@
                 "EnergyRegenRate": 1.24
             },
             {
-                "MaxEnergy": 452.0,
+                "MaxEnergy": 515.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5378,7 +5841,7 @@
                 "EnergyRegenRate": 1.33
             },
             {
-                "MaxEnergy": 488.0,
+                "MaxEnergy": 560.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5391,7 +5854,7 @@
                 "EnergyRegenRate": 1.42
             },
             {
-                "MaxEnergy": 524.0,
+                "MaxEnergy": 605.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5404,7 +5867,7 @@
                 "EnergyRegenRate": 1.51
             },
             {
-                "MaxEnergy": 560.0,
+                "MaxEnergy": 650.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5417,7 +5880,7 @@
                 "EnergyRegenRate": 1.6
             },
             {
-                "MaxEnergy": 596.0,
+                "MaxEnergy": 695.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5430,7 +5893,7 @@
                 "EnergyRegenRate": 1.69
             },
             {
-                "MaxEnergy": 632.0,
+                "MaxEnergy": 740.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5443,7 +5906,7 @@
                 "EnergyRegenRate": 1.78
             },
             {
-                "MaxEnergy": 668.0,
+                "MaxEnergy": 785.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5456,7 +5919,7 @@
                 "EnergyRegenRate": 1.87
             },
             {
-                "MaxEnergy": 704.0,
+                "MaxEnergy": 830.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.35,
                 "AbilityPenetrationRating": 0.0,
@@ -5570,14 +6033,14 @@
                 "modifiersByLevel": [
                     {
                         "damage": 75.0,
-                        "movespeed": 850.0,
+                        "movespeed": 1525.0,
                         "attackratingcoefficient": 0.75,
                         "cooldown": 14.0,
                         "energycost": -110.0
                     },
                     {
                         "damage": 125.0,
-                        "movespeed": 1187.5,
+                        "movespeed": 1525.0,
                         "attackratingcoefficient": 0.75,
                         "cooldown": 14.0,
                         "energycost": -110.0
@@ -5773,7 +6236,7 @@
                 "MaxHealth": 664.0,
                 "BasicResistanceRating": 15.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 101.4,
+                "AttackSpeedRating": 102.0,
                 "EnergyRegenRate": 0.79
             },
             {
@@ -5786,7 +6249,7 @@
                 "MaxHealth": 743.0,
                 "BasicResistanceRating": 16.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 102.8,
+                "AttackSpeedRating": 104.0,
                 "EnergyRegenRate": 0.88
             },
             {
@@ -5799,7 +6262,7 @@
                 "MaxHealth": 822.0,
                 "BasicResistanceRating": 17.75,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 104.2,
+                "AttackSpeedRating": 106.0,
                 "EnergyRegenRate": 0.97
             },
             {
@@ -5812,7 +6275,7 @@
                 "MaxHealth": 901.0,
                 "BasicResistanceRating": 19.0,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 105.6,
+                "AttackSpeedRating": 108.0,
                 "EnergyRegenRate": 1.06
             },
             {
@@ -5825,7 +6288,7 @@
                 "MaxHealth": 980.0,
                 "BasicResistanceRating": 20.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 107.0,
+                "AttackSpeedRating": 110.0,
                 "EnergyRegenRate": 1.15
             },
             {
@@ -5838,7 +6301,7 @@
                 "MaxHealth": 1059.0,
                 "BasicResistanceRating": 21.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 108.4,
+                "AttackSpeedRating": 112.0,
                 "EnergyRegenRate": 1.24
             },
             {
@@ -5851,7 +6314,7 @@
                 "MaxHealth": 1138.0,
                 "BasicResistanceRating": 22.75,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 109.8,
+                "AttackSpeedRating": 114.0,
                 "EnergyRegenRate": 1.33
             },
             {
@@ -5864,7 +6327,7 @@
                 "MaxHealth": 1217.0,
                 "BasicResistanceRating": 24.0,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 111.2,
+                "AttackSpeedRating": 116.0,
                 "EnergyRegenRate": 1.42
             },
             {
@@ -5877,7 +6340,7 @@
                 "MaxHealth": 1296.0,
                 "BasicResistanceRating": 25.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 112.6,
+                "AttackSpeedRating": 118.0,
                 "EnergyRegenRate": 1.51
             },
             {
@@ -5890,7 +6353,7 @@
                 "MaxHealth": 1375.0,
                 "BasicResistanceRating": 26.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 114.0,
+                "AttackSpeedRating": 120.0,
                 "EnergyRegenRate": 1.6
             },
             {
@@ -5903,7 +6366,7 @@
                 "MaxHealth": 1454.0,
                 "BasicResistanceRating": 27.75,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 115.4,
+                "AttackSpeedRating": 122.0,
                 "EnergyRegenRate": 1.69
             },
             {
@@ -5916,7 +6379,7 @@
                 "MaxHealth": 1533.0,
                 "BasicResistanceRating": 29.0,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 116.8,
+                "AttackSpeedRating": 124.0,
                 "EnergyRegenRate": 1.78
             },
             {
@@ -5929,7 +6392,7 @@
                 "MaxHealth": 1612.0,
                 "BasicResistanceRating": 30.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 118.2,
+                "AttackSpeedRating": 126.0,
                 "EnergyRegenRate": 1.87
             },
             {
@@ -5942,7 +6405,7 @@
                 "MaxHealth": 1691.0,
                 "BasicResistanceRating": 31.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 119.6,
+                "AttackSpeedRating": 128.0,
                 "EnergyRegenRate": 1.96
             }
         ],
@@ -5962,74 +6425,74 @@
                         "cooldown": 1.2
                     },
                     {
-                        "damage": 59.0,
+                        "damage": 58.8,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.18343
+                        "cooldown": 1.17647
                     },
                     {
-                        "damage": 60.0,
+                        "damage": 59.6,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.16732
+                        "cooldown": 1.15385
                     },
                     {
-                        "damage": 61.0,
+                        "damage": 60.4,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.15163
+                        "cooldown": 1.13208
+                    },
+                    {
+                        "damage": 61.2,
+                        "attackratingcoefficient": 0.7,
+                        "cooldown": 1.11111
                     },
                     {
                         "damage": 62.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.13636
+                        "cooldown": 1.09091
                     },
                     {
-                        "damage": 63.0,
+                        "damage": 62.8,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.1215
+                        "cooldown": 1.07143
                     },
                     {
-                        "damage": 64.0,
-                        "attackratingcoefficient": 0.7,
-                        "cooldown": 1.10701
-                    },
-                    {
-                        "damage": 65.0,
-                        "attackratingcoefficient": 0.7,
-                        "cooldown": 1.0929
-                    },
-                    {
-                        "damage": 66.0,
-                        "attackratingcoefficient": 0.7,
-                        "cooldown": 1.07914
-                    },
-                    {
-                        "damage": 67.0,
-                        "attackratingcoefficient": 0.7,
-                        "cooldown": 1.06572
-                    },
-                    {
-                        "damage": 68.0,
+                        "damage": 63.6,
                         "attackratingcoefficient": 0.7,
                         "cooldown": 1.05263
                     },
                     {
-                        "damage": 69.0,
+                        "damage": 64.4,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.03986
+                        "cooldown": 1.03448
                     },
                     {
-                        "damage": 70.0,
+                        "damage": 65.2,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.0274
+                        "cooldown": 1.01695
                     },
                     {
-                        "damage": 71.0,
+                        "damage": 66.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.01523
+                        "cooldown": 1.0
                     },
                     {
-                        "damage": 72.0,
+                        "damage": 66.8,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.00334
+                        "cooldown": 0.983607
+                    },
+                    {
+                        "damage": 67.6,
+                        "attackratingcoefficient": 0.7,
+                        "cooldown": 0.967742
+                    },
+                    {
+                        "damage": 68.4,
+                        "attackratingcoefficient": 0.7,
+                        "cooldown": 0.952381
+                    },
+                    {
+                        "damage": 69.2,
+                        "attackratingcoefficient": 0.7,
+                        "cooldown": 0.9375
                     }
                 ],
                 "images": {
@@ -6711,7 +7174,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.25,
                 "AbilityResistanceRating": 20.0,
-                "MaxHealth": 475.0,
+                "MaxHealth": 522.5,
                 "BasicResistanceRating": 18.0,
                 "CleaveRating": 0.1,
                 "AttackSpeedRating": 100.0,
@@ -6724,10 +7187,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.45,
                 "AbilityResistanceRating": 20.75,
-                "MaxHealth": 539.03,
-                "BasicResistanceRating": 20.0,
+                "MaxHealth": 599.336,
+                "BasicResistanceRating": 20.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 102.2,
                 "EnergyRegenRate": 0.92
             },
             {
@@ -6737,10 +7200,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.65,
                 "AbilityResistanceRating": 21.5,
-                "MaxHealth": 603.06,
-                "BasicResistanceRating": 22.0,
+                "MaxHealth": 676.172,
+                "BasicResistanceRating": 23.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 104.4,
                 "EnergyRegenRate": 1.04
             },
             {
@@ -6750,10 +7213,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.85,
                 "AbilityResistanceRating": 22.25,
-                "MaxHealth": 667.09,
-                "BasicResistanceRating": 24.0,
+                "MaxHealth": 753.008,
+                "BasicResistanceRating": 25.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 106.6,
                 "EnergyRegenRate": 1.16
             },
             {
@@ -6763,10 +7226,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.05,
                 "AbilityResistanceRating": 23.0,
-                "MaxHealth": 731.12,
-                "BasicResistanceRating": 26.0,
+                "MaxHealth": 829.844,
+                "BasicResistanceRating": 28.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 108.8,
                 "EnergyRegenRate": 1.28
             },
             {
@@ -6776,10 +7239,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.25,
                 "AbilityResistanceRating": 23.75,
-                "MaxHealth": 795.15,
-                "BasicResistanceRating": 28.0,
+                "MaxHealth": 906.68,
+                "BasicResistanceRating": 30.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 111.0,
                 "EnergyRegenRate": 1.4
             },
             {
@@ -6789,10 +7252,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.45,
                 "AbilityResistanceRating": 24.5,
-                "MaxHealth": 859.18,
-                "BasicResistanceRating": 30.0,
+                "MaxHealth": 983.516,
+                "BasicResistanceRating": 33.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 113.2,
                 "EnergyRegenRate": 1.52
             },
             {
@@ -6802,10 +7265,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.65,
                 "AbilityResistanceRating": 25.25,
-                "MaxHealth": 923.21,
-                "BasicResistanceRating": 32.0,
+                "MaxHealth": 1060.35,
+                "BasicResistanceRating": 35.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 115.4,
                 "EnergyRegenRate": 1.64
             },
             {
@@ -6815,10 +7278,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.85,
                 "AbilityResistanceRating": 26.0,
-                "MaxHealth": 987.24,
-                "BasicResistanceRating": 34.0,
+                "MaxHealth": 1137.19,
+                "BasicResistanceRating": 38.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 117.6,
                 "EnergyRegenRate": 1.76
             },
             {
@@ -6828,10 +7291,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.05,
                 "AbilityResistanceRating": 26.75,
-                "MaxHealth": 1051.27,
-                "BasicResistanceRating": 36.0,
+                "MaxHealth": 1214.02,
+                "BasicResistanceRating": 40.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 119.8,
                 "EnergyRegenRate": 1.88
             },
             {
@@ -6841,10 +7304,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.25,
                 "AbilityResistanceRating": 27.5,
-                "MaxHealth": 1115.3,
-                "BasicResistanceRating": 38.0,
+                "MaxHealth": 1290.86,
+                "BasicResistanceRating": 43.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 122.0,
                 "EnergyRegenRate": 2.0
             },
             {
@@ -6854,10 +7317,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.45,
                 "AbilityResistanceRating": 28.25,
-                "MaxHealth": 1179.33,
-                "BasicResistanceRating": 40.0,
+                "MaxHealth": 1367.7,
+                "BasicResistanceRating": 45.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 124.2,
                 "EnergyRegenRate": 2.12
             },
             {
@@ -6867,10 +7330,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.65,
                 "AbilityResistanceRating": 29.0,
-                "MaxHealth": 1243.36,
-                "BasicResistanceRating": 42.0,
+                "MaxHealth": 1444.53,
+                "BasicResistanceRating": 48.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 126.4,
                 "EnergyRegenRate": 2.24
             },
             {
@@ -6880,10 +7343,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.85,
                 "AbilityResistanceRating": 29.75,
-                "MaxHealth": 1307.39,
-                "BasicResistanceRating": 44.0,
+                "MaxHealth": 1521.37,
+                "BasicResistanceRating": 50.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 128.6,
                 "EnergyRegenRate": 2.36
             },
             {
@@ -6893,10 +7356,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.05,
                 "AbilityResistanceRating": 30.5,
-                "MaxHealth": 1371.42,
-                "BasicResistanceRating": 46.0,
+                "MaxHealth": 1598.2,
+                "BasicResistanceRating": 53.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 100.0,
+                "AttackSpeedRating": 130.8,
                 "EnergyRegenRate": 2.48
             }
         ],
@@ -6911,79 +7374,79 @@
                 "maxLevel": 15,
                 "modifiersByLevel": [
                     {
-                        "damage": 55.0,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
-                    },
-                    {
-                        "damage": 56.6,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
-                    },
-                    {
-                        "damage": 58.2,
+                        "damage": 58.0,
                         "attackratingcoefficient": 1.0,
                         "cooldown": 1.2
                     },
                     {
                         "damage": 59.8,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.17417
                     },
                     {
-                        "damage": 61.4,
+                        "damage": 61.6,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.14943
                     },
                     {
-                        "damage": 63.0,
+                        "damage": 63.4,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.1257
                     },
                     {
-                        "damage": 64.6,
+                        "damage": 65.2,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.10294
                     },
                     {
-                        "damage": 66.2,
+                        "damage": 67.0,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.08108
                     },
                     {
-                        "damage": 67.8,
+                        "damage": 68.8,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.06007
                     },
                     {
-                        "damage": 69.4,
+                        "damage": 70.6,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.03986
                     },
                     {
-                        "damage": 71.0,
+                        "damage": 72.4,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
-                    },
-                    {
-                        "damage": 72.6,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.02041
                     },
                     {
                         "damage": 74.2,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 1.00167
                     },
                     {
-                        "damage": 75.8,
+                        "damage": 76.0,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 0.983607
                     },
                     {
-                        "damage": 77.4,
+                        "damage": 77.8,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.2
+                        "cooldown": 0.966184
+                    },
+                    {
+                        "damage": 79.6,
+                        "attackratingcoefficient": 1.0,
+                        "cooldown": 0.949367
+                    },
+                    {
+                        "damage": 81.4,
+                        "attackratingcoefficient": 1.0,
+                        "cooldown": 0.933126
+                    },
+                    {
+                        "damage": 83.2,
+                        "attackratingcoefficient": 1.0,
+                        "cooldown": 0.917431
                     }
                 ],
                 "images": {
@@ -6993,7 +7456,7 @@
             {
                 "name": "Chastise",
                 "description": "Serath sweeps her wings in front of her, dealing {damage} AOE {attr:endmg} and applying a {movespeed} {attr:spd} {status:slow} for {duration} seconds",
-                "shortDescription": "• AOE Cone: {damage} {attr:endmg} \r\n• {status:slow} ({movespeed} {attr:spd})",
+                "shortDescription": "• AOE Cone: {damage} {attr:endmg} \r\n• {status:slow} ({movespeed} {attr:spd}) for {duration} seconds",
                 "type": "Alternate",
                 "binding": "RMB",
                 "damageType": "Ability",
@@ -7050,28 +7513,28 @@
                 "maxLevel": 4,
                 "modifiersByLevel": [
                     {
-                        "damage": 55.0,
+                        "damage": 58.0,
                         "attackratingcoefficient": 1.0,
                         "cooldown": 24.0,
                         "energycost": -45.0,
                         "castdelaydur": 0.2
                     },
                     {
-                        "damage": 56.6,
+                        "damage": 59.8,
                         "attackratingcoefficient": 1.0,
                         "cooldown": 18.0,
                         "energycost": -45.0,
                         "castdelaydur": 0.2
                     },
                     {
-                        "damage": 58.2,
+                        "damage": 61.6,
                         "attackratingcoefficient": 1.0,
                         "cooldown": 12.0,
                         "energycost": -45.0,
                         "castdelaydur": 0.2
                     },
                     {
-                        "damage": 59.8,
+                        "damage": 63.4,
                         "attackratingcoefficient": 1.0,
                         "cooldown": 6.0,
                         "energycost": -45.0,
@@ -7498,7 +7961,7 @@
                         "duration": 2.5,
                         "damage": 75.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 18.0,
+                        "cooldown": 16.0,
                         "physarmor": 40.0,
                         "energycost": -65.0
                     },
@@ -7507,7 +7970,7 @@
                         "duration": 2.5,
                         "damage": 130.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 16.0,
+                        "cooldown": 14.0,
                         "physarmor": 60.0,
                         "energycost": -65.0
                     },
@@ -7516,7 +7979,7 @@
                         "duration": 2.5,
                         "damage": 185.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 14.0,
+                        "cooldown": 12.0,
                         "physarmor": 80.0,
                         "energycost": -65.0
                     },
@@ -7525,7 +7988,7 @@
                         "duration": 2.5,
                         "damage": 240.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 12.0,
+                        "cooldown": 10.0,
                         "physarmor": 100.0,
                         "energycost": -65.0
                     }
@@ -7639,7 +8102,7 @@
                         "damage": 320.0,
                         "movespeed": -400.0,
                         "attackratingcoefficient": 0.8,
-                        "cooldown": 70.0,
+                        "cooldown": 75.0,
                         "slowdur": 2.0,
                         "energycost": -110.0
                     },
@@ -7647,7 +8110,7 @@
                         "damage": 420.0,
                         "movespeed": -400.0,
                         "attackratingcoefficient": 0.8,
-                        "cooldown": 55.0,
+                        "cooldown": 65.0,
                         "slowdur": 2.0,
                         "energycost": -130.0
                     }
@@ -8546,30 +9009,30 @@
                 "maxLevel": 4,
                 "modifiersByLevel": [
                     {
-                        "duration": 5.0,
-                        "damage": 75.0,
-                        "attackratingcoefficient": 0.625,
+                        "duration": 3.0,
+                        "damage": 60.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 22.0,
                         "energycost": -80.0
                     },
                     {
-                        "duration": 5.0,
-                        "damage": 125.0,
-                        "attackratingcoefficient": 0.625,
+                        "duration": 3.0,
+                        "damage": 100.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 19.0,
                         "energycost": -90.0
                     },
                     {
-                        "duration": 5.0,
-                        "damage": 175.0,
-                        "attackratingcoefficient": 0.625,
+                        "duration": 3.0,
+                        "damage": 140.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 16.0,
                         "energycost": -100.0
                     },
                     {
-                        "duration": 5.0,
-                        "damage": 225.0,
-                        "attackratingcoefficient": 0.625,
+                        "duration": 3.0,
+                        "damage": 180.0,
+                        "attackratingcoefficient": 0.5,
                         "cooldown": 13.0,
                         "energycost": -110.0
                     }
@@ -8592,7 +9055,7 @@
                         "splitdamage": 50.0,
                         "damage": 340.0,
                         "attackratingcoefficient": 3.125,
-                        "cooldown": 90.0,
+                        "cooldown": 105.0,
                         "energycost": -100.0
                     },
                     {
@@ -8600,7 +9063,7 @@
                         "splitdamage": 50.0,
                         "damage": 520.0,
                         "attackratingcoefficient": 3.125,
-                        "cooldown": 70.0,
+                        "cooldown": 90.0,
                         "energycost": -125.0
                     },
                     {
@@ -8608,7 +9071,7 @@
                         "splitdamage": 50.0,
                         "damage": 700.0,
                         "attackratingcoefficient": 3.125,
-                        "cooldown": 50.0,
+                        "cooldown": 75.0,
                         "energycost": -150.0
                     }
                 ],
@@ -8985,28 +9448,28 @@
                     {
                         "duration": 3.0,
                         "damage": 50.0,
-                        "attackratingcoefficient": 0.5,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 14.0,
                         "energycost": -35.0
                     },
                     {
                         "duration": 3.0,
-                        "damage": 75.0,
-                        "attackratingcoefficient": 0.5,
+                        "damage": 80.0,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 12.0,
                         "energycost": -40.0
                     },
                     {
                         "duration": 3.0,
-                        "damage": 100.0,
-                        "attackratingcoefficient": 0.5,
+                        "damage": 110.0,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 10.0,
                         "energycost": -45.0
                     },
                     {
                         "duration": 3.0,
-                        "damage": 125.0,
-                        "attackratingcoefficient": 0.5,
+                        "damage": 140.0,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 8.0,
                         "energycost": -50.0
                     }
@@ -9122,7 +9585,7 @@
                 "EnergyRegenRate": 0.8
             },
             {
-                "MaxEnergy": 208.8,
+                "MaxEnergy": 213.6,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9135,7 +9598,7 @@
                 "EnergyRegenRate": 0.92
             },
             {
-                "MaxEnergy": 237.6,
+                "MaxEnergy": 247.2,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9148,7 +9611,7 @@
                 "EnergyRegenRate": 1.04
             },
             {
-                "MaxEnergy": 266.4,
+                "MaxEnergy": 280.8,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9161,7 +9624,7 @@
                 "EnergyRegenRate": 1.16
             },
             {
-                "MaxEnergy": 295.2,
+                "MaxEnergy": 314.4,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9174,7 +9637,7 @@
                 "EnergyRegenRate": 1.28
             },
             {
-                "MaxEnergy": 324.0,
+                "MaxEnergy": 348.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9187,7 +9650,7 @@
                 "EnergyRegenRate": 1.4
             },
             {
-                "MaxEnergy": 352.8,
+                "MaxEnergy": 381.6,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9200,7 +9663,7 @@
                 "EnergyRegenRate": 1.52
             },
             {
-                "MaxEnergy": 381.6,
+                "MaxEnergy": 415.2,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9213,7 +9676,7 @@
                 "EnergyRegenRate": 1.64
             },
             {
-                "MaxEnergy": 410.4,
+                "MaxEnergy": 448.8,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9226,7 +9689,7 @@
                 "EnergyRegenRate": 1.76
             },
             {
-                "MaxEnergy": 439.2,
+                "MaxEnergy": 482.4,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9239,7 +9702,7 @@
                 "EnergyRegenRate": 1.88
             },
             {
-                "MaxEnergy": 468.0,
+                "MaxEnergy": 516.0,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9252,7 +9715,7 @@
                 "EnergyRegenRate": 2.0
             },
             {
-                "MaxEnergy": 496.8,
+                "MaxEnergy": 549.6,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9265,7 +9728,7 @@
                 "EnergyRegenRate": 2.12
             },
             {
-                "MaxEnergy": 525.6,
+                "MaxEnergy": 583.2,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9278,7 +9741,7 @@
                 "EnergyRegenRate": 2.24
             },
             {
-                "MaxEnergy": 554.4,
+                "MaxEnergy": 616.8,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9291,7 +9754,7 @@
                 "EnergyRegenRate": 2.36
             },
             {
-                "MaxEnergy": 583.2,
+                "MaxEnergy": 650.4,
                 "BasicPenetrationRating": 0.0,
                 "BaseAttackTime": 1.2,
                 "AbilityPenetrationRating": 0.0,
@@ -9316,77 +9779,77 @@
                 "modifiersByLevel": [
                     {
                         "damage": 55.0,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.2
                     },
                     {
                         "damage": 56.6,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.16732
                     },
                     {
                         "damage": 58.2,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.13636
                     },
                     {
                         "damage": 59.8,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.10701
                     },
                     {
                         "damage": 61.4,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.07914
                     },
                     {
                         "damage": 63.0,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.05263
                     },
                     {
                         "damage": 64.6,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.0274
                     },
                     {
                         "damage": 66.2,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.00334
                     },
                     {
                         "damage": 67.8,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.980392
                     },
                     {
                         "damage": 69.4,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.958467
                     },
                     {
                         "damage": 71.0,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.9375
                     },
                     {
                         "damage": 72.6,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.917431
                     },
                     {
                         "damage": 74.2,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.898204
                     },
                     {
                         "damage": 75.8,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.879765
                     },
                     {
                         "damage": 77.4,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.862069
                     }
                 ],
@@ -9476,8 +9939,8 @@
             },
             {
                 "name": "Suppression Mode",
-                "description": "When this ability is toggled on, Pulse Cannon attacks use {energycost} {attr:mp} per shot and apply a {movespeed} {attr:spd} {status:slow} for 1.5s.",
-                "shortDescription": "• {status:slow} Toggle: ({movespeed} {attr:spd} for 1.5s)   \r\n• {energycost} {attr:mp} per shot",
+                "description": "When this ability is toggled on, Pulse Cannon attacks use {energycost} {attr:mp} per shot and apply a {movespeed} {attr:spd} {status:slow} for .8s.",
+                "shortDescription": "• {status:slow} Toggle: ({movespeed} {attr:spd} for .8s)   \r\n• {energycost} {attr:mp} per shot",
                 "type": "Secondary",
                 "binding": "E",
                 "damageType": null,
@@ -10460,14 +10923,14 @@
                         "damage": 225.0,
                         "movespeed": 6.0,
                         "attackratingcoefficient": 0.4,
-                        "cooldown": 110.0,
+                        "cooldown": 100.0,
                         "energycost": -100.0
                     },
                     {
                         "damage": 300.0,
                         "movespeed": 7.0,
                         "attackratingcoefficient": 0.4,
-                        "cooldown": 110.0,
+                        "cooldown": 90.0,
                         "energycost": -100.0
                     }
                 ],
@@ -10894,25 +11357,25 @@
                     {
                         "damage": 65.0,
                         "attackratingcoefficient": 0.9375,
-                        "cooldown": 6.0,
+                        "cooldown": 5.0,
                         "energycost": -60.0
                     },
                     {
                         "damage": 90.0,
                         "attackratingcoefficient": 0.9375,
-                        "cooldown": 6.0,
+                        "cooldown": 5.0,
                         "energycost": -70.0
                     },
                     {
                         "damage": 115.0,
                         "attackratingcoefficient": 0.9375,
-                        "cooldown": 6.0,
+                        "cooldown": 5.0,
                         "energycost": -80.0
                     },
                     {
                         "damage": 140.0,
                         "attackratingcoefficient": 0.9375,
-                        "cooldown": 6.0,
+                        "cooldown": 5.0,
                         "energycost": -90.0
                     }
                 ],
@@ -11479,7 +11942,7 @@
                 "MaxHealth": 624.2,
                 "BasicResistanceRating": 15.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 101.26,
+                "AttackSpeedRating": 101.5,
                 "EnergyRegenRate": 0.79
             },
             {
@@ -11492,7 +11955,7 @@
                 "MaxHealth": 698.4,
                 "BasicResistanceRating": 16.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 102.52,
+                "AttackSpeedRating": 103.0,
                 "EnergyRegenRate": 0.88
             },
             {
@@ -11505,7 +11968,7 @@
                 "MaxHealth": 772.6,
                 "BasicResistanceRating": 17.75,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 103.78,
+                "AttackSpeedRating": 104.5,
                 "EnergyRegenRate": 0.97
             },
             {
@@ -11518,7 +11981,7 @@
                 "MaxHealth": 846.8,
                 "BasicResistanceRating": 19.0,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 105.04,
+                "AttackSpeedRating": 106.0,
                 "EnergyRegenRate": 1.06
             },
             {
@@ -11531,7 +11994,7 @@
                 "MaxHealth": 921.0,
                 "BasicResistanceRating": 20.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 106.3,
+                "AttackSpeedRating": 107.5,
                 "EnergyRegenRate": 1.15
             },
             {
@@ -11544,7 +12007,7 @@
                 "MaxHealth": 995.2,
                 "BasicResistanceRating": 21.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 107.56,
+                "AttackSpeedRating": 109.0,
                 "EnergyRegenRate": 1.24
             },
             {
@@ -11557,7 +12020,7 @@
                 "MaxHealth": 1069.4,
                 "BasicResistanceRating": 22.75,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 108.82,
+                "AttackSpeedRating": 110.5,
                 "EnergyRegenRate": 1.33
             },
             {
@@ -11570,7 +12033,7 @@
                 "MaxHealth": 1143.6,
                 "BasicResistanceRating": 24.0,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 110.08,
+                "AttackSpeedRating": 112.0,
                 "EnergyRegenRate": 1.42
             },
             {
@@ -11583,7 +12046,7 @@
                 "MaxHealth": 1217.8,
                 "BasicResistanceRating": 25.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 111.34,
+                "AttackSpeedRating": 113.5,
                 "EnergyRegenRate": 1.51
             },
             {
@@ -11596,7 +12059,7 @@
                 "MaxHealth": 1292.0,
                 "BasicResistanceRating": 26.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 112.6,
+                "AttackSpeedRating": 115.0,
                 "EnergyRegenRate": 1.6
             },
             {
@@ -11609,7 +12072,7 @@
                 "MaxHealth": 1366.2,
                 "BasicResistanceRating": 27.75,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 113.86,
+                "AttackSpeedRating": 116.5,
                 "EnergyRegenRate": 1.69
             },
             {
@@ -11622,7 +12085,7 @@
                 "MaxHealth": 1440.4,
                 "BasicResistanceRating": 29.0,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 115.12,
+                "AttackSpeedRating": 118.0,
                 "EnergyRegenRate": 1.78
             },
             {
@@ -11635,7 +12098,7 @@
                 "MaxHealth": 1514.6,
                 "BasicResistanceRating": 30.25,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 116.38,
+                "AttackSpeedRating": 119.5,
                 "EnergyRegenRate": 1.87
             },
             {
@@ -11648,7 +12111,7 @@
                 "MaxHealth": 1588.8,
                 "BasicResistanceRating": 31.5,
                 "CleaveRating": 0.2,
-                "AttackSpeedRating": 117.64,
+                "AttackSpeedRating": 121.0,
                 "EnergyRegenRate": 1.96
             }
         ],
@@ -11670,72 +12133,72 @@
                     {
                         "damage": 66.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.3332
+                        "cooldown": 1.33005
                     },
                     {
                         "damage": 67.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.31682
+                        "cooldown": 1.31068
                     },
                     {
                         "damage": 69.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.30083
+                        "cooldown": 1.29187
                     },
                     {
                         "damage": 70.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.28522
+                        "cooldown": 1.27358
                     },
                     {
                         "damage": 72.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.26999
+                        "cooldown": 1.25581
                     },
                     {
                         "damage": 73.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.25511
+                        "cooldown": 1.23853
                     },
                     {
                         "damage": 75.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.24058
+                        "cooldown": 1.22172
                     },
                     {
                         "damage": 76.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.22638
+                        "cooldown": 1.20536
                     },
                     {
                         "damage": 78.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.2125
+                        "cooldown": 1.18943
                     },
                     {
                         "damage": 79.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.19893
+                        "cooldown": 1.17391
                     },
                     {
                         "damage": 81.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.18567
+                        "cooldown": 1.1588
                     },
                     {
                         "damage": 82.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.17269
+                        "cooldown": 1.14407
                     },
                     {
                         "damage": 84.0,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.15999
+                        "cooldown": 1.12971
                     },
                     {
                         "damage": 85.5,
                         "attackratingcoefficient": 0.7,
-                        "cooldown": 1.14757
+                        "cooldown": 1.1157
                     }
                 ],
                 "images": {
@@ -11898,20 +12361,20 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "damage": 300.0,
-                        "attackratingcoefficient": 0.8,
+                        "damage": 260.0,
+                        "attackratingcoefficient": 1.0,
                         "cooldown": 90.0,
                         "energycost": -85.0
                     },
                     {
-                        "damage": 400.0,
-                        "attackratingcoefficient": 0.8,
+                        "damage": 350.0,
+                        "attackratingcoefficient": 1.0,
                         "cooldown": 70.0,
                         "energycost": -110.0
                     },
                     {
-                        "damage": 500.0,
-                        "attackratingcoefficient": 0.8,
+                        "damage": 440.0,
+                        "attackratingcoefficient": 1.0,
                         "cooldown": 50.0,
                         "energycost": -135.0
                     }
@@ -12292,7 +12755,7 @@
                     {
                         "duration": 3.0,
                         "damage": 60.0,
-                        "movespeed": -175.0,
+                        "movespeed": -200.0,
                         "attackratingcoefficient": 0.6,
                         "cooldown": 9.0,
                         "energycost": -90.0
@@ -12300,7 +12763,7 @@
                     {
                         "duration": 3.0,
                         "damage": 80.0,
-                        "movespeed": -245.0,
+                        "movespeed": -250.0,
                         "attackratingcoefficient": 0.6,
                         "cooldown": 9.0,
                         "energycost": -105.0
@@ -12308,7 +12771,7 @@
                     {
                         "duration": 3.0,
                         "damage": 100.0,
-                        "movespeed": -315.0,
+                        "movespeed": -300.0,
                         "attackratingcoefficient": 0.6,
                         "cooldown": 9.0,
                         "energycost": -120.0
@@ -12316,7 +12779,7 @@
                     {
                         "duration": 3.0,
                         "damage": 120.0,
-                        "movespeed": -385.0,
+                        "movespeed": -350.0,
                         "attackratingcoefficient": 0.6,
                         "cooldown": 9.0,
                         "energycost": -135.0
@@ -12374,24 +12837,30 @@
             },
             {
                 "name": "Reversal of Fortune",
-                "description": "Muriel flies to a targeted ally anywhere on the map. The ally instantly receives a +{shield} {attr:shld}. Enemy heroes are knocked up as Muriel lands. ",
-                "shortDescription": "• Fly to Target Ally (Unlimited Range)\r\n• +{shield} {attr:shld}, Knockup Enemies upon arrival",
+                "description": "Muriel flies to a targeted ally anywhere on the map. The ally instantly receives a +{shield} {attr:shld}. Enemy heroes are slowed by {movespeed} {attr:spd} for {duration} as Muriel lands. ",
+                "shortDescription": "• Fly to Target Ally (Unlimited Range)\r\n• +{shield} {attr:shld}\r\n• Slow ({movespeed} {attr:spd}) upon arrival for {duration} seconds",
                 "type": "Ultimate",
                 "binding": "R",
                 "damageType": null,
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
+                        "duration": 2.0,
+                        "movespeed": -400.0,
                         "shield": 350.0,
                         "cooldown": 130.0,
                         "energycost": -150.0
                     },
                     {
+                        "duration": 2.0,
+                        "movespeed": -400.0,
                         "shield": 600.0,
                         "cooldown": 120.0,
                         "energycost": -200.0
                     },
                     {
+                        "duration": 2.0,
+                        "movespeed": -400.0,
                         "shield": 850.0,
                         "cooldown": 110.0,
                         "energycost": -250.0
@@ -12725,30 +13194,30 @@
                 "maxLevel": 4,
                 "modifiersByLevel": [
                     {
-                        "damage": 80.0,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 8.0,
+                        "damage": 75.0,
+                        "attackratingcoefficient": 0.75,
+                        "cooldown": 9.0,
                         "range": 2500.0,
                         "energycost": -80.0
                     },
                     {
-                        "damage": 140.0,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 8.0,
+                        "damage": 125.0,
+                        "attackratingcoefficient": 0.75,
+                        "cooldown": 9.0,
                         "range": 2500.0,
                         "energycost": -90.0
                     },
                     {
-                        "damage": 200.0,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 8.0,
+                        "damage": 175.0,
+                        "attackratingcoefficient": 0.75,
+                        "cooldown": 9.0,
                         "range": 2500.0,
                         "energycost": -100.0
                     },
                     {
-                        "damage": 260.0,
-                        "attackratingcoefficient": 1.0,
-                        "cooldown": 8.0,
+                        "damage": 225.0,
+                        "attackratingcoefficient": 0.75,
+                        "cooldown": 9.0,
                         "range": 2500.0,
                         "energycost": -110.0
                     }
@@ -12801,7 +13270,7 @@
             },
             {
                 "name": "Relentless",
-                "description": "Passive: Successive hits within 5 seconds on the same target deals an extra 2/3.5/5/6.5% Bow Shot Damage. This effect stacks up to {stacknumber} times, and is triggered by any damage Sparrow causes.",
+                "description": "Passive: Successive hits within 5 seconds on the same target deals an extra 3/5/7/9% Bow Shot Damage. This effect stacks up to {stacknumber} times, and is triggered by any damage Sparrow causes.",
                 "shortDescription": "• Passive: Consecutive attacks within {movespeed}s deal an additional {maxhealthpercent}% Bow Shot {attr:physdmg} \r\n• Extra damage can Stack up to {stacknumber}x",
                 "type": "Secondary",
                 "binding": "E",
@@ -12845,21 +13314,21 @@
                     {
                         "duration": 7.0,
                         "percentage": 50.0,
-                        "cooldown": 90.0,
+                        "cooldown": 100.0,
                         "maxhealthpercent": 50.0,
                         "energycost": -50.0
                     },
                     {
                         "duration": 7.0,
                         "percentage": 70.0,
-                        "cooldown": 70.0,
+                        "cooldown": 85.0,
                         "maxhealthpercent": 70.0,
                         "energycost": -50.0
                     },
                     {
                         "duration": 7.0,
                         "percentage": 90.0,
-                        "cooldown": 50.0,
+                        "cooldown": 70.0,
                         "maxhealthpercent": 90.0,
                         "energycost": -50.0
                     }
@@ -13196,25 +13665,25 @@
                 "modifiersByLevel": [
                     {
                         "damage": 60.0,
-                        "attackratingcoefficient": 0.7,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 5.0,
                         "energycost": -25.0
                     },
                     {
                         "damage": 80.0,
-                        "attackratingcoefficient": 0.7,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 5.0,
                         "energycost": -25.0
                     },
                     {
                         "damage": 100.0,
-                        "attackratingcoefficient": 0.7,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 5.0,
                         "energycost": -25.0
                     },
                     {
                         "damage": 120.0,
-                        "attackratingcoefficient": 0.7,
+                        "attackratingcoefficient": 0.6,
                         "cooldown": 5.0,
                         "energycost": -25.0
                     }
@@ -13234,25 +13703,25 @@
                 "modifiersByLevel": [
                     {
                         "damage": 75.0,
-                        "attackratingcoefficient": 0.4,
+                        "attackratingcoefficient": 0.3,
                         "cooldown": 14.0,
                         "energycost": -70.0
                     },
                     {
                         "damage": 120.0,
-                        "attackratingcoefficient": 0.4,
+                        "attackratingcoefficient": 0.3,
                         "cooldown": 14.0,
                         "energycost": -75.0
                     },
                     {
                         "damage": 165.0,
-                        "attackratingcoefficient": 0.4,
+                        "attackratingcoefficient": 0.3,
                         "cooldown": 14.0,
                         "energycost": -80.0
                     },
                     {
                         "damage": 210.0,
-                        "attackratingcoefficient": 0.4,
+                        "attackratingcoefficient": 0.3,
                         "cooldown": 14.0,
                         "energycost": -85.0
                     }

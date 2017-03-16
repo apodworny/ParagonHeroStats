@@ -3,13 +3,24 @@ import Ember from 'ember';
 export default Ember.Component.extend({
     didInsertElement() {
         this._super(...arguments);
-        var attacksPerSecond = this.get('aps');
+        var heroData = this.get('heroData');
+        var attacksPerSecond = heroData.AttacksPerSecond;
+        var burstDamage = heroData.BurstDamage;
+        var damagePerSecond = heroData.DamagePerSecond;
         var maxAps = this.get('maxAps');
         var minAps = this.get('minAps');
-        console.log("ASDSADSA: " + attacksPerSecond);
+        var maxBurst = this.get('maxBurst');
+        var minBurst = this.get('minBurst');
+        var maxDps = this.get('maxDps');
+        var minDps = this.get('minDps');
 
+        if(heroData.name.toLowerCase() == "yin"){
+            debugger;
+        }
         var domEle = this.$('.bar-stat');
-        domEle.children().css("width", (attacksPerSecond-minAps)/(maxAps-minAps)*100 + "%");
+        domEle.children(".bar--aps").css("width", (attacksPerSecond-minAps)/(maxAps-minAps)*100 + "%");
+        domEle.children(".bar--burst").css("width", (burstDamage-minBurst)/(maxBurst-minBurst)*100 + "%");
+        domEle.children(".bar--dps").css("width", (damagePerSecond-minDps)/(maxDps-minDps)*100 + "%");
 
         //can use a percentage for the bar graph, whereas 100 is 0, and the highest number is 100%
 

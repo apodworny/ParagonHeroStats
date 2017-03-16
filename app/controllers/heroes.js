@@ -4,6 +4,10 @@ export default Ember.Controller.extend({
     testArray1: null,
     maxAps: null,
     minAps: null,
+    maxBurst: null,
+    minBurst: null,
+    maxDps: null,
+    minDps: null,
     init: function() {
         var that = this;
 

@@ -10,21 +10,17 @@ export default Ember.Route.extend({
         var heroes = model.get('content');
 
         var highestAPS = 0;
-        var lowestAPS = 10;
+        var lowestAPS = 9999;
 
+        var highestBurstDamage = 0;
+        var lowestBurstDamage = 9999;
 
+        var highestDamagePerSecond = 0;
+        var lowestDamagePerSecond = 9999;
 
         for (var i = 0; i < heroes.length; i++) {
             //Get Attacks per second
             heroes[i]._data.AttacksPerSecond = 1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100));
-
-            //Determine highest aps hero
-            if (heroes[i]._data.AttacksPerSecond >= highestAPS) {
-                highestAPS = heroes[i]._data.AttacksPerSecond;
-            }
-            if (heroes[i]._data.AttacksPerSecond <= lowestAPS) {
-                lowestAPS = heroes[i]._data.AttacksPerSecond;
-            }
 
             //DPS with basic attacks only
             heroes[i]._data.DamagePerSecond = (heroes[i]._data.AttacksPerSecond * heroes[i]._data.abilities[0].modifiersByLevel[14].damage);
@@ -66,12 +62,38 @@ export default Ember.Route.extend({
             console.log(heroes[i]._data.DamagePerSecond);
             console.log(heroes[i]._data.BurstDamage);
 
-            //I need an object that has multiple instances that can be accessed from a template
-            
+            //Determine highest aps hero
+            if (heroes[i]._data.AttacksPerSecond >= highestAPS) {
+                highestAPS = heroes[i]._data.AttacksPerSecond;
+            }
+            //Determine lowest aps hero
+            if (heroes[i]._data.AttacksPerSecond <= lowestAPS) {
+                lowestAPS = heroes[i]._data.AttacksPerSecond;
+            }
+            //Determine highest burst damage hero
+            if (heroes[i]._data.BurstDamage >= highestBurstDamage) {
+                highestBurstDamage = heroes[i]._data.BurstDamage;
+            }
+            //Determine lowest burst damage hero
+            if (heroes[i]._data.BurstDamage <= lowestBurstDamage) {
+                lowestBurstDamage = heroes[i]._data.BurstDamage;
+            }
+            //Determine highest DPS hero
+            if (heroes[i]._data.DamagePerSecond >= highestDamagePerSecond) {
+                highestDamagePerSecond = heroes[i]._data.DamagePerSecond;
+            }
+            //Determine lowest DPS hero
+            if (heroes[i]._data.DamagePerSecond <= lowestDamagePerSecond) {
+                lowestDamagePerSecond = heroes[i]._data.DamagePerSecond;
+            }
         }
 
         controller.set('maxAps', highestAPS);
         controller.set('minAps', lowestAPS);
+        controller.set('maxBurst', highestBurstDamage);
+        controller.set('minBurst', lowestBurstDamage);
+        controller.set('maxDps', highestDamagePerSecond);
+        controller.set('minDps', lowestDamagePerSecond);
         controller.set('testArray1', heroes);
     }
 });
