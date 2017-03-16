@@ -1,19 +1,22 @@
-<h1>Heroes</h1>
-<p>Add a filter to sort by traits at the top</p>
-<p>Assassin</p>
-<p>Attacker</p>
-<p>Burst</p>
-<p>Controller</p>
-<p>Durable</p>
-<p>Elusive</p>
-<p>Ganker</p>
-<p>Guardian</p>
-<p>Initiator</p>
-<p>Marauder</p>
-<p>Sieger</p>
-<p>Wild</p>
-<p>Zoner</p>
 <p>Be able to order heroes by attack speed and other traits</p>
+<div class="filter--clear-all">
+    <button {{action 'clearAll'}}>Clear All</button>
+</div>
+<div class="filter">
+    <button class="filter__trait" onclick={{action 'toggleFilterAssassin'}}>Assassin</button>
+    <button class="filter__trait"{{action 'toggleFilterAttacker'}}>Attacker</button>
+    <button class="filter__trait"{{action 'toggleFilterBurst'}}>Burst</button>
+    <button class="filter__trait"{{action 'toggleFilterController'}}>Controller</button>
+    <button class="filter__trait"{{action 'toggleFilterDurable'}}>Durable</button>
+    <button class="filter__trait"{{action 'toggleFilterElusive'}}>Elusive</button>
+    <button class="filter__trait"{{action 'toggleFilterGanker'}}>Ganker</button>
+    <button class="filter__trait"{{action 'toggleFilterGuardian'}}>Guardian</button>
+    <button class="filter__trait"{{action 'toggleFilterInitiator'}}>Initiator</button>
+    <button class="filter__trait"{{action 'toggleFilterMarauder'}}>Marauder</button>
+    <button class="filter__trait"{{action 'toggleFilterSieger'}}>Sieger</button>
+    <button class="filter__trait"{{action 'toggleFilterWild'}}>Wild</button>
+    <button class="filter__trait"{{action 'toggleFilterZoner'}}>Zoner</button>
+</div>
 <div class="heroes">
     {{#each testArray1 as |hero index|}}
     <div class="hero">

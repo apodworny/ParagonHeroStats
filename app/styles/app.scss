@@ -19,7 +19,7 @@ html, body {
     width: 500px;
     color: #fff;
     .portrait img {
-        width: 100px;
+        width: 15px;
     }
 }
 
@@ -35,6 +35,27 @@ html, body {
         }
         &--dps {
             background-color: red;
+        }
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 0 auto;
+    &__trait {
+        width: 100px;
+        border: 1px solid #333;
+        background-color: #222;
+        text-align: center;
+        margin: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        &:focus {
+            outline: none;
         }
     }
 }
