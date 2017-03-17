@@ -3,29 +3,28 @@
     <button {{action 'clearAll'}}>Clear All</button>
 </div>
 <div class="filter">
-    <button class="filter__trait" onclick={{action 'toggleFilterAssassin'}}>Assassin</button>
-    <button class="filter__trait"{{action 'toggleFilterAttacker'}}>Attacker</button>
-    <button class="filter__trait"{{action 'toggleFilterBurst'}}>Burst</button>
-    <button class="filter__trait"{{action 'toggleFilterController'}}>Controller</button>
-    <button class="filter__trait"{{action 'toggleFilterDurable'}}>Durable</button>
-    <button class="filter__trait"{{action 'toggleFilterElusive'}}>Elusive</button>
-    <button class="filter__trait"{{action 'toggleFilterGanker'}}>Ganker</button>
-    <button class="filter__trait"{{action 'toggleFilterGuardian'}}>Guardian</button>
-    <button class="filter__trait"{{action 'toggleFilterInitiator'}}>Initiator</button>
-    <button class="filter__trait"{{action 'toggleFilterMarauder'}}>Marauder</button>
-    <button class="filter__trait"{{action 'toggleFilterSieger'}}>Sieger</button>
-    <button class="filter__trait"{{action 'toggleFilterWild'}}>Wild</button>
-    <button class="filter__trait"{{action 'toggleFilterZoner'}}>Zoner</button>
+    <button class="filter__trait active" onclick={{action 'toggleFilter' 'assassin'}}>Assassin</button>
+    <button class="filter__trait active" onclick={{action 'toggleFilter' 'attacker'}}>Attacker</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'burst'}}>Burst</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'controller'}}>Controller</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'durable'}}>Durable</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'elusive'}}>Elusive</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'ganker'}}>Ganker</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'guardian'}}>Guardian</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'initiator'}}>Initiator</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'marauder'}}>Marauder</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'sieger'}}>Sieger</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'wild'}}>Wild</button>
+    <button class="filter__trait active"onclick={{action 'toggleFilter' 'zoner'}}>Zoner</button>
 </div>
 <div class="heroes">
-    {{#each testArray1 as |hero index|}}
+    {{#each filteredHeroes as |hero index|}}
     <div class="hero">
         <div class="basics">
             <div class="portrait">
                 <img src="{{hero._data.images}}" alt="Hero image">
             </div>
             <div class="name">
-                <p>{{hero.id}}</p>
                 <p>{{hero._data.name}}</p>
             </div>
         </div>

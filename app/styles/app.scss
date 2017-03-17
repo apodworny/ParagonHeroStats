@@ -7,34 +7,52 @@ html, body {
 
 .heroes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .hero {
-    background-color: #111;
+    margin: 10px 10px;
+    background-color: #141414;
     border: 1px solid #222;
     border-radius: 10px;
-    width: 500px;
+    width: 300px;
     color: #fff;
-    .portrait img {
-        width: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .basics {
+        .portrait {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            img {
+                width: 80px;
+            }
+        }
+        .name {
+            p {
+                margin: 5px 0 10px;
+                text-align: center;
+            }
+        }
     }
 }
 
 .bar-stat {
     width: 100%;
     .bar {
-        height: 20px;
+        height: 15px;
+        margin: 4px 0;
         &--aps {
             background-color: yellow;
         }
-        &--burst {
-            background-color: white;
-        }
         &--dps {
             background-color: red;
+        }
+        &--burst {
+            background-color: blue;
         }
     }
 }
@@ -46,16 +64,21 @@ html, body {
     width: 600px;
     margin: 0 auto;
     &__trait {
+        background-color: #171717;
+        color: #666;
+        border: none;
         width: 100px;
-        border: 1px solid #333;
-        background-color: #222;
         text-align: center;
         margin: 5px;
-        color: #fff;
         cursor: pointer;
         padding: 10px;
         &:focus {
             outline: none;
+        }
+        &.active {
+            color: #fff;
+            border: 1px solid #333;
+            background-color: #222;
         }
     }
 }

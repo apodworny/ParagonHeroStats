@@ -9,6 +9,8 @@ export default Ember.Route.extend({
 
         var heroes = model.get('content');
 
+        var filteredHeroes = [];
+
         var highestAPS = 0;
         var lowestAPS = 9999;
 
@@ -94,6 +96,74 @@ export default Ember.Route.extend({
         controller.set('minBurst', lowestBurstDamage);
         controller.set('maxDps', highestDamagePerSecond);
         controller.set('minDps', lowestDamagePerSecond);
-        controller.set('testArray1', heroes);
+        controller.set('unfilteredHeroes', heroes);
+
+        //Unfiltered for the first call
+        controller.set("filteredHeroes", heroes);
+
+    },
+    actions: {
+        filterHeroesTest(){
+            var controller = this.controllerFor('Heroes');
+            var filteredHeroes = [];
+            for (var i = 0; i < controller.get("unfilteredHeroes").length; i++) {
+                for(var j = 0; j < 3; j++) {
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "assassin" && controller.get("assassin") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "attacker" && controller.get("attacker") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "burst" && controller.get("burst") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "controller" && controller.get("controller") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "durable" && controller.get("durable") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "elusive" && controller.get("elusive") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "ganker" && controller.get("ganker") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "guardian" && controller.get("guardian") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "initiator" && controller.get("initiator") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "marauder" && controller.get("marauder") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "sieger" && controller.get("sieger") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "wild" && controller.get("wild") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "zoner" && controller.get("zoner") == true){
+                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                        break;
+                    }
+                }
+            }
+            
+            controller.set("filteredHeroes", filteredHeroes);
+        }
     }
 });

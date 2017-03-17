@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    testArray1: null,
+    unfilteredHeroes: null,
+    filteredHeroes: null,
     maxAps: null,
     minAps: null,
     maxBurst: null,
@@ -24,24 +25,23 @@ export default Ember.Controller.extend({
     zoner: true,
 
     actions: {
-        toggleFilterAssassin(event) {
+        toggleFilter(trait, event) {
+            //I will have to check all previously applied filters, and add the current filter to them
+
             var element = Ember.$(event.target);
-            element.css("backgroundColor", "#171717");
-            element.css("color", "#666");
-            element.css("border", "none");
-            if(this.get("assassin") == true) {
-                this.set("assassin", false);
-                console.log("assassin is now " + this.get("assassin"));
+            if(this.get(trait) == true) {
+                this.set(trait, false);
+                element.toggleClass("active");
             }
             else {
-                this.set("assassin", true);
-                console.log("assassin is now " + this.get("assassin"));
+                this.set(trait, true);
+                element.toggleClass("active");
             }
+
+            this.send("filterHeroesTest");
         },
         clearAll() {
-            Ember.$(".filter__trait").css("backgroundColor", "#171717");
-            Ember.$(".filter__trait").css("color", "#666");
-            Ember.$(".filter__trait").css("border", "none");
+            Ember.$(".filter__trait").removeClass("active");
             this.set("assassin", false);
             this.set("attacker", false);
             this.set("burst", false);
@@ -55,11 +55,12 @@ export default Ember.Controller.extend({
             this.set("sieger", false);
             this.set("wild", false);
             this.set("zoner", false);
+                        
+            this.send("filterHeroesTest");
         }
     },
     
     init: function() {
         var that = this;
-        //get name where id = 051b478dd9b58f6f31c5e580996724df (countess)
     }
 });
