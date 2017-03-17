@@ -107,7 +107,7 @@ export default Ember.Route.extend({
             var controller = this.controllerFor('Heroes');
             var filteredHeroes = [];
             for (var i = 0; i < controller.get("unfilteredHeroes").length; i++) {
-                for(var j = 0; j < 3; j++) {
+                for(var j = 0; j < controller.get("unfilteredHeroes")[i]._data.traits.length; j++) {
                     if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "assassin" && controller.get("assassin") == true){
                         filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
                         break;
