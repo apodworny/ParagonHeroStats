@@ -175,77 +175,7 @@ export default Ember.Route.extend({
                     // make sure there are no elements left in sub
                     return j == sub.length;
                 }
-                
-
-                //if all of the items from one array are in another
-
-                for(var j = 0; j < currentFilteredTraits.length; j++) {
-
-                }
-
-
-
-
-                for(var j = 0; j < controller.get("unfilteredHeroes")[i]._data.traits.length; j++) {
-                    if(Ember.$.inArray("assassin", currentFilteredTraits)) {
-
-                    }
-
-
-                    
-
-
-                    /*if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "attacker" && controller.get("attacker") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "burst" && controller.get("burst") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "controller" && controller.get("controller") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "durable" && controller.get("durable") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "elusive" && controller.get("elusive") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "ganker" && controller.get("ganker") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "guardian" && controller.get("guardian") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "initiator" && controller.get("initiator") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "marauder" && controller.get("marauder") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "sieger" && controller.get("sieger") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "wild" && controller.get("wild") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "zoner" && controller.get("zoner") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
-                    }*/
-                }
             }
-            
             controller.set("filteredHeroes", filteredHeroes);
         }
     }
