@@ -106,13 +106,96 @@ export default Ember.Route.extend({
         filterHeroesTest(){
             var controller = this.controllerFor('Heroes');
             var filteredHeroes = [];
+            var currentFilteredTraits = [];
+            var currentHeroTraits = [];
+
+            if(controller.get("assassin") == true){
+                currentFilteredTraits.push("Assassin");
+            }
+            if(controller.get("attacker") == true){
+                currentFilteredTraits.push("Attacker");
+            }
+            if(controller.get("burst") == true){
+                currentFilteredTraits.push("Burst");
+            }
+            if(controller.get("controller") == true){
+                currentFilteredTraits.push("Controller");
+            }
+            if(controller.get("durable") == true){
+                currentFilteredTraits.push("Durable");
+            }
+            if(controller.get("elusive") == true){
+                currentFilteredTraits.push("Elusive");
+            }
+            if(controller.get("ganker") == true){
+                currentFilteredTraits.push("Ganker");
+            }
+            if(controller.get("guardian") == true){
+                currentFilteredTraits.push("Guardian");
+            }
+            if(controller.get("initiator") == true){
+                currentFilteredTraits.push("Initiator");
+            }
+            if(controller.get("marauder") == true){
+                currentFilteredTraits.push("Marauder");
+            }
+            if(controller.get("sieger") == true){
+                currentFilteredTraits.push("Sieger");
+            }
+            if(controller.get("wild") == true){
+                currentFilteredTraits.push("Wild");
+            }
+            if(controller.get("zoner") == true){
+                currentFilteredTraits.push("Zoner");
+            }
+
+
             for (var i = 0; i < controller.get("unfilteredHeroes").length; i++) {
-                for(var j = 0; j < controller.get("unfilteredHeroes")[i]._data.traits.length; j++) {
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "assassin" && controller.get("assassin") == true){
-                        filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                        break;
+                //need an array that contains all filtered traits
+                currentHeroTraits = controller.get("unfilteredHeroes")[i]._data.traits;
+
+                if(superbag(currentHeroTraits, currentFilteredTraits)){
+                    filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
+                }
+
+                function superbag(sup, sub) {
+                    sup.sort();
+                    sub.sort();
+                    var i, j;
+                    for (i=0,j=0; i<sup.length && j<sub.length;) {
+                        if (sup[i] < sub[j]) {
+                            ++i;
+                        } else if (sup[i] == sub[j]) {
+                            ++i; ++j;
+                        } else {
+                            // sub[j] not in sup, so sub not subbag
+                            return false;
+                        }
                     }
-                    if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "attacker" && controller.get("attacker") == true){
+                    // make sure there are no elements left in sub
+                    return j == sub.length;
+                }
+                
+
+                //if all of the items from one array are in another
+
+                for(var j = 0; j < currentFilteredTraits.length; j++) {
+
+                }
+
+
+
+
+                for(var j = 0; j < controller.get("unfilteredHeroes")[i]._data.traits.length; j++) {
+                    if(Ember.$.inArray("assassin", currentFilteredTraits)) {
+
+                    }
+
+
+                    
+
+
+                    /*if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "attacker" && controller.get("attacker") == true){
                         filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
                         break;
                     }
@@ -159,7 +242,7 @@ export default Ember.Route.extend({
                     if(controller.get('unfilteredHeroes')[i]._data.traits[j].toLowerCase() == "zoner" && controller.get("zoner") == true){
                         filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
                         break;
-                    }
+                    }*/
                 }
             }
             
