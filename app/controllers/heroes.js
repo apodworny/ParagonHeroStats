@@ -58,9 +58,5 @@ export default Ember.Controller.extend({
                         
             this.send("filterHeroesTest");
         }
-    },
-    
-    init: function() {
-        var that = this;
     }
 });

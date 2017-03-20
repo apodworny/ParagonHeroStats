@@ -1,0 +1,19 @@
+{
+    "remotePath": "./paragonstats.gg/dist",
+    "host": "server53.web-hosting.com",
+    "username": "alexklls",
+    "password": "Sportsking7",
+    "port": 21,
+    "secure": true,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": true,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ]
+}

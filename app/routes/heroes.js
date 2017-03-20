@@ -22,7 +22,7 @@ export default Ember.Route.extend({
 
         for (var i = 0; i < heroes.length; i++) {
             //Get Attacks per second
-            heroes[i]._data.AttacksPerSecond = 1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100));
+            heroes[i]._data.AttacksPerSecond = (1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100))).toFixed(2);
 
             //DPS with basic attacks only
             heroes[i]._data.DamagePerSecond = (heroes[i]._data.AttacksPerSecond * heroes[i]._data.abilities[0].modifiersByLevel[14].damage);
@@ -51,6 +51,12 @@ export default Ember.Route.extend({
 
                 heroes[i]._data.BurstDamage += heroes[i]._data.abilities[4].modifiersByLevel[2].damage;
             }
+
+            //Rounding for formatting purposes
+            heroes[i]._data.DamagePerSecond = Math.round(heroes[i]._data.DamagePerSecond);
+            heroes[i]._data.BurstDamage = Math.round(heroes[i]._data.BurstDamage);
+
+
 
             //SecondsPerAttack = BAT / ((AS) / 100)
             //AttacksPerSecond = 1/(BAT / ((AS) / 100)) Use the reciprocal of seconds per attack to find attacks per second

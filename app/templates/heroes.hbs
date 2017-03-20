@@ -1,6 +1,16 @@
 <p>Be able to order heroes by attack speed and other traits</p>
-<div class="filter--clear-all">
-    <button {{action 'clearAll'}}>Clear All</button>
+<p>Ability armour for every hero is 30.5</p>
+<div class="sliders">
+    <div class="slider slider--level">
+        <span id="valBox"></span>
+        <input type="range" min="1" max="15" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+    </div>
+    <div class="slider slider--power">
+        
+    </div>
+    <div class="slider slider--attack-speed">
+        
+    </div>
 </div>
 <div class="filter">
     <button class="filter__trait" onclick={{action 'toggleFilter' 'assassin'}}>Assassin</button>
@@ -33,6 +43,23 @@
             <p>Attacks per second: {{hero._data.AttacksPerSecond}}</p>
             <p>Damage per second: {{hero._data.DamagePerSecond}}</p>
             <p>Burst Damage: {{hero._data.BurstDamage}}</p>
+            <div class="attributes">
+                <div class="attribute attribute--health">
+                    <p>Health: {{hero._data.attributesByLevel.[14].MaxHealth}}</p>
+                </div>
+                <div class="attribute attribute--energy">
+                    <p>Energy: {{hero._data.attributesByLevel.[14].MaxEnergy}}</p>
+                </div>
+                <div class="attribute attribute--health-regen">
+                    <p>Health Regen: {{hero._data.attributesByLevel.[14].HealthRegenRate}}</p>
+                </div>
+                <div class="attribute attribute--energy-regen">
+                    <p>Energy Regen: {{hero._data.attributesByLevel.[14].EnergyRegenRate}}</p>
+                </div>
+                <div class="attribute attribute--basic-armour">
+                    <p>Basic Armour: {{hero._data.attributesByLevel.[14].BasicResistanceRating}}</p>
+                </div>
+            </div>
             <!--#each hero._data.attributesByLevel as |stat|
             <p>{{stat.BaseAttackTime}}</p>
             /each-->
