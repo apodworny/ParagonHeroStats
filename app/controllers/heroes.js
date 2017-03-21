@@ -10,6 +10,10 @@ export default Ember.Controller.extend({
     maxDps: null,
     minDps: null,
 
+    heroLevel: 1,
+    cpPower: 0,
+    cpAttackSpeed: 0,
+
     assassin: false,
     attacker: false,
     burst: false,
@@ -38,7 +42,7 @@ export default Ember.Controller.extend({
                 element.toggleClass("active");
             }
 
-            this.send("filterHeroesTest");
+            this.send("filterHeroes");
         },
         clearAll() {
             Ember.$(".filter__trait").removeClass("active");
@@ -56,7 +60,34 @@ export default Ember.Controller.extend({
             this.set("wild", false);
             this.set("zoner", false);
                         
-            this.send("filterHeroesTest");
+            this.send("filterHeroes");
+        },
+        heroLevelSlider(level){
+            if(isNaN(parseInt(level))) {
+                level = 1;
+            }
+            else if(level > 15) {
+                level = 15;
+            }
+            this.set('heroLevel', level)
+        },
+        cpPowerSlider(cp){
+            if(isNaN(parseInt(cp))) {
+                cp = 0;
+            }
+            else if(cp > 66) {
+                cp = 66;
+            }
+            this.set('cpPower', cp)
+        },
+        cpAttackSpeedSlider(cp){
+            if(isNaN(parseInt(cp))) {
+                cp = 0;
+            }
+            else if(cp > 66) {
+                cp = 66;
+            }
+            this.set('cpAttackSpeed', cp)
         }
     }
 });

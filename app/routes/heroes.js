@@ -64,12 +64,6 @@ export default Ember.Route.extend({
             //SecondsPerAttack = BAT / ((AS + 100) / 100)
             //Since epic's data already has the 100 attack speed as a minimum for every hero, we don't have to add the 100 that the attack speed formula shows
 
-            console.log(heroes[i]._data.name);
-            console.log(heroes[i].id);
-            console.log(heroes[i]._data.AttacksPerSecond);
-            console.log(heroes[i]._data.DamagePerSecond);
-            console.log(heroes[i]._data.BurstDamage);
-
             //Determine highest aps hero
             if (heroes[i]._data.AttacksPerSecond >= highestAPS) {
                 highestAPS = heroes[i]._data.AttacksPerSecond;
@@ -109,7 +103,7 @@ export default Ember.Route.extend({
 
     },
     actions: {
-        filterHeroesTest(){
+        filterHeroes(){
             var controller = this.controllerFor('Heroes');
             var filteredHeroes = [];
             var currentFilteredTraits = [];

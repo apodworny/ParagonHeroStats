@@ -14,9 +14,6 @@ export default Ember.Component.extend({
         var maxDps = this.get('maxDps');
         var minDps = this.get('minDps');
 
-        if(heroData.name.toLowerCase() == "yin"){
-            
-        }
         var domEle = this.$('.bar-stat');
         domEle.children(".bar--aps").css("width", (attacksPerSecond-minAps)/(maxAps-minAps)*100 + "%");
         domEle.children(".bar--burst").css("width", (burstDamage-minBurst)/(maxBurst-minBurst)*100 + "%");

@@ -2,14 +2,19 @@
 <p>Ability armour for every hero is 30.5</p>
 <div class="sliders">
     <div class="slider slider--level">
-        <span id="valBox"></span>
-        <input type="range" min="1" max="15" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+        <p>Hero Level:</p>
+        <input type="range" value={{heroLevel}} min="1" max="15" step="1" oninput={{action 'heroLevelSlider' value="target.value"}} onchange={{action 'heroLevelSlider' value="target.value"}}>
+        <div class="value">{{input value=heroLevel min="1" max="15" enter="heroLevelSlider"}}</div>
     </div>
     <div class="slider slider--power">
-        
+        <p>Power CP:</p>
+        <input type="range" value={{cpPower}} min="0" max="66" step="1" oninput={{action 'cpPowerSlider' value="target.value"}} onchange={{action 'cpPowerSlider' value="target.value"}}>
+        <div class="value">{{input value=cpPower maxlength="2" min="0" max="66" enter="cpPowerSlider"}}</div>
     </div>
     <div class="slider slider--attack-speed">
-        
+        <p>Attack Speed CP:</p>
+        <input type="range" value={{cpAttackSpeed}} min="0" max="66" step="1" oninput={{action 'cpAttackSpeedSlider' value="target.value"}} onchange={{action 'cpAttackSpeedSlider' value="target.value"}}>
+        <div class="value">{{input value=cpAttackSpeed maxlength="2" min="0" max="66" enter="cpAttackSpeedSlider"}}</div>
     </div>
 </div>
 <div class="filter">

@@ -1317,8 +1317,8 @@
             },
             {
                 "name": "Boulder Throw",
-                "description": "Rampage throws a boulder that deals {damage} {attr:endmg} and stuns enemy heroes for 1.4/1.6/1.8/2 seconds. Enemy minions hit by the boulder will be displaced. On activation Rampage has 5 seconds to confirm the ability if not confirmed in the time window the ability will cancel automatically. Canceling the ability will consume the energy cost.",
-                "shortDescription": "• Boulder: {damage} {attr:endmg}\r\n• Stun on hit for {stunduration}s\r\n• Knockaway Minions on hit",
+                "description": "Rampage throws a boulder that deals {damage} {attr:endmg} and stuns enemy heroes for 1.4/1.6/1.8/2 seconds. Enemy minions hit by the boulder will be displaced and stunned. On activation Rampage has 5 seconds to confirm the ability. If not confirmed in the time window the ability will cancel automatically. Canceling the ability will consume the energy cost.",
+                "shortDescription": "• Boulder: {damage} {attr:endmg}\r\n• Stun on hit for {movespeed}s\r\n• Knockaway Minions on hit",
                 "type": "Primary",
                 "binding": "Q",
                 "damageType": "Ability",
@@ -1326,6 +1326,7 @@
                 "modifiersByLevel": [
                     {
                         "damage": 100.0,
+                        "movespeed": 1.4,
                         "attackratingcoefficient": 0.75,
                         "stunduration": 2.0,
                         "cooldown": 14.0,
@@ -1333,6 +1334,7 @@
                     },
                     {
                         "damage": 165.0,
+                        "movespeed": 1.6,
                         "attackratingcoefficient": 0.75,
                         "stunduration": 2.0,
                         "cooldown": 14.0,
@@ -1340,6 +1342,7 @@
                     },
                     {
                         "damage": 230.0,
+                        "movespeed": 1.8,
                         "attackratingcoefficient": 0.75,
                         "stunduration": 2.0,
                         "cooldown": 14.0,
@@ -1347,6 +1350,7 @@
                     },
                     {
                         "damage": 295.0,
+                        "movespeed": 2.0,
                         "attackratingcoefficient": 0.75,
                         "stunduration": 2.0,
                         "cooldown": 14.0,
@@ -3668,8 +3672,8 @@
             },
             {
                 "name": "Ambush",
-                "description": "Khaimera leaps to a target enemy hero, dealing {damage} {attr:endmg} and applying a {movespeed} {attr:spd} {status:slow} in a small AOE. Khaimera is granted 4 stacks of Spirit Regeneration upon activation.",
-                "shortDescription": "• Leap to Targeted Enemy Hero: {damage} {attr:endmg} in AOE\r\n• {status:slow} ({movespeed} {attr:spd}) for {duration}s\r\n• Grants 4 Stacks of Spirit Regeneration",
+                "description": "Khaimera leaps to a target enemy hero, dealing {damage} {attr:endmg} and applying a {movespeed} {attr:spd} {status:slow} in a small AOE. Khaimera is granted {stacks} stacks of Spirit Regeneration upon activation.",
+                "shortDescription": "• Leap to Targeted Enemy Hero: {damage} {attr:endmg} in AOE\r\n• {status:slow} ({movespeed} {attr:spd}) for {duration}s\r\n• Grants {stacks} Stacks of Spirit Regeneration",
                 "type": "Alternate",
                 "binding": "RMB",
                 "damageType": "Ability",
@@ -3680,6 +3684,7 @@
                         "damage": 55.0,
                         "movespeed": -550.0,
                         "attackratingcoefficient": 0.25,
+                        "stacks": 3.0,
                         "cooldown": 5.0,
                         "energycost": -80.0
                     },
@@ -3688,6 +3693,7 @@
                         "damage": 70.0,
                         "movespeed": -550.0,
                         "attackratingcoefficient": 0.25,
+                        "stacks": 3.0,
                         "cooldown": 5.0,
                         "energycost": -65.0
                     },
@@ -3696,6 +3702,7 @@
                         "damage": 85.0,
                         "movespeed": -550.0,
                         "attackratingcoefficient": 0.25,
+                        "stacks": 3.0,
                         "cooldown": 5.0,
                         "energycost": -50.0
                     },
@@ -3704,6 +3711,7 @@
                         "damage": 100.0,
                         "movespeed": -550.0,
                         "attackratingcoefficient": 0.25,
+                        "stacks": 3.0,
                         "cooldown": 5.0,
                         "energycost": -35.0
                     }
@@ -3786,8 +3794,8 @@
             },
             {
                 "name": "Cull",
-                "description": "After a brief channel, Khaimera stuns and causes {damage} {attr:endmg} to a targeted enemy hero. Nearby enemies are displaced and receive a 60% {attr:spd} {status:slow} for {slowlong} seconds. Khaimera is granted 7 stacks of Spirit Regeneration upon activation.",
-                "shortDescription": "• Stun targeted Enemy Hero for {damage} {attr:endmg}\r\n• Knockaway and {status:slow} (60% {attr:spd}) others for {slowlong}s\r\n• Grants 7 Stacks of Spirit Regeneration",
+                "description": "After a brief channel, Khaimera stuns and causes {damage} {attr:endmg} to a targeted enemy hero. Nearby enemies are displaced and receive a 60% {attr:spd} {status:slow} for {slowlong} seconds. Khaimera is granted {stacks} stacks of Spirit Regeneration upon activation.",
+                "shortDescription": "• Stun targeted Enemy Hero for {damage} {attr:endmg}\r\n• Knockaway and {status:slow} (60% {attr:spd}) others for {slowlong}s\r\n• Grants {stacks} Stacks of Spirit Regeneration",
                 "type": "Ultimate",
                 "binding": "R",
                 "damageType": "Ability",
@@ -3796,6 +3804,7 @@
                     {
                         "damage": 250.0,
                         "attackratingcoefficient": 0.8,
+                        "stacks": 6.0,
                         "cooldown": 90.0,
                         "energycost": -75.0,
                         "slowlong": 3.0
@@ -3803,6 +3812,7 @@
                     {
                         "damage": 350.0,
                         "attackratingcoefficient": 0.8,
+                        "stacks": 6.0,
                         "cooldown": 70.0,
                         "energycost": -75.0,
                         "slowlong": 3.0
@@ -3810,6 +3820,7 @@
                     {
                         "damage": 450.0,
                         "attackratingcoefficient": 0.8,
+                        "stacks": 6.0,
                         "cooldown": 50.0,
                         "energycost": -75.0,
                         "slowlong": 3.0
@@ -4814,7 +4825,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.25,
                 "AbilityResistanceRating": 20.0,
-                "MaxHealth": 475.0,
+                "MaxHealth": 513.0,
                 "BasicResistanceRating": 18.0,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 100.0,
@@ -4827,8 +4838,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.45,
                 "AbilityResistanceRating": 20.75,
-                "MaxHealth": 539.03,
-                "BasicResistanceRating": 20.0,
+                "MaxHealth": 583.433,
+                "BasicResistanceRating": 20.3,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 102.8,
                 "EnergyRegenRate": 0.92
@@ -4840,8 +4851,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.65,
                 "AbilityResistanceRating": 21.5,
-                "MaxHealth": 603.06,
-                "BasicResistanceRating": 22.0,
+                "MaxHealth": 653.866,
+                "BasicResistanceRating": 22.6,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 105.6,
                 "EnergyRegenRate": 1.04
@@ -4853,8 +4864,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.85,
                 "AbilityResistanceRating": 22.25,
-                "MaxHealth": 667.09,
-                "BasicResistanceRating": 24.0,
+                "MaxHealth": 724.299,
+                "BasicResistanceRating": 24.9,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 108.4,
                 "EnergyRegenRate": 1.16
@@ -4866,8 +4877,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.05,
                 "AbilityResistanceRating": 23.0,
-                "MaxHealth": 731.12,
-                "BasicResistanceRating": 26.0,
+                "MaxHealth": 794.732,
+                "BasicResistanceRating": 27.2,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 111.2,
                 "EnergyRegenRate": 1.28
@@ -4879,8 +4890,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.25,
                 "AbilityResistanceRating": 23.75,
-                "MaxHealth": 795.15,
-                "BasicResistanceRating": 28.0,
+                "MaxHealth": 865.165,
+                "BasicResistanceRating": 29.5,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 114.0,
                 "EnergyRegenRate": 1.4
@@ -4892,8 +4903,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.45,
                 "AbilityResistanceRating": 24.5,
-                "MaxHealth": 859.18,
-                "BasicResistanceRating": 30.0,
+                "MaxHealth": 935.598,
+                "BasicResistanceRating": 31.8,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 116.8,
                 "EnergyRegenRate": 1.52
@@ -4905,8 +4916,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.65,
                 "AbilityResistanceRating": 25.25,
-                "MaxHealth": 923.21,
-                "BasicResistanceRating": 32.0,
+                "MaxHealth": 1006.03,
+                "BasicResistanceRating": 34.1,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 119.6,
                 "EnergyRegenRate": 1.64
@@ -4918,8 +4929,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.85,
                 "AbilityResistanceRating": 26.0,
-                "MaxHealth": 987.24,
-                "BasicResistanceRating": 34.0,
+                "MaxHealth": 1076.46,
+                "BasicResistanceRating": 36.4,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 122.4,
                 "EnergyRegenRate": 1.76
@@ -4931,8 +4942,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.05,
                 "AbilityResistanceRating": 26.75,
-                "MaxHealth": 1051.27,
-                "BasicResistanceRating": 36.0,
+                "MaxHealth": 1146.9,
+                "BasicResistanceRating": 38.7,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 125.2,
                 "EnergyRegenRate": 1.88
@@ -4944,8 +4955,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.25,
                 "AbilityResistanceRating": 27.5,
-                "MaxHealth": 1115.3,
-                "BasicResistanceRating": 38.0,
+                "MaxHealth": 1217.33,
+                "BasicResistanceRating": 41.0,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 128.0,
                 "EnergyRegenRate": 2.0
@@ -4957,8 +4968,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.45,
                 "AbilityResistanceRating": 28.25,
-                "MaxHealth": 1179.33,
-                "BasicResistanceRating": 40.0,
+                "MaxHealth": 1287.76,
+                "BasicResistanceRating": 43.3,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 130.8,
                 "EnergyRegenRate": 2.12
@@ -4970,8 +4981,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.65,
                 "AbilityResistanceRating": 29.0,
-                "MaxHealth": 1243.36,
-                "BasicResistanceRating": 42.0,
+                "MaxHealth": 1358.2,
+                "BasicResistanceRating": 45.6,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 133.6,
                 "EnergyRegenRate": 2.24
@@ -4983,8 +4994,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.85,
                 "AbilityResistanceRating": 29.75,
-                "MaxHealth": 1307.39,
-                "BasicResistanceRating": 44.0,
+                "MaxHealth": 1428.63,
+                "BasicResistanceRating": 47.9,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 136.4,
                 "EnergyRegenRate": 2.36
@@ -4996,8 +5007,8 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.05,
                 "AbilityResistanceRating": 30.5,
-                "MaxHealth": 1371.42,
-                "BasicResistanceRating": 46.0,
+                "MaxHealth": 1499.06,
+                "BasicResistanceRating": 50.2,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 139.2,
                 "EnergyRegenRate": 2.48
@@ -5015,77 +5026,77 @@
                 "modifiersByLevel": [
                     {
                         "damage": 55.0,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.2
                     },
                     {
                         "damage": 56.6,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.16732
                     },
                     {
                         "damage": 58.2,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.13636
                     },
                     {
                         "damage": 59.8,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.10701
                     },
                     {
                         "damage": 61.4,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.07914
                     },
                     {
                         "damage": 63.0,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.05263
                     },
                     {
                         "damage": 64.6,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.0274
                     },
                     {
                         "damage": 66.2,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 1.00334
                     },
                     {
                         "damage": 67.8,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.980392
                     },
                     {
                         "damage": 69.4,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.958467
                     },
                     {
                         "damage": 71.0,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.9375
                     },
                     {
                         "damage": 72.6,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.917431
                     },
                     {
                         "damage": 74.2,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.898204
                     },
                     {
                         "damage": 75.8,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.879765
                     },
                     {
                         "damage": 77.4,
-                        "attackratingcoefficient": 0.85,
+                        "attackratingcoefficient": 0.92,
                         "cooldown": 0.862069
                     }
                 ],
@@ -5095,8 +5106,8 @@
             },
             {
                 "name": "Backlash",
-                "description": "Yin cracks her whip, creating a sphere of pressure around her. If enemy projectiles hit the sphere, they are reflected back toward the enemy who fired them. Has a {cooldown} second cooldown.",
-                "shortDescription": "• Reflects enemy projectiles\r\n• {cooldown}s cooldown",
+                "description": "Yin cracks her whip, creating a sphere of pressure around her for 0.5 seconds. If enemy projectiles hit the sphere, they are reflected back toward the enemy who fired them.",
+                "shortDescription": "• Reflects enemy projectiles\r\n• Reflection sphere last 0.5 seconds",
                 "type": "Alternate",
                 "binding": "RMB",
                 "damageType": null,
@@ -5134,30 +5145,30 @@
                 "modifiersByLevel": [
                     {
                         "damage": 80.0,
-                        "movespeed": 650.0,
+                        "movespeed": 950.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 11.0,
+                        "cooldown": 10.0,
                         "energycost": -55.0
                     },
                     {
                         "damage": 130.0,
-                        "movespeed": 650.0,
+                        "movespeed": 950.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 11.0,
+                        "cooldown": 10.0,
                         "energycost": -55.0
                     },
                     {
                         "damage": 180.0,
-                        "movespeed": 650.0,
+                        "movespeed": 950.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 11.0,
+                        "cooldown": 10.0,
                         "energycost": -55.0
                     },
                     {
                         "damage": 230.0,
-                        "movespeed": 650.0,
+                        "movespeed": 950.0,
                         "attackratingcoefficient": 0.5,
-                        "cooldown": 11.0,
+                        "cooldown": 10.0,
                         "energycost": -55.0
                     }
                 ],
@@ -5168,7 +5179,7 @@
             {
                 "name": "Windburn",
                 "description": "Yin extends her whip, increasing the range of her basic attack to {movespeed} units and gains 100% Cleave for {maxhealth} seconds.",
-                "shortDescription": "• Extend Basic Attack range to {movespeed}u\r\n• Gain 100% Cleave\r\n• {maxhealth}s duration and {cooldown}s cooldown",
+                "shortDescription": "• Extend Basic Attack range to {movespeed}u\r\n• Gain 100% Cleave\r\n• {maxhealth}s duration",
                 "type": "Secondary",
                 "binding": "E",
                 "damageType": null,
@@ -5205,7 +5216,7 @@
             },
             {
                 "name": "Quelling Gale",
-                "description": "Yin surrounds herself in gale winds, displacing all enemies within range. For {maxhealth} seconds after, the AOE will apply a {movespeed} {attr:spd} slow to enemies. Projectiles that travel through it are halted. ",
+                "description": "Yin surrounds herself in gale winds, displacing all enemies within range. For {maxhealth} seconds after, the AOE will apply a {movespeed} {attr:spd} slow to enemies. Projectiles that travel through it are halted. Has a radius of {radius} units.",
                 "shortDescription": "• AOE Knockaway\r\n• Slow ({movespeed} {attr:spd})  enemies and projectiles\r\n• Lasts {maxhealth}s",
                 "type": "Ultimate",
                 "binding": "R",
@@ -5213,22 +5224,25 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "movespeed": -150.0,
+                        "movespeed": -350.0,
                         "maxhealth": 5.0,
                         "cooldown": 90.0,
-                        "energycost": -75.0
+                        "energycost": -75.0,
+                        "radius": 500.0
                     },
                     {
-                        "movespeed": -200.0,
+                        "movespeed": -400.0,
                         "maxhealth": 5.5,
                         "cooldown": 65.0,
-                        "energycost": -75.0
+                        "energycost": -75.0,
+                        "radius": 500.0
                     },
                     {
-                        "movespeed": -250.0,
+                        "movespeed": -450.0,
                         "maxhealth": 6.0,
                         "cooldown": 40.0,
-                        "energycost": -75.0
+                        "energycost": -75.0,
+                        "radius": 500.0
                     }
                 ],
                 "images": {
