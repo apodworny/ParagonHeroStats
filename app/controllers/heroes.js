@@ -30,8 +30,6 @@ export default Ember.Controller.extend({
 
     actions: {
         toggleFilter(trait, event) {
-            //I will have to check all previously applied filters, and add the current filter to them
-
             var element = Ember.$(event.target);
             if(this.get(trait) == true) {
                 this.set(trait, false);
@@ -88,6 +86,8 @@ export default Ember.Controller.extend({
                 cp = 66;
             }
             this.set('cpAttackSpeed', cp)
+            
+            this.send("calculateStats");
         }
     }
 });
