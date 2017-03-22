@@ -44,11 +44,11 @@
             </div>
         </div>
         <div class="advanced">
-            {{heroes-bar-stat heroData=hero._data maxAps=maxAps minAps=minAps maxDps=maxDps minDps=minDps maxBurst=maxBurst minBurst=minBurst }}
-            <p>Attacks per second: {{hero._data.AttacksPerSecond}}</p>
-            <p>Damage per second: {{hero._data.DamagePerSecond}}</p>
-            <p>Burst Damage: {{hero._data.BurstDamage}}</p>
+            {{heroes-bar-stat heroData=hero._data maxAps=maxAps minAps=minAps maxDps=maxDps minDps=minDps maxBurst=maxBurst minBurst=minBurst updatedStats=updatedStats}}
             <div class="attributes">
+                <p>Attacks per second: {{hero._data.AttacksPerSecond}}</p>
+                <p>Damage per second: {{hero._data.DamagePerSecond}}</p>
+                <p>Burst Damage: {{hero._data.BurstDamage}}</p>
                 <div class="attribute attribute--health">
                     <p>Health: {{hero._data.attributesByLevel.[14].MaxHealth}}</p>
                 </div>

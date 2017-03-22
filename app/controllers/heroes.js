@@ -10,9 +10,11 @@ export default Ember.Controller.extend({
     maxDps: null,
     minDps: null,
 
-    heroLevel: 1,
+    heroLevel: 15,
     cpPower: 0,
     cpAttackSpeed: 0,
+
+    updatedStats: 0,
 
     assassin: false,
     attacker: false,
@@ -68,6 +70,8 @@ export default Ember.Controller.extend({
                 level = 15;
             }
             this.set('heroLevel', level)
+
+            this.send("calculateStats");
         },
         cpPowerSlider(cp){
             if(isNaN(parseInt(cp))) {
@@ -77,6 +81,8 @@ export default Ember.Controller.extend({
                 cp = 66;
             }
             this.set('cpPower', cp)
+
+            this.send("calculateStats");
         },
         cpAttackSpeedSlider(cp){
             if(isNaN(parseInt(cp))) {
@@ -88,6 +94,63 @@ export default Ember.Controller.extend({
             this.set('cpAttackSpeed', cp)
             
             this.send("calculateStats");
+        },
+        
+        calculateStats() {
+            var heroes = this.get("filteredHeroes");
+            
+            var valueOfAttackSpeedPerCP = 5.5;
+            var valueOfPowerPerCP = 6;
+
+            var heroDPS = 0;
+            var heroBurst = 0;
+
+            var attackSpeed = this.get('cpAttackSpeed') * valueOfAttackSpeedPerCP;
+            var power = this.get('cpPower') * valueOfPowerPerCP;
+
+            for (var i = 0; i < heroes.length; i++) {
+                //Set Attacks per second
+                var aps = 1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating'] + attackSpeed) / 100))
+                if(aps <= 2.5) {
+                    Ember.set(heroes[i],'_data.AttacksPerSecond', aps.toFixed(2));
+                }
+                else {
+                    Ember.set(heroes[i],'_data.AttacksPerSecond', (2.50).toFixed(2));
+                }
+                
+                //DPS with basic attacks only
+                heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[14].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[14].attackratingcoefficient * power)));
+                //Damage from one basic attack
+                heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[14].damage + (heroes[i]._data.abilities[0].modifiersByLevel[14].attackratingcoefficient * power);
+                
+                //If both damage and cooldown exists per ability, calculate dps and then burst damage
+                if (heroes[i]._data.abilities[1].modifiersByLevel[3].damage && heroes[i]._data.abilities[1].modifiersByLevel[3].cooldown) {
+                    heroDPS += heroes[i]._data.abilities[1].modifiersByLevel[3].damage / heroes[i]._data.abilities[1].modifiersByLevel[3].cooldown;
+
+                    heroBurst += heroes[i]._data.abilities[1].modifiersByLevel[3].damage + (heroes[i]._data.abilities[1].modifiersByLevel[3].attackratingcoefficient * power);
+                }
+                if (heroes[i]._data.abilities[2].modifiersByLevel[3].damage && heroes[i]._data.abilities[2].modifiersByLevel[3].cooldown) {
+                    heroDPS += heroes[i]._data.abilities[2].modifiersByLevel[3].damage / heroes[i]._data.abilities[2].modifiersByLevel[3].cooldown;
+
+                    heroBurst += heroes[i]._data.abilities[2].modifiersByLevel[3].damage + (heroes[i]._data.abilities[2].modifiersByLevel[3].attackratingcoefficient * power);
+                }
+                if (heroes[i]._data.abilities[3].modifiersByLevel[3].damage && heroes[i]._data.abilities[3].modifiersByLevel[3].cooldown) {
+                    heroDPS += heroes[i]._data.abilities[3].modifiersByLevel[3].damage / heroes[i]._data.abilities[3].modifiersByLevel[3].cooldown;
+
+                    heroBurst += heroes[i]._data.abilities[3].modifiersByLevel[3].damage + (heroes[i]._data.abilities[3].modifiersByLevel[3].attackratingcoefficient * power);
+                }
+                if (heroes[i]._data.abilities[4].modifiersByLevel[2].damage && heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown) {
+                    heroDPS += heroes[i]._data.abilities[4].modifiersByLevel[2].damage / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown;
+
+                    heroBurst += heroes[i]._data.abilities[4].modifiersByLevel[2].damage + (heroes[i]._data.abilities[4].modifiersByLevel[2].attackratingcoefficient * power);
+                }
+
+                //Rounding for formatting purposes
+                Ember.set(heroes[i],'_data.DamagePerSecond', Math.round(heroDPS));
+                Ember.set(heroes[i],'_data.BurstDamage', Math.round(heroBurst));
+                
+            }
+            this.set("updatedStats", (this.get("updatedStats") + 1))
         }
     }
 });

@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     color: #fff;
+    font-family: arial;
 }
 
 .heroes {
@@ -41,21 +42,81 @@ html, body {
             }
         }
     }
+    .advanced {
+        width: 100%;
+        padding: 0 30px 10px;
+        box-sizing: border-box;
+        .attributes {
+            margin-top: 20px;
+            p {
+                margin: 7px 0;
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 .bar-stat {
     width: 100%;
     .bar {
-        height: 15px;
         margin: 4px 0;
         &--aps {
-            background-color: yellow;
+            .bar__bg {
+                background-color: yellow;
+            }
         }
         &--dps {
-            background-color: red;
+            .bar__bg {
+                background-color: red;
+            }
         }
         &--burst {
-            background-color: blue;
+            .bar__bg {
+                background-color: blue;
+            }
+        }
+        &__labels {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .label {
+                color: white;
+                font-size: 10px;
+                position: relative;
+                width: 10px;
+                height: 16px;
+                p {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    text-align: center;
+                    margin: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .arrow-container {
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    bottom: 0;
+                    .arrow {
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        
+                        border-top: 5px solid #fff;
+                    }
+                }
+            }
+        }
+        .line {
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+        &__bg {
+            height: 8px;
         }
     }
 }

@@ -22,7 +22,7 @@ export default Ember.Route.extend({
 
         for (var i = 0; i < heroes.length; i++) {
             //Get Attacks per second
-            heroes[i]._data.AttacksPerSecond = (1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100)));
+            heroes[i]._data.AttacksPerSecond = (1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100))).toFixed(2);
 
             //DPS with basic attacks only
             heroes[i]._data.DamagePerSecond = (heroes[i]._data.AttacksPerSecond * heroes[i]._data.abilities[0].modifiersByLevel[14].damage);
@@ -53,8 +53,8 @@ export default Ember.Route.extend({
             }
 
             //Rounding for formatting purposes
-            //heroes[i]._data.DamagePerSecond = Math.round(heroes[i]._data.DamagePerSecond);
-            //heroes[i]._data.BurstDamage = Math.round(heroes[i]._data.BurstDamage);
+            heroes[i]._data.DamagePerSecond = Math.round(heroes[i]._data.DamagePerSecond);
+            heroes[i]._data.BurstDamage = Math.round(heroes[i]._data.BurstDamage);
 
 
 
@@ -65,7 +65,7 @@ export default Ember.Route.extend({
             //Since epic's data already has the 100 attack speed as a minimum for every hero, we don't have to add the 100 that the attack speed formula shows
 
             //Determine highest aps hero
-            if (heroes[i]._data.AttacksPerSecond >= highestAPS) {
+            /*if (heroes[i]._data.AttacksPerSecond >= highestAPS) {
                 highestAPS = heroes[i]._data.AttacksPerSecond;
             }
             //Determine lowest aps hero
@@ -87,9 +87,18 @@ export default Ember.Route.extend({
             //Determine lowest DPS hero
             if (heroes[i]._data.DamagePerSecond <= lowestDamagePerSecond) {
                 lowestDamagePerSecond = heroes[i]._data.DamagePerSecond;
-            }
+            }*/
+
+            
 
         }
+
+        highestAPS = 2.5;
+        lowestAPS = 0.5;
+        highestDamagePerSecond = 800;
+        lowestDamagePerSecond = 0;
+        highestBurstDamage = 3000;
+        lowestBurstDamage = 0;
 
         controller.set('maxAps', highestAPS);
         controller.set('minAps', lowestAPS);
@@ -178,25 +187,6 @@ export default Ember.Route.extend({
                 }
             }
             controller.set("filteredHeroes", filteredHeroes);
-        },
-        calculateStats() {
-            var controller = this.controllerFor('Heroes');
-            var heroes = controller.get("filteredHeroes");
-            
-            var valueOfAttackSpeedPerCP = 5.5;
-            var valueOfPowerPerCP = 6;
-
-            var attackSpeed = controller.get('cpAttackSpeed') * valueOfAttackSpeedPerCP;
-            var power = controller.get('cpPower') * valueOfPowerPerCP;
-
-            for (var i = 0; i < heroes.length; i++) {
-                //Get Attacks per second
-                console.log(heroes[i]._data.AttacksPerSecond);
-                debugger;
-                
-                heroes[i]._data.AttacksPerSecond = (1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating'] + attackSpeed) / 100)));
-            }
-            controller.set('filteredHeroes', heroes);
         }
     }
 });
