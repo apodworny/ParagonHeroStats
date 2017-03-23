@@ -50,19 +50,19 @@
                 <p>Damage per second: {{hero._data.DamagePerSecond}}</p>
                 <p>Burst Damage: {{hero._data.BurstDamage}}</p>
                 <div class="attribute attribute--health">
-                    <p>Health: {{hero._data.attributesByLevel.[14].MaxHealth}}</p>
+                    <p>Health: {{hero._data.CurrentHealth}}</p>
                 </div>
                 <div class="attribute attribute--energy">
-                    <p>Energy: {{hero._data.attributesByLevel.[14].MaxEnergy}}</p>
+                    <p>Energy: {{hero._data.CurrentEnergy}}</p>
                 </div>
                 <div class="attribute attribute--health-regen">
-                    <p>Health Regen: {{hero._data.attributesByLevel.[14].HealthRegenRate}}</p>
+                    <p>Health Regen: {{hero._data.CurrentHealthRegen}}</p>
                 </div>
                 <div class="attribute attribute--energy-regen">
-                    <p>Energy Regen: {{hero._data.attributesByLevel.[14].EnergyRegenRate}}</p>
+                    <p>Energy Regen: {{hero._data.CurrentEnergyRegen}}</p>
                 </div>
                 <div class="attribute attribute--basic-armour">
-                    <p>Basic Armour: {{hero._data.attributesByLevel.[14].BasicResistanceRating}}</p>
+                    <p>Basic Armour: {{hero._data.CurrentBasicArmour}}</p>
                 </div>
             </div>
             <!--#each hero._data.attributesByLevel as |stat|

@@ -14,6 +14,12 @@ export default Ember.Controller.extend({
     cpPower: 0,
     cpAttackSpeed: 0,
 
+    heroHealth: 0,
+    heroEnergy: 0,
+    heroHealthRegen: 0,
+    heroEnergyRegen: 0,
+    heroBasicArmour: 0,
+
     updatedStats: 0,
 
     assassin: false,
@@ -64,7 +70,7 @@ export default Ember.Controller.extend({
         },
         heroLevelSlider(level){
             if(isNaN(parseInt(level))) {
-                level = 1;
+                level = 15;
             }
             else if(level > 15) {
                 level = 15;
@@ -105,8 +111,15 @@ export default Ember.Controller.extend({
             var heroDPS = 0;
             var heroBurst = 0;
 
+            var heroHealth = 0;
+            var heroEnergy = 0;
+            var heroHealthRegen = 0;
+            var heroEnergyRegen = 0;
+            var heroBasicArmour = 0;
+
             var attackSpeed = this.get('cpAttackSpeed') * valueOfAttackSpeedPerCP;
             var power = this.get('cpPower') * valueOfPowerPerCP;
+            var heroLevel = this.get('heroLevel');
 
             for (var i = 0; i < heroes.length; i++) {
                 //Set Attacks per second
@@ -148,8 +161,22 @@ export default Ember.Controller.extend({
                 //Rounding for formatting purposes
                 Ember.set(heroes[i],'_data.DamagePerSecond', Math.round(heroDPS));
                 Ember.set(heroes[i],'_data.BurstDamage', Math.round(heroBurst));
+
+
+                heroHealth = heroes[i]._data.attributesByLevel[heroLevel-1].MaxHealth;
+                heroEnergy = heroes[i]._data.attributesByLevel[heroLevel-1].MaxEnergy;
+                heroHealthRegen = heroes[i]._data.attributesByLevel[heroLevel-1].HealthRegenRate;
+                heroEnergyRegen = heroes[i]._data.attributesByLevel[heroLevel-1].EnergyRegenRate;
+                heroBasicArmour = heroes[i]._data.attributesByLevel[heroLevel-1].BasicResistanceRating;
+
+                Ember.set(heroes[i],'_data.CurrentHealth', heroHealth);
+                Ember.set(heroes[i],'_data.CurrentEnergy', heroEnergy);
+                Ember.set(heroes[i],'_data.CurrentHealthRegen', heroHealthRegen);
+                Ember.set(heroes[i],'_data.CurrentEnergyRegen', heroEnergyRegen);
+                Ember.set(heroes[i],'_data.CurrentBasicArmour', heroBasicArmour);
                 
             }
+
             this.set("updatedStats", (this.get("updatedStats") + 1))
         }
     }

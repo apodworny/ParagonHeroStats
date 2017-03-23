@@ -55,6 +55,12 @@ export default Ember.Route.extend({
             //Rounding for formatting purposes
             heroes[i]._data.DamagePerSecond = Math.round(heroes[i]._data.DamagePerSecond);
             heroes[i]._data.BurstDamage = Math.round(heroes[i]._data.BurstDamage);
+            
+            Ember.set(heroes[i],'_data.CurrentHealth', heroes[i]._data.attributesByLevel[14].MaxHealth);
+            Ember.set(heroes[i],'_data.CurrentEnergy', heroes[i]._data.attributesByLevel[14].MaxEnergy);
+            Ember.set(heroes[i],'_data.CurrentHealthRegen', heroes[i]._data.attributesByLevel[14].HealthRegenRate);
+            Ember.set(heroes[i],'_data.CurrentEnergyRegen', heroes[i]._data.attributesByLevel[14].EnergyRegenRate);
+            Ember.set(heroes[i],'_data.CurrentBasicArmour', heroes[i]._data.attributesByLevel[14].BasicResistanceRating);
 
 
 
