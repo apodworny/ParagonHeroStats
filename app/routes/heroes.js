@@ -11,6 +11,10 @@ export default Ember.Route.extend({
 
         var filteredHeroes = [];
 
+        var heroDPS = 0;
+        var heroBurst = 0;
+
+
         var highestAPS = 0;
         var lowestAPS = 9999;
 
@@ -21,41 +25,35 @@ export default Ember.Route.extend({
         var lowestDamagePerSecond = 9999;
 
         for (var i = 0; i < heroes.length; i++) {
+            heroBurst = 0;
             //Get Attacks per second
             heroes[i]._data.AttacksPerSecond = (1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating']) / 100))).toFixed(2);
 
             //DPS with basic attacks only
-            heroes[i]._data.DamagePerSecond = (heroes[i]._data.AttacksPerSecond * heroes[i]._data.abilities[0].modifiersByLevel[14].damage);
+            heroDPS = (heroes[i]._data.AttacksPerSecond * heroes[i]._data.abilities[0].modifiersByLevel[14].damage);
 
             //Damage from one basic attack
-            heroes[i]._data.BurstDamage = heroes[i]._data.abilities[0].modifiersByLevel[14].damage;
+            heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[14].damage;
+            //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
+            for(var j = 1; j < 4; j++){
+                if (heroes[i]._data.abilities[j].modifiersByLevel[3].damage && heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown) {
+                    heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage) / heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown;
 
-            //If both damage and cooldown exists per ability, calculate dps and then burst damage
-            if (heroes[i]._data.abilities[1].modifiersByLevel[3].damage && heroes[i]._data.abilities[1].modifiersByLevel[3].cooldown) {
-                heroes[i]._data.DamagePerSecond += heroes[i]._data.abilities[1].modifiersByLevel[3].damage / heroes[i]._data.abilities[1].modifiersByLevel[3].cooldown;
-
-                heroes[i]._data.BurstDamage += heroes[i]._data.abilities[1].modifiersByLevel[3].damage;
+                    heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[3].damage;
+                }
             }
-            if (heroes[i]._data.abilities[2].modifiersByLevel[3].damage && heroes[i]._data.abilities[2].modifiersByLevel[3].cooldown) {
-                heroes[i]._data.DamagePerSecond += heroes[i]._data.abilities[2].modifiersByLevel[3].damage / heroes[i]._data.abilities[2].modifiersByLevel[3].cooldown;
 
-                heroes[i]._data.BurstDamage += heroes[i]._data.abilities[2].modifiersByLevel[3].damage;
-            }
-            if (heroes[i]._data.abilities[3].modifiersByLevel[3].damage && heroes[i]._data.abilities[3].modifiersByLevel[3].cooldown) {
-                heroes[i]._data.DamagePerSecond += heroes[i]._data.abilities[3].modifiersByLevel[3].damage / heroes[i]._data.abilities[3].modifiersByLevel[3].cooldown;
-
-                heroes[i]._data.BurstDamage += heroes[i]._data.abilities[3].modifiersByLevel[3].damage;
-            }
+            //Add dps and burst damage for ultimate
             if (heroes[i]._data.abilities[4].modifiersByLevel[2].damage && heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown) {
-                heroes[i]._data.DamagePerSecond += heroes[i]._data.abilities[4].modifiersByLevel[2].damage / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown;
+                heroDPS += (heroes[i]._data.abilities[4].modifiersByLevel[2].damage) / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown;
 
-                heroes[i]._data.BurstDamage += heroes[i]._data.abilities[4].modifiersByLevel[2].damage;
+                heroBurst += heroes[i]._data.abilities[4].modifiersByLevel[2].damage;
             }
 
-            //Rounding for formatting purposes
-            heroes[i]._data.DamagePerSecond = Math.round(heroes[i]._data.DamagePerSecond);
-            heroes[i]._data.BurstDamage = Math.round(heroes[i]._data.BurstDamage);
-            
+            //Rounding for formatting purposes, and set the value
+            Ember.set(heroes[i],'_data.DamagePerSecond', Math.round(heroDPS));
+            Ember.set(heroes[i],'_data.BurstDamage', Math.round(heroBurst));
+
             Ember.set(heroes[i],'_data.CurrentHealth', heroes[i]._data.attributesByLevel[14].MaxHealth);
             Ember.set(heroes[i],'_data.CurrentEnergy', heroes[i]._data.attributesByLevel[14].MaxEnergy);
             Ember.set(heroes[i],'_data.CurrentHealthRegen', heroes[i]._data.attributesByLevel[14].HealthRegenRate);
