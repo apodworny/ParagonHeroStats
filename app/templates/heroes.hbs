@@ -1,5 +1,22 @@
-<p>Be able to order heroes by attack speed and other traits</p>
-<p>Ability armour for every hero is 30.5</p>
+<div class="intro">
+    <h1>Paragon Hero Stats</h1>
+    <p>The site is heavily in early development and is nowhere near finished.</p>
+    <h2>Planned Future Features</h2>
+    <p>In no particular order:</p>
+    <ul>
+        <li>Be able to order heroes by attack speed, power, health, etc. while applying your filters</li>
+        <li>Make the site look... less bad</li>
+        <li>Have detailed hero ability information including cooldowns, scaling, stun durations, damage, etc.</li>
+        <li>Be able to directly compare two or more heroes, likely by just removing the ones you don't want to see temporarily</li>
+        <li>Make the line bar labels look better on firefox, and actually indicate what the bars relate to (yellow is attack speed, red is dps, blue is burst damage)</li>
+        <li>Account for armour and penetration in dps/burst calculations (be warned, right now no penetration or armour is accounted for)</li>
+        <li>List the traits for each hero to make sorting easier, possibly by mousing over</li>
+        <li>Make burst damage only show damage for abilities that are either instant or the damage you can do with them over ~5 seconds rather than their full duration. Right now burst damage is calculated based on the full duration of the ability, so Iggy for example has high burst damage because it assumes you take all the damage from one of his turrets.</li>
+        <li>Make ability sliders to change ability levels, right now it assumes all abilities are max level, even if your character is level 1</li>
+        <li>Address any issues with specific heroes not fitting the norm, for example Belica's ult damage currently is not added to dps or burst damage since it does 0 damage if an enemy hero has full mana</li>
+        <li>Display a message when no heroes are found from the filters applied</li>
+    </ul>
+</div>
 <div class="sliders">
     <div class="slider slider--level">
         <p>Hero Level:</p>
@@ -63,6 +80,9 @@
                 </div>
                 <div class="attribute attribute--basic-armour">
                     <p>Basic Armour: {{hero._data.CurrentBasicArmour}}</p>
+                </div>
+                <div class="attribute attribute--ability-armour">
+                    <p>Basic Armour: {{hero._data.CurrentAbilityArmour}}</p>
                 </div>
             </div>
             <!--#each hero._data.attributesByLevel as |stat|

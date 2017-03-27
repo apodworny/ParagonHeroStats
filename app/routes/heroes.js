@@ -37,7 +37,14 @@ export default Ember.Route.extend({
             //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
             for(var j = 1; j < 4; j++){
                 if (heroes[i]._data.abilities[j].modifiersByLevel[3].damage && heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown) {
-                    heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage) / heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown;
+                //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
+                    if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
+                        heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage) / heroes[i]._data.abilities[j].modifiersByLevel[3].duration;
+                    }
+                    else {
+                        heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage) / heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown;
+                    }
+                    
 
                     heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[3].damage;
                 }
@@ -59,6 +66,7 @@ export default Ember.Route.extend({
             Ember.set(heroes[i],'_data.CurrentHealthRegen', heroes[i]._data.attributesByLevel[14].HealthRegenRate);
             Ember.set(heroes[i],'_data.CurrentEnergyRegen', heroes[i]._data.attributesByLevel[14].EnergyRegenRate);
             Ember.set(heroes[i],'_data.CurrentBasicArmour', heroes[i]._data.attributesByLevel[14].BasicResistanceRating);
+            Ember.set(heroes[i],'_data.CurrentAbilityArmour', heroes[i]._data.attributesByLevel[14].AbilityResistanceRating);
 
 
 

@@ -19,6 +19,7 @@ export default Ember.Controller.extend({
     heroHealthRegen: 0,
     heroEnergyRegen: 0,
     heroBasicArmour: 0,
+    heroAbilityArmour: 0,
 
     updatedStats: 0,
 
@@ -116,14 +117,15 @@ export default Ember.Controller.extend({
             var heroHealthRegen = 0;
             var heroEnergyRegen = 0;
             var heroBasicArmour = 0;
+            var heroAbilityArmour = 0;
 
             var attackSpeed = this.get('cpAttackSpeed') * valueOfAttackSpeedPerCP;
             var power = this.get('cpPower') * valueOfPowerPerCP;
-            var heroLevel = this.get('heroLevel');
+            var heroLevel = this.get('heroLevel') - 1;
 
             for (var i = 0; i < heroes.length; i++) {
                 //Set Attacks per second
-                var aps = 1 / (heroes[i]._data.attributesByLevel[14]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[14]['AttackSpeedRating'] + attackSpeed) / 100))
+                var aps = 1 / (heroes[i]._data.attributesByLevel[heroLevel]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[heroLevel]['AttackSpeedRating'] + attackSpeed) / 100))
                 if(aps <= 2.5) {
                     Ember.set(heroes[i],'_data.AttacksPerSecond', aps.toFixed(2));
                 }
@@ -132,14 +134,20 @@ export default Ember.Controller.extend({
                 }
                 
                 //DPS with basic attacks only
-                heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[14].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[14].attackratingcoefficient * power)));
+                heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power)));
                 //Damage from one basic attack
-                heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[14].damage + (heroes[i]._data.abilities[0].modifiersByLevel[14].attackratingcoefficient * power);
+                heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power);
                 
                 //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
                 for(var j = 1; j < 4; j++){
                     if (heroes[i]._data.abilities[j].modifiersByLevel[3].damage && heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown) {
-                        heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown;
+                        //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
+                        if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
+                            heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[3].duration;
+                        }
+                        else {
+                            heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown;
+                        }
 
                         heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power);
                     }
@@ -157,17 +165,19 @@ export default Ember.Controller.extend({
                 Ember.set(heroes[i],'_data.BurstDamage', Math.round(heroBurst));
 
 
-                heroHealth = heroes[i]._data.attributesByLevel[heroLevel-1].MaxHealth;
-                heroEnergy = heroes[i]._data.attributesByLevel[heroLevel-1].MaxEnergy;
-                heroHealthRegen = heroes[i]._data.attributesByLevel[heroLevel-1].HealthRegenRate;
-                heroEnergyRegen = heroes[i]._data.attributesByLevel[heroLevel-1].EnergyRegenRate;
-                heroBasicArmour = heroes[i]._data.attributesByLevel[heroLevel-1].BasicResistanceRating;
+                heroHealth = heroes[i]._data.attributesByLevel[heroLevel].MaxHealth;
+                heroEnergy = heroes[i]._data.attributesByLevel[heroLevel].MaxEnergy;
+                heroHealthRegen = heroes[i]._data.attributesByLevel[heroLevel].HealthRegenRate;
+                heroEnergyRegen = heroes[i]._data.attributesByLevel[heroLevel].EnergyRegenRate;
+                heroBasicArmour = heroes[i]._data.attributesByLevel[heroLevel].BasicResistanceRating;
+                heroAbilityArmour = heroes[i]._data.attributesByLevel[heroLevel].AbilityResistanceRating;
 
                 Ember.set(heroes[i],'_data.CurrentHealth', heroHealth);
                 Ember.set(heroes[i],'_data.CurrentEnergy', heroEnergy);
                 Ember.set(heroes[i],'_data.CurrentHealthRegen', heroHealthRegen);
                 Ember.set(heroes[i],'_data.CurrentEnergyRegen', heroEnergyRegen);
                 Ember.set(heroes[i],'_data.CurrentBasicArmour', heroBasicArmour);
+                Ember.set(heroes[i],'_data.CurrentAbilityArmour', heroAbilityArmour);
                 
             }
 
