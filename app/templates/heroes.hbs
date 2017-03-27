@@ -15,6 +15,8 @@
         <li>Make ability sliders to change ability levels, right now it assumes all abilities are max level, even if your character is level 1</li>
         <li>Address any issues with specific heroes not fitting the norm, for example Belica's ult damage currently is not added to dps or burst damage since it does 0 damage if an enemy hero has full mana</li>
         <li>Display a message when no heroes are found from the filters applied</li>
+        <li>Add non hero data such as cxp for minion kills, tower health, etc.</li>
+        <li>Add movement speeds</li>
     </ul>
 </div>
 <div class="sliders">
@@ -82,7 +84,7 @@
                     <p>Basic Armour: {{hero._data.CurrentBasicArmour}}</p>
                 </div>
                 <div class="attribute attribute--ability-armour">
-                    <p>Basic Armour: {{hero._data.CurrentAbilityArmour}}</p>
+                    <p>Ability Armour: {{hero._data.CurrentAbilityArmour}}</p>
                 </div>
             </div>
             <!--#each hero._data.attributesByLevel as |stat|
