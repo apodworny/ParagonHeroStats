@@ -54,7 +54,7 @@
 </div>
 <div class="heroes">
     {{#each filteredHeroes as |hero index|}}
-    <div class="hero">
+    <div class="hero" title="{{hero._data.traits}}">
         <button class="remove-hero" {{action "removeHero"}}>x</button>
         <div class="basics">
             <div class="portrait">

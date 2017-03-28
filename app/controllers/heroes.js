@@ -102,7 +102,6 @@ export default Ember.Controller.extend({
             
             this.send("calculateStats");
         },
-        
         calculateStats() {
             var heroes = this.get("filteredHeroes");
             
@@ -183,9 +182,12 @@ export default Ember.Controller.extend({
 
             this.set("updatedStats", (this.get("updatedStats") + 1))
         },
-        removeHero(event) {
+        removeHero() {
             var element = Ember.$(event.target);
             var heroes = this.get('filteredHeroes');
+            debugger;
+            //jquery and javascript have different names for properties -.-'
+            var name = $(element.parent().children[1].lastElementChild.children[0].innerHTML);
             debugger;
         }
     }
