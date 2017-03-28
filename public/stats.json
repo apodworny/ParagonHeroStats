@@ -4838,7 +4838,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.45,
                 "AbilityResistanceRating": 20.75,
-                "MaxHealth": 583.433,
+                "MaxHealth": 580.232,
                 "BasicResistanceRating": 20.3,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 102.8,
@@ -4851,7 +4851,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.65,
                 "AbilityResistanceRating": 21.5,
-                "MaxHealth": 653.866,
+                "MaxHealth": 647.463,
                 "BasicResistanceRating": 22.6,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 105.6,
@@ -4864,7 +4864,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.85,
                 "AbilityResistanceRating": 22.25,
-                "MaxHealth": 724.299,
+                "MaxHealth": 714.695,
                 "BasicResistanceRating": 24.9,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 108.4,
@@ -4877,7 +4877,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.05,
                 "AbilityResistanceRating": 23.0,
-                "MaxHealth": 794.732,
+                "MaxHealth": 781.926,
                 "BasicResistanceRating": 27.2,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 111.2,
@@ -4890,7 +4890,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.25,
                 "AbilityResistanceRating": 23.75,
-                "MaxHealth": 865.165,
+                "MaxHealth": 849.157,
                 "BasicResistanceRating": 29.5,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 114.0,
@@ -4903,7 +4903,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.45,
                 "AbilityResistanceRating": 24.5,
-                "MaxHealth": 935.598,
+                "MaxHealth": 916.389,
                 "BasicResistanceRating": 31.8,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 116.8,
@@ -4916,7 +4916,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.65,
                 "AbilityResistanceRating": 25.25,
-                "MaxHealth": 1006.03,
+                "MaxHealth": 983.62,
                 "BasicResistanceRating": 34.1,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 119.6,
@@ -4929,7 +4929,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.85,
                 "AbilityResistanceRating": 26.0,
-                "MaxHealth": 1076.46,
+                "MaxHealth": 1050.85,
                 "BasicResistanceRating": 36.4,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 122.4,
@@ -4942,7 +4942,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.05,
                 "AbilityResistanceRating": 26.75,
-                "MaxHealth": 1146.9,
+                "MaxHealth": 1118.08,
                 "BasicResistanceRating": 38.7,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 125.2,
@@ -4955,7 +4955,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.25,
                 "AbilityResistanceRating": 27.5,
-                "MaxHealth": 1217.33,
+                "MaxHealth": 1185.31,
                 "BasicResistanceRating": 41.0,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 128.0,
@@ -4968,7 +4968,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.45,
                 "AbilityResistanceRating": 28.25,
-                "MaxHealth": 1287.76,
+                "MaxHealth": 1252.55,
                 "BasicResistanceRating": 43.3,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 130.8,
@@ -4981,7 +4981,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.65,
                 "AbilityResistanceRating": 29.0,
-                "MaxHealth": 1358.2,
+                "MaxHealth": 1319.78,
                 "BasicResistanceRating": 45.6,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 133.6,
@@ -4994,7 +4994,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.85,
                 "AbilityResistanceRating": 29.75,
-                "MaxHealth": 1428.63,
+                "MaxHealth": 1387.01,
                 "BasicResistanceRating": 47.9,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 136.4,
@@ -5007,7 +5007,7 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.05,
                 "AbilityResistanceRating": 30.5,
-                "MaxHealth": 1499.06,
+                "MaxHealth": 1454.24,
                 "BasicResistanceRating": 50.2,
                 "CleaveRating": 0.0,
                 "AttackSpeedRating": 139.2,
@@ -5224,21 +5224,21 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "movespeed": -350.0,
+                        "movespeed": -250.0,
                         "maxhealth": 5.0,
                         "cooldown": 90.0,
                         "energycost": -75.0,
                         "radius": 500.0
                     },
                     {
-                        "movespeed": -400.0,
+                        "movespeed": -300.0,
                         "maxhealth": 5.5,
                         "cooldown": 65.0,
                         "energycost": -75.0,
                         "radius": 500.0
                     },
                     {
-                        "movespeed": -450.0,
+                        "movespeed": -350.0,
                         "maxhealth": 6.0,
                         "cooldown": 40.0,
                         "energycost": -75.0,
@@ -7201,10 +7201,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.45,
                 "AbilityResistanceRating": 20.75,
-                "MaxHealth": 599.336,
+                "MaxHealth": 593.573,
                 "BasicResistanceRating": 20.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 102.2,
+                "AttackSpeedRating": 101.4,
                 "EnergyRegenRate": 0.92
             },
             {
@@ -7214,10 +7214,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.65,
                 "AbilityResistanceRating": 21.5,
-                "MaxHealth": 676.172,
+                "MaxHealth": 664.647,
                 "BasicResistanceRating": 23.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 104.4,
+                "AttackSpeedRating": 102.8,
                 "EnergyRegenRate": 1.04
             },
             {
@@ -7227,10 +7227,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 1.85,
                 "AbilityResistanceRating": 22.25,
-                "MaxHealth": 753.008,
+                "MaxHealth": 735.72,
                 "BasicResistanceRating": 25.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 106.6,
+                "AttackSpeedRating": 104.2,
                 "EnergyRegenRate": 1.16
             },
             {
@@ -7240,10 +7240,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.05,
                 "AbilityResistanceRating": 23.0,
-                "MaxHealth": 829.844,
+                "MaxHealth": 806.793,
                 "BasicResistanceRating": 28.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 108.8,
+                "AttackSpeedRating": 105.6,
                 "EnergyRegenRate": 1.28
             },
             {
@@ -7253,10 +7253,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.25,
                 "AbilityResistanceRating": 23.75,
-                "MaxHealth": 906.68,
+                "MaxHealth": 877.867,
                 "BasicResistanceRating": 30.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 111.0,
+                "AttackSpeedRating": 107.0,
                 "EnergyRegenRate": 1.4
             },
             {
@@ -7266,10 +7266,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.45,
                 "AbilityResistanceRating": 24.5,
-                "MaxHealth": 983.516,
+                "MaxHealth": 948.94,
                 "BasicResistanceRating": 33.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 113.2,
+                "AttackSpeedRating": 108.4,
                 "EnergyRegenRate": 1.52
             },
             {
@@ -7279,10 +7279,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.65,
                 "AbilityResistanceRating": 25.25,
-                "MaxHealth": 1060.35,
+                "MaxHealth": 1020.01,
                 "BasicResistanceRating": 35.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 115.4,
+                "AttackSpeedRating": 109.8,
                 "EnergyRegenRate": 1.64
             },
             {
@@ -7292,10 +7292,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 2.85,
                 "AbilityResistanceRating": 26.0,
-                "MaxHealth": 1137.19,
+                "MaxHealth": 1091.09,
                 "BasicResistanceRating": 38.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 117.6,
+                "AttackSpeedRating": 111.2,
                 "EnergyRegenRate": 1.76
             },
             {
@@ -7305,10 +7305,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.05,
                 "AbilityResistanceRating": 26.75,
-                "MaxHealth": 1214.02,
+                "MaxHealth": 1162.16,
                 "BasicResistanceRating": 40.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 119.8,
+                "AttackSpeedRating": 112.6,
                 "EnergyRegenRate": 1.88
             },
             {
@@ -7318,10 +7318,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.25,
                 "AbilityResistanceRating": 27.5,
-                "MaxHealth": 1290.86,
+                "MaxHealth": 1233.23,
                 "BasicResistanceRating": 43.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 122.0,
+                "AttackSpeedRating": 114.0,
                 "EnergyRegenRate": 2.0
             },
             {
@@ -7331,10 +7331,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.45,
                 "AbilityResistanceRating": 28.25,
-                "MaxHealth": 1367.7,
+                "MaxHealth": 1304.31,
                 "BasicResistanceRating": 45.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 124.2,
+                "AttackSpeedRating": 115.4,
                 "EnergyRegenRate": 2.12
             },
             {
@@ -7344,10 +7344,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.65,
                 "AbilityResistanceRating": 29.0,
-                "MaxHealth": 1444.53,
+                "MaxHealth": 1375.38,
                 "BasicResistanceRating": 48.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 126.4,
+                "AttackSpeedRating": 116.8,
                 "EnergyRegenRate": 2.24
             },
             {
@@ -7357,10 +7357,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 3.85,
                 "AbilityResistanceRating": 29.75,
-                "MaxHealth": 1521.37,
+                "MaxHealth": 1446.45,
                 "BasicResistanceRating": 50.5,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 128.6,
+                "AttackSpeedRating": 118.2,
                 "EnergyRegenRate": 2.36
             },
             {
@@ -7370,10 +7370,10 @@
                 "AbilityPenetrationRating": 0.0,
                 "HealthRegenRate": 4.05,
                 "AbilityResistanceRating": 30.5,
-                "MaxHealth": 1598.2,
+                "MaxHealth": 1517.53,
                 "BasicResistanceRating": 53.0,
                 "CleaveRating": 0.1,
-                "AttackSpeedRating": 130.8,
+                "AttackSpeedRating": 119.6,
                 "EnergyRegenRate": 2.48
             }
         ],
@@ -7395,72 +7395,72 @@
                     {
                         "damage": 59.8,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.17417
+                        "cooldown": 1.18343
                     },
                     {
                         "damage": 61.6,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.14943
+                        "cooldown": 1.16732
                     },
                     {
                         "damage": 63.4,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.1257
+                        "cooldown": 1.15163
                     },
                     {
                         "damage": 65.2,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.10294
+                        "cooldown": 1.13636
                     },
                     {
                         "damage": 67.0,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.08108
+                        "cooldown": 1.1215
                     },
                     {
                         "damage": 68.8,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.06007
+                        "cooldown": 1.10701
                     },
                     {
                         "damage": 70.6,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.03986
+                        "cooldown": 1.0929
                     },
                     {
                         "damage": 72.4,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.02041
+                        "cooldown": 1.07914
                     },
                     {
                         "damage": 74.2,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 1.00167
+                        "cooldown": 1.06572
                     },
                     {
                         "damage": 76.0,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 0.983607
+                        "cooldown": 1.05263
                     },
                     {
                         "damage": 77.8,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 0.966184
+                        "cooldown": 1.03986
                     },
                     {
                         "damage": 79.6,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 0.949367
+                        "cooldown": 1.0274
                     },
                     {
                         "damage": 81.4,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 0.933126
+                        "cooldown": 1.01523
                     },
                     {
                         "damage": 83.2,
                         "attackratingcoefficient": 1.0,
-                        "cooldown": 0.917431
+                        "cooldown": 1.00334
                     }
                 ],
                 "images": {
@@ -7611,7 +7611,7 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "duration": 18.0,
+                        "duration": 15.0,
                         "damage": 15.0,
                         "movespeed": 30.0,
                         "attackratingcoefficient": 1.0,
@@ -7621,7 +7621,7 @@
                         "energycost": -75.0
                     },
                     {
-                        "duration": 18.0,
+                        "duration": 15.0,
                         "damage": 20.0,
                         "movespeed": 45.0,
                         "attackratingcoefficient": 1.0,
@@ -7631,7 +7631,7 @@
                         "energycost": -75.0
                     },
                     {
-                        "duration": 18.0,
+                        "duration": 15.0,
                         "damage": 25.0,
                         "movespeed": 60.0,
                         "attackratingcoefficient": 1.0,

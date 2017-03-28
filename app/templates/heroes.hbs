@@ -9,14 +9,15 @@
         <li>Have detailed hero ability information including cooldowns, scaling, stun durations, damage, etc.</li>
         <li>Be able to directly compare two or more heroes, likely by just removing the ones you don't want to see temporarily</li>
         <li>Make the line bar labels look better on firefox, and actually indicate what the bars relate to (yellow is attack speed, red is dps, blue is burst damage)</li>
-        <li>Account for armour and penetration in dps/burst calculations (be warned, right now no penetration or armour is accounted for)</li>
+        <li>Account for armour and penetration in dps/burst calculations, likely by adding sliders for pen and armour (be warned, right now no penetration or armour is accounted for)</li>
         <li>List the traits for each hero to make sorting easier, possibly by mousing over</li>
         <li>Make burst damage only show damage for abilities that are either instant or the damage you can do with them over ~5 seconds rather than their full duration. Right now burst damage is calculated based on the full duration of the ability, so Iggy for example has high burst damage because it assumes you take all the damage from one of his turrets.</li>
         <li>Make ability sliders to change ability levels, right now it assumes all abilities are max level, even if your character is level 1</li>
         <li>Address any issues with specific heroes not fitting the norm, for example Belica's ult damage currently is not added to dps or burst damage since it does 0 damage if an enemy hero has full mana</li>
         <li>Display a message when no heroes are found from the filters applied</li>
         <li>Add non hero data such as cxp for minion kills, tower health, etc.</li>
-        <li>Add movement speeds</li>
+        <li>Add movement speeds and release date</li>
+        <li>Show the differences in the stats between updates</li>
     </ul>
 </div>
 <div class="sliders">
@@ -54,6 +55,7 @@
 <div class="heroes">
     {{#each filteredHeroes as |hero index|}}
     <div class="hero">
+        <button class="remove-hero" {{action "removeHero"}}>x</button>
         <div class="basics">
             <div class="portrait">
                 <img src="{{hero._data.images}}" alt="{{hero._data.name}} Portrait">

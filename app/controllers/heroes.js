@@ -182,6 +182,11 @@ export default Ember.Controller.extend({
             }
 
             this.set("updatedStats", (this.get("updatedStats") + 1))
+        },
+        removeHero(event) {
+            var element = Ember.$(event.target);
+            var heroes = this.get('filteredHeroes');
+            debugger;
         }
     }
 });
