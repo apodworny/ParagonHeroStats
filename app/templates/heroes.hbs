@@ -18,6 +18,7 @@
         <li>Add non hero data such as cxp for minion kills, tower health, etc.</li>
         <li>Add movement speeds and release date</li>
         <li>Show the differences in the stats between updates</li>
+        <li>Dragging and dropping heroes to re-order them</li>
     </ul>
 </div>
 <div class="sliders">
@@ -51,6 +52,9 @@
     <button class="filter__trait" onclick={{action 'toggleFilter' 'sieger'}}>Sieger</button>
     <button class="filter__trait" onclick={{action 'toggleFilter' 'wild'}}>Wild</button>
     <button class="filter__trait" onclick={{action 'toggleFilter' 'zoner'}}>Zoner</button>
+</div>
+<div class="reset">
+    <button class="btn--reset" {{action 'resetFilters'}}>Reset</button>
 </div>
 <div class="heroes">
     {{#each filteredHeroes as |hero index|}}

@@ -51,24 +51,6 @@ export default Ember.Controller.extend({
 
             this.send("filterHeroes");
         },
-        clearAll() {
-            Ember.$(".filter__trait").removeClass("active");
-            this.set("assassin", false);
-            this.set("attacker", false);
-            this.set("burst", false);
-            this.set("controller", false);
-            this.set("durable", false);
-            this.set("elusive", false);
-            this.set("ganker", false);
-            this.set("guardian", false);
-            this.set("initiator", false);
-            this.set("marauder", false);
-            this.set("sieger", false);
-            this.set("wild", false);
-            this.set("zoner", false);
-                        
-            this.send("filterHeroes");
-        },
         heroLevelSlider(level){
             if(isNaN(parseInt(level))) {
                 level = 15;
@@ -185,10 +167,32 @@ export default Ember.Controller.extend({
         removeHero() {
             var element = Ember.$(event.target);
             var heroes = this.get('filteredHeroes');
-            debugger;
-            //jquery and javascript have different names for properties -.-'
-            var name = $(element.parent().children[1].lastElementChild.children[0].innerHTML);
-            debugger;
+            var heroesNew;
+            var name = element.siblings(".basics").find(".name").find("p").text();
+
+            for(var i = 0; i < heroes.length; i++){
+                if (heroes[i]._data.name == name){
+                    heroesNew = heroes.removeObject(heroes[i]);
+                }
+            }
+        },
+        resetFilters() {
+            Ember.$(".filter__trait").removeClass("active");
+            this.set("assassin", false);
+            this.set("attacker", false);
+            this.set("burst", false);
+            this.set("controller", false);
+            this.set("durable", false);
+            this.set("elusive", false);
+            this.set("ganker", false);
+            this.set("guardian", false);
+            this.set("initiator", false);
+            this.set("marauder", false);
+            this.set("sieger", false);
+            this.set("wild", false);
+            this.set("zoner", false);
+                        
+            this.send("filterHeroes");
         }
     }
 });
