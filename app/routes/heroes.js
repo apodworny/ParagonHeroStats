@@ -7,6 +7,8 @@ export default Ember.Route.extend({
     afterModel:  function(model, transition){
         var controller = this.controllerFor('Heroes');
 
+        controller.set('model', model);
+
         var heroes = model.get('content');
 
         var filteredHeroes = [];
@@ -67,6 +69,8 @@ export default Ember.Route.extend({
             Ember.set(heroes[i],'_data.CurrentEnergyRegen', heroes[i]._data.attributesByLevel[14].EnergyRegenRate);
             Ember.set(heroes[i],'_data.CurrentBasicArmour', heroes[i]._data.attributesByLevel[14].BasicResistanceRating);
             Ember.set(heroes[i],'_data.CurrentAbilityArmour', heroes[i]._data.attributesByLevel[14].AbilityResistanceRating);
+
+            Ember.set(heroes[i],'_data.Active', true);
 
 
 

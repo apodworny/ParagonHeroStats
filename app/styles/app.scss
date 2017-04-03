@@ -25,11 +25,33 @@ html, body {
     }
 }
 
+.loading {
+    text-align: center;
+}
+
 .heroes {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    background: #222;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    outline: none;
+}
+
+.reset {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 320px;
+    margin: 25px auto 20px;
 }
 
 .hero {
@@ -56,12 +78,12 @@ html, body {
     }
     .basics {
         .portrait {
-            //width: 80px; height: 80px;
-            width: 15px; height: 15px;
+            width: 80px; height: 80px;
+            //width: 15px; height: 15px;
             margin: 0 auto;
             img {
-                //width: 80px;
-                width: 15px;
+                width: 80px;
+                //width: 15px;
             }
         }
         .name {
@@ -80,6 +102,35 @@ html, body {
             p {
                 margin: 7px 0;
                 font-size: 12px;
+            }
+            .pre-stat-indicator {
+                display: flex;
+                align-items: center;
+                margin: 7px 0;
+                .label {
+                    width: 5px;
+                    height: 5px;
+                    margin-left: -10px;
+                    margin-right: 5px;
+                }
+                p {
+                    margin: 0;
+                }
+                &--aps {
+                    .label {
+                        background-color: yellow;
+                    }
+                }
+                &--dps {
+                    .label {
+                        background-color: red;
+                    }
+                }
+                &--burst {
+                    .label {
+                        background-color: blue;
+                    }
+                }
             }
         }
     }
@@ -156,7 +207,7 @@ html, body {
     flex-wrap: wrap;
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     &__trait {
         background-color: #171717;
         color: #666;

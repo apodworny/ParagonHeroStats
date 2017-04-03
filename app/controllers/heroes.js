@@ -10,6 +10,8 @@ export default Ember.Controller.extend({
     maxDps: null,
     minDps: null,
 
+    model: null,
+
     heroLevel: 15,
     cpPower: 0,
     cpAttackSpeed: 0,
@@ -159,9 +161,7 @@ export default Ember.Controller.extend({
                 Ember.set(heroes[i],'_data.CurrentEnergyRegen', heroEnergyRegen);
                 Ember.set(heroes[i],'_data.CurrentBasicArmour', heroBasicArmour);
                 Ember.set(heroes[i],'_data.CurrentAbilityArmour', heroAbilityArmour);
-                
             }
-
             this.set("updatedStats", (this.get("updatedStats") + 1))
         },
         removeHero() {
@@ -172,7 +172,7 @@ export default Ember.Controller.extend({
 
             for(var i = 0; i < heroes.length; i++){
                 if (heroes[i]._data.name == name){
-                    heroesNew = heroes.removeObject(heroes[i]);
+                    Ember.set(heroes[i],'_data.Active', false);
                 }
             }
         },
@@ -193,6 +193,12 @@ export default Ember.Controller.extend({
             this.set("zoner", false);
                         
             this.send("filterHeroes");
+        },
+        resetHeroes() {
+            var heroes = this.get("unfilteredHeroes");
+            for (var i = 0; i < heroes.length; i++) {
+                Ember.set(heroes[i],'_data.Active', true);
+            }
         }
     }
 });
