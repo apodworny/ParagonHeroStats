@@ -1878,7 +1878,7 @@
                 "maxLevel": 3,
                 "modifiersByLevel": [
                     {
-                        "damage": 160.0,
+                        "damage": 180.0,
                         "movespeed": 1.5,
                         "shield": -300.0,
                         "attackratingcoefficient": 0.75,
@@ -1888,7 +1888,7 @@
                         "energycost": -75.0
                     },
                     {
-                        "damage": 200.0,
+                        "damage": 230.0,
                         "movespeed": 1.5,
                         "shield": -300.0,
                         "attackratingcoefficient": 0.75,
@@ -1898,7 +1898,7 @@
                         "energycost": -75.0
                     },
                     {
-                        "damage": 240.0,
+                        "damage": 280.0,
                         "movespeed": 1.5,
                         "shield": -300.0,
                         "attackratingcoefficient": 0.75,
@@ -4787,6 +4787,492 @@
                 ],
                 "images": {
                     "icon": "//developer-paragon-cdn.epicgames.com/Images/C181F2B85F7786A0E9C6600C6CE7873C9169B36D.png"
+                }
+            }
+        ]
+    },
+    {
+        "id": "44c9da1c2937c54e39e7957386d70482",
+        "name": "Morigesh",
+        "attack": "Ranged",
+        "traits": [
+            "Burst",
+            "Ganker",
+            "Elusive",
+            "Sieger",
+            "Durable"
+        ],
+        "scale": "PhysicalDamage",
+        "releaseDate": "2017-04-04T00:00:00.000Z",
+        "affinities": [
+            "Growth",
+            "Corruption"
+        ],
+        "difficulty": 0,
+        "stats": {
+            "Mobility": 4,
+            "BasicAttack": 2,
+            "Durability": 4,
+            "AbilityAttack": 8
+        },
+        "images": {
+            "icon": "//developer-paragon-cdn.epicgames.com/Images/270FF40BDEA998C839EF636836C368705C409C53.png"
+        },
+        "attributesByLevel": [
+            {
+                "MaxEnergy": 305.2,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.3625,
+                "AbilityResistanceRating": 21.4,
+                "MaxHealth": 540.0,
+                "BasicResistanceRating": 8.72,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 1.404
+            },
+            {
+                "MaxEnergy": 380.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.5785,
+                "AbilityResistanceRating": 22.21,
+                "MaxHealth": 614.14,
+                "BasicResistanceRating": 9.79,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 1.6929
+            },
+            {
+                "MaxEnergy": 454.8,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 1.7945,
+                "AbilityResistanceRating": 23.02,
+                "MaxHealth": 688.28,
+                "BasicResistanceRating": 10.86,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 1.9818
+            },
+            {
+                "MaxEnergy": 529.6,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.0105,
+                "AbilityResistanceRating": 23.83,
+                "MaxHealth": 762.42,
+                "BasicResistanceRating": 11.93,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 2.2707
+            },
+            {
+                "MaxEnergy": 604.4,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.2265,
+                "AbilityResistanceRating": 24.64,
+                "MaxHealth": 836.56,
+                "BasicResistanceRating": 13.0,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 2.5596
+            },
+            {
+                "MaxEnergy": 679.2,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.4425,
+                "AbilityResistanceRating": 25.45,
+                "MaxHealth": 910.7,
+                "BasicResistanceRating": 14.07,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 2.8485
+            },
+            {
+                "MaxEnergy": 754.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.6585,
+                "AbilityResistanceRating": 26.26,
+                "MaxHealth": 984.84,
+                "BasicResistanceRating": 15.14,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 3.1374
+            },
+            {
+                "MaxEnergy": 828.8,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 2.8745,
+                "AbilityResistanceRating": 27.07,
+                "MaxHealth": 1058.98,
+                "BasicResistanceRating": 16.21,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 3.4263
+            },
+            {
+                "MaxEnergy": 903.6,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.0905,
+                "AbilityResistanceRating": 27.88,
+                "MaxHealth": 1133.12,
+                "BasicResistanceRating": 17.28,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 3.7152
+            },
+            {
+                "MaxEnergy": 978.4,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.3065,
+                "AbilityResistanceRating": 28.69,
+                "MaxHealth": 1207.26,
+                "BasicResistanceRating": 18.35,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 4.0041
+            },
+            {
+                "MaxEnergy": 1053.2,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.5225,
+                "AbilityResistanceRating": 29.5,
+                "MaxHealth": 1281.4,
+                "BasicResistanceRating": 19.42,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 4.293
+            },
+            {
+                "MaxEnergy": 1128.0,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.7385,
+                "AbilityResistanceRating": 30.31,
+                "MaxHealth": 1355.54,
+                "BasicResistanceRating": 20.49,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 4.5819
+            },
+            {
+                "MaxEnergy": 1202.8,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 3.9545,
+                "AbilityResistanceRating": 31.12,
+                "MaxHealth": 1429.68,
+                "BasicResistanceRating": 21.56,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 4.8708
+            },
+            {
+                "MaxEnergy": 1277.6,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 4.1705,
+                "AbilityResistanceRating": 31.93,
+                "MaxHealth": 1503.82,
+                "BasicResistanceRating": 22.63,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 5.1597
+            },
+            {
+                "MaxEnergy": 1352.4,
+                "BasicPenetrationRating": 0.0,
+                "BaseAttackTime": 1.2,
+                "AbilityPenetrationRating": 0.0,
+                "HealthRegenRate": 4.3865,
+                "AbilityResistanceRating": 32.74,
+                "MaxHealth": 1577.96,
+                "BasicResistanceRating": 23.7,
+                "CleaveRating": 0.0,
+                "AttackSpeedRating": 100.0,
+                "EnergyRegenRate": 5.4486
+            }
+        ],
+        "abilities": [
+            {
+                "name": "Dagger",
+                "description": "Ranged basic attack dealing {damage} {attr:physdmg}.",
+                "shortDescription": "• Basic Attack: {damage} {attr:physdmg}",
+                "type": "Basic",
+                "binding": "LMB",
+                "damageType": "Basic",
+                "maxLevel": 15,
+                "modifiersByLevel": [
+                    {
+                        "damage": 56.71,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 58.438,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 60.166,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 61.894,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 63.622,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 65.35,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 67.078,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 68.806,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 70.534,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 72.262,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 73.99,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 75.718,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 77.446,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 79.174,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    },
+                    {
+                        "damage": 80.902,
+                        "attackratingcoefficient": 0.3,
+                        "cooldown": 1.2
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/FAA5B5FCCAAB901E6CA19B9BE733CAAD3EE5FAC0.png"
+                }
+            },
+            {
+                "name": "Mark",
+                "description": "Morigesh selects a target hero within range, dealing {damage} {attr:endmg} to the hero. Her doll takes the shape of the hero, marking them as her target wherever they go in the map.",
+                "shortDescription": "• Mark Target: {damage} {attr:endmg}\r\n• No line-of-sight restrictions",
+                "type": "Alternate",
+                "binding": "RMB",
+                "damageType": "Ability",
+                "maxLevel": 4,
+                "modifiersByLevel": [
+                    {
+                        "damage": 82.5,
+                        "attackratingcoefficient": 1.08,
+                        "cooldown": 5.0,
+                        "energycost": -67.5
+                    },
+                    {
+                        "damage": 137.0,
+                        "attackratingcoefficient": 1.08,
+                        "cooldown": 5.0,
+                        "energycost": -76.5
+                    },
+                    {
+                        "damage": 191.5,
+                        "attackratingcoefficient": 1.08,
+                        "cooldown": 5.0,
+                        "energycost": -85.5
+                    },
+                    {
+                        "damage": 246.0,
+                        "attackratingcoefficient": 1.08,
+                        "cooldown": 5.0,
+                        "energycost": -94.5
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/39AAFCDA3497781CCB16F9F4705BA5ABE17B3F4B.png"
+                }
+            },
+            {
+                "name": "Hive",
+                "description": "Morigesh throws a hive of insects that explodes in an AOE, deals {damage} {attr:endmg} on direct hit, and applies a stack of {damage} {attr:endmg} per tick over {duration} seconds to enemies in the AOE. Enemies are slowed briefly on each tick of damage and Morigesh gains vision of the affected targets. Damage and vision last {shield} seconds on a Marked target.",
+                "shortDescription": "• AOE: {damage} {attr:endmg} on hit, {damage} {attr:endmg} per tick over {duration}s\r\n• Grants vision\r\n• Lasts {shield}s on a Marked target",
+                "type": "Primary",
+                "binding": "Q",
+                "damageType": "Ability",
+                "maxLevel": 4,
+                "modifiersByLevel": [
+                    {
+                        "duration": 8.0,
+                        "damage": 21.8,
+                        "shield": 12.0,
+                        "attackratingcoefficient": 0.1284,
+                        "cooldown": 15.0,
+                        "energycost": -72.0
+                    },
+                    {
+                        "duration": 8.0,
+                        "damage": 34.76,
+                        "shield": 12.0,
+                        "attackratingcoefficient": 0.1284,
+                        "cooldown": 15.0,
+                        "energycost": -81.0
+                    },
+                    {
+                        "duration": 8.0,
+                        "damage": 47.72,
+                        "shield": 12.0,
+                        "attackratingcoefficient": 0.1284,
+                        "cooldown": 15.0,
+                        "energycost": -90.0
+                    },
+                    {
+                        "duration": 8.0,
+                        "damage": 60.68,
+                        "shield": 12.0,
+                        "attackratingcoefficient": 0.1284,
+                        "cooldown": 15.0,
+                        "energycost": -99.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/856526CBDD1508083FBFCD03E5E136E64CA80881.png"
+                }
+            },
+            {
+                "name": "Swarm",
+                "description": "Morigesh transforms into a swarm of insects for {duration} seconds, granting her a {attr:spd} boost and the ability to pass through enemies. Passing through an enemy deals {damage} {attr:endmg} and grants her 1 stack of +{maxhealth} Health Regen for {stackduration} seconds. Stacks are limited to {stacksmax} and enemies can only be hit once.",
+                "shortDescription": "• Pass Through: {damage} {attr:endmg}\r\n• {attr:spd} boost, {duration}s\r\n• +1 stack of +{maxhealth} Health Regen per enemy; up to {stacksmax}",
+                "type": "Secondary",
+                "binding": "E",
+                "damageType": "Ability",
+                "maxLevel": 4,
+                "modifiersByLevel": [
+                    {
+                        "duration": 2.5,
+                        "damage": 43.2,
+                        "attackratingcoefficient": 0.2675,
+                        "stackduration": 4.0,
+                        "stacksmax": 5.0,
+                        "maxhealth": 6.48,
+                        "cooldown": 15.0,
+                        "energycost": -90.0
+                    },
+                    {
+                        "duration": 3.0,
+                        "damage": 59.7,
+                        "attackratingcoefficient": 0.2675,
+                        "stackduration": 4.0,
+                        "stacksmax": 5.0,
+                        "maxhealth": 13.08,
+                        "cooldown": 15.0,
+                        "energycost": -108.0
+                    },
+                    {
+                        "duration": 3.5,
+                        "damage": 76.2,
+                        "attackratingcoefficient": 0.2675,
+                        "stackduration": 4.0,
+                        "stacksmax": 5.0,
+                        "maxhealth": 19.68,
+                        "cooldown": 15.0,
+                        "energycost": -126.0
+                    },
+                    {
+                        "duration": 4.0,
+                        "damage": 92.7,
+                        "attackratingcoefficient": 0.2675,
+                        "stackduration": 4.0,
+                        "stacksmax": 5.0,
+                        "maxhealth": 26.28,
+                        "cooldown": 15.0,
+                        "energycost": -144.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/268476EA279341D7C4B881A309AF8161D747B69A.png"
+                }
+            },
+            {
+                "name": "Curse",
+                "description": "If Morigesh has a valid Mark, she raises her dagger and stabs her doll, dealing {damage} {attr:endmg} to her target. While Morigesh is channeling, the Marked hero will be warned that she is about to strike.",
+                "shortDescription": "• Strike Marked Enemy: {damage} {attr:endmg}",
+                "type": "Ultimate",
+                "binding": "R",
+                "damageType": "Ability",
+                "maxLevel": 3,
+                "modifiersByLevel": [
+                    {
+                        "damage": 192.6,
+                        "attackratingcoefficient": 0.981,
+                        "cooldown": 80.0,
+                        "energycost": -90.0
+                    },
+                    {
+                        "damage": 279.8,
+                        "attackratingcoefficient": 0.981,
+                        "cooldown": 70.0,
+                        "energycost": -90.0
+                    },
+                    {
+                        "damage": 367.0,
+                        "attackratingcoefficient": 0.981,
+                        "cooldown": 60.0,
+                        "energycost": -90.0
+                    }
+                ],
+                "images": {
+                    "icon": "//developer-paragon-cdn.epicgames.com/Images/73617DBA6B568953C817205C24C54D28702C3BB5.png"
                 }
             }
         ]
