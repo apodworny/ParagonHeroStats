@@ -16,6 +16,8 @@ export default Ember.Controller.extend({
     cpPower: 0,
     cpAttackSpeed: 0,
 
+    selectedHero: null,
+
     heroHealth: 0,
     heroEnergy: 0,
     heroHealthRegen: 0,

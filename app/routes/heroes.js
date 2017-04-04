@@ -40,7 +40,7 @@ export default Ember.Route.extend({
             for(var j = 1; j < 4; j++){
                 if (heroes[i]._data.abilities[j].modifiersByLevel[3].damage && heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown) {
                 //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
-                    if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
+                    if(heroes[i]._data.name.toLowerCase() === "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
                         heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage) / heroes[i]._data.abilities[j].modifiersByLevel[3].duration;
                     }
                     else {
@@ -127,6 +127,9 @@ export default Ember.Route.extend({
         //Unfiltered for the first call
         controller.set("filteredHeroes", heroes);
 
+        //Default selected hero
+        controller.set('selectedHero', heroes[0]);
+
     },
     actions: {
         filterHeroes(){
@@ -135,44 +138,62 @@ export default Ember.Route.extend({
             var currentFilteredTraits = [];
             var currentHeroTraits = [];
 
-            if(controller.get("assassin") == true){
+            if(controller.get("assassin") === true){
                 currentFilteredTraits.push("Assassin");
             }
-            if(controller.get("attacker") == true){
+            if(controller.get("attacker") === true){
                 currentFilteredTraits.push("Attacker");
             }
-            if(controller.get("burst") == true){
+            if(controller.get("burst") === true){
                 currentFilteredTraits.push("Burst");
             }
-            if(controller.get("controller") == true){
+            if(controller.get("controller") === true){
                 currentFilteredTraits.push("Controller");
             }
-            if(controller.get("durable") == true){
+            if(controller.get("durable") === true){
                 currentFilteredTraits.push("Durable");
             }
-            if(controller.get("elusive") == true){
+            if(controller.get("elusive") === true){
                 currentFilteredTraits.push("Elusive");
             }
-            if(controller.get("ganker") == true){
+            if(controller.get("ganker") === true){
                 currentFilteredTraits.push("Ganker");
             }
-            if(controller.get("guardian") == true){
+            if(controller.get("guardian") === true){
                 currentFilteredTraits.push("Guardian");
             }
-            if(controller.get("initiator") == true){
+            if(controller.get("initiator") === true){
                 currentFilteredTraits.push("Initiator");
             }
-            if(controller.get("marauder") == true){
+            if(controller.get("marauder") === true){
                 currentFilteredTraits.push("Marauder");
             }
-            if(controller.get("sieger") == true){
+            if(controller.get("sieger") === true){
                 currentFilteredTraits.push("Sieger");
             }
-            if(controller.get("wild") == true){
+            if(controller.get("wild") === true){
                 currentFilteredTraits.push("Wild");
             }
-            if(controller.get("zoner") == true){
+            if(controller.get("zoner") === true){
                 currentFilteredTraits.push("Zoner");
+            }
+
+            function superbag(sup, sub) {
+                sup.sort();
+                sub.sort();
+                var i, j;
+                for (i=0,j=0; i<sup.length && j<sub.length;) {
+                    if (sup[i] < sub[j]) {
+                        ++i;
+                    } else if (sup[i] === sub[j]) {
+                        ++i; ++j;
+                    } else {
+                        // sub[j] not in sup, so sub not subbag
+                        return false;
+                    }
+                }
+                // make sure there are no elements left in sub
+                return j === sub.length;
             }
 
 
@@ -182,24 +203,6 @@ export default Ember.Route.extend({
 
                 if(superbag(currentHeroTraits, currentFilteredTraits)){
                     filteredHeroes.push(controller.get('unfilteredHeroes')[i]);
-                }
-
-                function superbag(sup, sub) {
-                    sup.sort();
-                    sub.sort();
-                    var i, j;
-                    for (i=0,j=0; i<sup.length && j<sub.length;) {
-                        if (sup[i] < sub[j]) {
-                            ++i;
-                        } else if (sup[i] == sub[j]) {
-                            ++i; ++j;
-                        } else {
-                            // sub[j] not in sup, so sub not subbag
-                            return false;
-                        }
-                    }
-                    // make sure there are no elements left in sub
-                    return j == sub.length;
                 }
             }
             controller.set("filteredHeroes", filteredHeroes);
