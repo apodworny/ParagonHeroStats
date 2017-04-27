@@ -122,7 +122,7 @@ export default Ember.Controller.extend({
                 heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power)));
                 //Damage from one basic attack
                 heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power);
-                
+
                 //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
                 for(var j = 1; j < 4; j++){
                     if (heroes[i]._data.abilities[j].modifiersByLevel[3].damage && heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown) {
@@ -140,9 +140,17 @@ export default Ember.Controller.extend({
 
                 //Add dps and burst damage for ultimate
                 if (heroes[i]._data.abilities[4].modifiersByLevel[2].damage && heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown) {
-                    heroDPS += (heroes[i]._data.abilities[4].modifiersByLevel[2].damage + (heroes[i]._data.abilities[4].modifiersByLevel[2].attackratingcoefficient * power)) / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown;
+                    //If there is an attackratingcoefficient add it, otherwise just add the damage
+                    if(heroes[i]._data.abilities[4].modifiersByLevel[2].attackratingcoefficient){
+                        heroDPS += (heroes[i]._data.abilities[4].modifiersByLevel[2].damage + (heroes[i]._data.abilities[4].modifiersByLevel[2].attackratingcoefficient * power)) / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown;
+                        heroBurst += heroes[i]._data.abilities[4].modifiersByLevel[2].damage + (heroes[i]._data.abilities[4].modifiersByLevel[2].attackratingcoefficient * power);
+                    }
+                    else {
+                        heroDPS += (heroes[i]._data.abilities[4].modifiersByLevel[2].damage / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown);
+                        heroBurst += heroes[i]._data.abilities[4].modifiersByLevel[2].damage;
+                    }
 
-                    heroBurst += heroes[i]._data.abilities[4].modifiersByLevel[2].damage + (heroes[i]._data.abilities[4].modifiersByLevel[2].attackratingcoefficient * power);
+                    
                 }
 
                 //Rounding for formatting purposes
