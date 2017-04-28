@@ -17,6 +17,7 @@ export default Ember.Controller.extend({
     cpAttackSpeed: 0,
 
     selectedHero: null,
+    selectedHero2: null,
 
     heroHealth: 0,
     heroEnergy: 0,
@@ -62,7 +63,7 @@ export default Ember.Controller.extend({
             else if(level > 15) {
                 level = 15;
             }
-            this.set('heroLevel', level)
+            this.set('heroLevel', level);
 
             this.send("calculateStats");
         },
@@ -108,6 +109,10 @@ export default Ember.Controller.extend({
             var power = this.get('cpPower') * valueOfPowerPerCP;
             var heroLevel = this.get('heroLevel') - 1;
 
+            var currentAbility1Damage = this.get('selectedHero');
+            currentAbility1Damage = currentAbility1Damage._data.abilities[0].modifiersByLevel[heroLevel].damage;
+
+
             for (var i = 0; i < heroes.length; i++) {
                 //Set Attacks per second
                 var aps = 1 / (heroes[i]._data.attributesByLevel[heroLevel]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[heroLevel]['AttackSpeedRating'] + attackSpeed) / 100))
@@ -120,6 +125,9 @@ export default Ember.Controller.extend({
                 
                 //DPS with basic attacks only
                 heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power)));
+
+                this.set('selectedHero._data.currentAbility1Damage', currentAbility1Damage);
+
                 //Damage from one basic attack
                 heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power);
 
@@ -172,12 +180,12 @@ export default Ember.Controller.extend({
                 Ember.set(heroes[i],'_data.CurrentBasicArmour', heroBasicArmour);
                 Ember.set(heroes[i],'_data.CurrentAbilityArmour', heroAbilityArmour);
             }
+
             this.set("updatedStats", (this.get("updatedStats") + 1))
         },
         removeHero() {
             var element = Ember.$(event.target);
             var heroes = this.get('filteredHeroes');
-            var heroesNew;
             var name = element.siblings(".basics").find(".name").find("p").text();
 
             for(var i = 0; i < heroes.length; i++){
@@ -208,6 +216,19 @@ export default Ember.Controller.extend({
             var heroes = this.get("unfilteredHeroes");
             for (var i = 0; i < heroes.length; i++) {
                 Ember.set(heroes[i],'_data.Active', true);
+            }
+        },
+        selectHero() {
+            var element = Ember.$(event.target);
+            var heroes = this.get('filteredHeroes');
+            var name = element.closest(".hero").find(".name").find("p").text();
+            var heroLevel = this.get('heroLevel') - 1;
+            
+            for(var i = 0; i < heroes.length; i++){
+                if (heroes[i]._data.name == name){
+                    Ember.set(heroes[i], "_data.currentAbility1Damage", heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage);
+                    this.set('selectedHero', heroes[i]);
+                }
             }
         }
     }

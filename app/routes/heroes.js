@@ -127,6 +127,8 @@ export default Ember.Route.extend({
         //Unfiltered for the first call
         controller.set("filteredHeroes", heroes);
 
+        Ember.set(heroes[0], '_data.currentAbility1Damage', heroes[0]._data.abilities[0].modifiersByLevel[14].damage);
+
         //Default selected hero
         controller.set('selectedHero', heroes[0]);
 

@@ -17,10 +17,46 @@ html, body {
     padding: 30px;
     background-color: #141414;
     border: 1px solid #222;
+    margin-bottom: 50px;
     ul {
         padding-left: 20px;
         li {
             margin: 5px 0;
+        }
+    }
+}
+
+.selected-hero {
+    .basic-info {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .name {
+            text-align: center;
+        }
+    }
+    .abilities {
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        justify-content: center;
+        .ability {
+            &__name {
+                text-align: center;
+            }
+            &__damage {
+                text-align: center;
+                p {
+                    span {
+                        color: red;
+                    }
+                }
+            }
         }
     }
 }
@@ -66,6 +102,7 @@ html, body {
     align-items: center;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
     .remove-hero {
         position: absolute;
         top: 5px;
@@ -78,12 +115,12 @@ html, body {
     }
     .basics {
         .portrait {
-            //width: 80px; height: 80px;
-            width: 15px; height: 15px;
+            width: 80px; height: 80px;
+            //width: 15px; height: 15px;
             margin: 0 auto;
             img {
-                //width: 80px;
-                width: 15px;
+                width: 80px;
+                //width: 15px;
             }
         }
         .name {
