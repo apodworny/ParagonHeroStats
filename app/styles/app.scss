@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
 * {
     box-sizing: border-box;
 }
@@ -47,15 +49,35 @@ html, body {
     }
     .abilities {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
         justify-content: center;
         .ability {
+            width: 150px;
+            background-color: #141414;
+            border: 1px solid #222;
+            position: relative;
+            &__hotkeys {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                display: flex;
+                .hotkey {
+                    margin: 0 5px;
+                    p {
+                        margin: 0;
+                        color: #5a6b73;
+                        font-size: 8px;
+                        font-family: 'Audiowide', arial;
+                    }
+                }
+            }
             &__icon {
                 img {
-                    width: 20px;
-                    height: 20px;
+                    width: 100px;
+                    height: 100px;
                     display: block;
                     margin: 0 auto;
                 }
@@ -68,6 +90,28 @@ html, body {
                 p {
                     span {
                         color: red;
+                    }
+                }
+            }
+            &__level {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .level {
+                    margin: 0 5px;
+                    p {
+                        margin: 0;
+                    }
+                }
+                button {
+                    outline: none;
+                    background: none;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    &.inactive {
+                        color: #333;
+                        cursor: default;
                     }
                 }
             }

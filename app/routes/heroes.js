@@ -124,10 +124,16 @@ export default Ember.Route.extend({
         controller.set('minDps', lowestDamagePerSecond);
         controller.set('unfilteredHeroes', heroes);
 
+        controller.set('unfilteredHeroes', heroes);
+
         //Unfiltered for the first call
         controller.set("filteredHeroes", heroes);
 
-        Ember.set(heroes[0], '_data.currentAbility1Damage', heroes[0]._data.abilities[0].modifiersByLevel[14].damage);
+        Ember.set(heroes[0], '_data.currentBasicDamage', heroes[0]._data.abilities[0].modifiersByLevel[14].damage);
+        Ember.set(heroes[0], '_data.currentAbility1Damage', heroes[0]._data.abilities[1].modifiersByLevel[3].damage);
+        Ember.set(heroes[0], '_data.currentAbility2Damage', heroes[0]._data.abilities[2].modifiersByLevel[3].damage);
+        Ember.set(heroes[0], '_data.currentAbility3Damage', heroes[0]._data.abilities[3].modifiersByLevel[3].damage);
+        Ember.set(heroes[0], '_data.currentUltimateDamage', heroes[0]._data.abilities[1].modifiersByLevel[2].damage);
 
         //Default selected hero
         controller.set('selectedHero', heroes[0]);

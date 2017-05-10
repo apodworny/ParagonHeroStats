@@ -26,8 +26,14 @@ export default Ember.Controller.extend({
     heroBasicArmour: 0,
     heroAbilityArmour: 0,
 
+    ability1Level: 4,
+    ability2Level: 4,
+    ability3Level: 4,
+    ultimateLevel: 3,
+
     updatedStats: 0,
 
+    //traits
     assassin: false,
     attacker: false,
     burst: false,
@@ -108,10 +114,47 @@ export default Ember.Controller.extend({
             var attackSpeed = this.get('cpAttackSpeed') * valueOfAttackSpeedPerCP;
             var power = this.get('cpPower') * valueOfPowerPerCP;
             var heroLevel = this.get('heroLevel') - 1;
+            var ability1Level = this.get('ability1Level') - 1;
+            var ability2Level = this.get('ability2Level') - 1;
+            var ability3Level = this.get('ability3Level') - 1;
+            var ultimateLevel = this.get('ultimateLevel') - 1;
 
-            var currentAbility1Damage = this.get('selectedHero');
-            currentAbility1Damage = currentAbility1Damage._data.abilities[0].modifiersByLevel[heroLevel].damage;
+            var abilityLevelArray = [
+                ability1Level, ability2Level, ability3Level, ultimateLevel
+            ];
+            
+            //Need to figure out how to change out all of these lines:
+            //heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage
+            //only when the ability is not leveled up at all
 
+            var selectedHero = this.get('selectedHero');
+            var currentBasicDamage = selectedHero._data.abilities[0].modifiersByLevel[heroLevel].damage;
+
+            //For each ability, if the ability has no levels, set the damage to 0, otherwise set it appropriately
+            if (ability1Level < 0) {
+                var currentAbility1Damage = 0;
+            }
+            else {
+                var currentAbility1Damage = selectedHero._data.abilities[1].modifiersByLevel[ability1Level].damage;
+            }
+            if (ability2Level < 0) {
+                var currentAbility2Damage = 0;
+            }
+            else {
+                var currentAbility2Damage = selectedHero._data.abilities[2].modifiersByLevel[ability2Level].damage;
+            }
+            if (ability3Level < 0) {
+                var currentAbility3Damage = 0;
+            }
+            else {
+                var currentAbility3Damage = selectedHero._data.abilities[3].modifiersByLevel[ability3Level].damage;
+            }
+            if (ultimateLevel < 0) {
+                var currentUltimateDamage = 0;
+            }
+            else {
+                var currentUltimateDamage = selectedHero._data.abilities[4].modifiersByLevel[ultimateLevel].damage;
+            }
 
             for (var i = 0; i < heroes.length; i++) {
                 //Set Attacks per second
@@ -126,23 +169,44 @@ export default Ember.Controller.extend({
                 //DPS with basic attacks only
                 heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power)));
 
+                //Set current basic attack and ability damages
+                this.set('selectedHero._data.currentBasicDamage', currentBasicDamage);
                 this.set('selectedHero._data.currentAbility1Damage', currentAbility1Damage);
+                this.set('selectedHero._data.currentAbility2Damage', currentAbility2Damage);
+                this.set('selectedHero._data.currentAbility3Damage', currentAbility3Damage);
+                this.set('selectedHero._data.currentUltimateDamage', currentUltimateDamage);
 
                 //Damage from one basic attack
                 heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power);
-
                 //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
                 for(var j = 1; j < 4; j++){
-                    if (heroes[i]._data.abilities[j].modifiersByLevel[3].damage && heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown) {
+                    //If the specific ability has a valid damage and cooldown
+                    if(heroes[i]._data.name.toLowerCase() == "countess"){
+                        debugger;
+                    }
+                    // the following works out to -1, which messed up the line abilityLevelArray[j - 1]
+                    if (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage && heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].cooldown) {
                         //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
                         if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
-                            heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[3].duration;
+                            heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].duration;
                         }
                         else {
-                            heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[3].cooldown;
+                            heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].cooldown;
                         }
 
-                        heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[3].damage + (heroes[i]._data.abilities[j].modifiersByLevel[3].attackratingcoefficient * power);
+                        heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power);
+                    }
+                    //If the ability is not leveled up
+                    else if (abilityLevelArray[j-1] == 0) {
+                        //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
+                        if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
+                            heroDPS += 0;
+                        }
+                        else {
+                            heroDPS += 0;
+                        }
+
+                        heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power);
                     }
                 }
 
@@ -226,10 +290,98 @@ export default Ember.Controller.extend({
             
             for(var i = 0; i < heroes.length; i++){
                 if (heroes[i]._data.name == name){
-                    Ember.set(heroes[i], "_data.currentAbility1Damage", heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage);
+                    Ember.set(heroes[i], "_data.currentBasicDamage", heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage);
                     this.set('selectedHero', heroes[i]);
                 }
             }
+        },
+        decrementAbilityLevel(ability) {
+            var element = Ember.$(event.target);
+            switch (ability) {
+                case 1:
+                    if(this.get("ability1Level") >= 1) {
+                        this.set("ability1Level", this.get("ability1Level") - 1);
+                        element.parent().siblings(".increment").find("button").removeClass("inactive");
+                        if(this.get("ability1Level") <= 0) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                case 2:
+                    if(this.get("ability2Level") >= 1) {
+                        this.set("ability2Level", this.get("ability2Level") - 1);
+                        element.parent().siblings(".increment").find("button").removeClass("inactive");
+                        if(this.get("ability2Level") <= 0) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                case 3:
+                    if(this.get("ability3Level") >= 1) {
+                        this.set("ability3Level", this.get("ability3Level") - 1);
+                        element.parent().siblings(".increment").find("button").removeClass("inactive");
+                        if(this.get("ability3Level") <= 0) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                case 4:
+                    if(this.get("ultimateLevel") >= 1) {
+                        this.set("ultimateLevel", this.get("ultimateLevel") - 1);
+                        element.parent().siblings(".increment").find("button").removeClass("inactive");
+                        if(this.get("ultimateLevel") <= 0) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                default:
+                    console.log('Problem with decrementAbilityLevel occurred');
+            }
+            this.send("calculateStats");
+        },
+        incrementAbilityLevel(ability) {
+            var element = Ember.$(event.target);
+            switch (ability) {
+                case 1:
+                    if(this.get("ability1Level") <= 3) {
+                        this.set("ability1Level", this.get("ability1Level") + 1);
+                        element.parent().siblings(".decrement").find("button").removeClass("inactive");
+                        if(this.get("ability1Level") >= 4) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                case 2:
+                    if(this.get("ability2Level") <= 3) {
+                        this.set("ability2Level", this.get("ability2Level") + 1);
+                        element.parent().siblings(".decrement").find("button").removeClass("inactive");
+                        if(this.get("ability2Level") >= 4) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                case 3:
+                    if(this.get("ability3Level") <= 3) {
+                        this.set("ability3Level", this.get("ability3Level") + 1);
+                        element.parent().siblings(".decrement").find("button").removeClass("inactive");
+                        if(this.get("ability3Level") >= 4) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                case 4:
+                    if(this.get("ultimateLevel") <= 2) {
+                        this.set("ultimateLevel", this.get("ultimateLevel") + 1);
+                        element.parent().siblings(".decrement").find("button").removeClass("inactive");
+                        if(this.get("ultimateLevel") >= 3) {
+                            element.addClass("inactive");
+                        }
+                    }
+                    break;
+                default:
+                    console.log('Problem with incrementAbilityLevel occurred');
+            }
+            this.send("calculateStats");
         }
     }
 });
