@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
 
     model: null,
 
-    heroLevel: 15,
+    heroLevel: 20,
     cpPower: 0,
     cpAttackSpeed: 0,
 
@@ -51,7 +51,7 @@ export default Ember.Controller.extend({
     actions: {
         toggleFilter(trait, event) {
             var element = Ember.$(event.target);
-            if(this.get(trait) == true) {
+            if(this.get(trait) === true) {
                 this.set(trait, false);
                 element.toggleClass("active");
             }
@@ -64,10 +64,10 @@ export default Ember.Controller.extend({
         },
         heroLevelSlider(level){
             if(isNaN(parseInt(level))) {
-                level = 15;
+                level = 20;
             }
-            else if(level > 15) {
-                level = 15;
+            else if(level > 20) {
+                level = 20;
             }
             this.set('heroLevel', level);
 
@@ -77,10 +77,10 @@ export default Ember.Controller.extend({
             if(isNaN(parseInt(cp))) {
                 cp = 0;
             }
-            else if(cp > 66) {
-                cp = 66;
+            else if(cp > 100) {
+                cp = 100;
             }
-            this.set('cpPower', cp)
+            this.set('cpPower', cp);
 
             this.send("calculateStats");
         },
@@ -88,18 +88,18 @@ export default Ember.Controller.extend({
             if(isNaN(parseInt(cp))) {
                 cp = 0;
             }
-            else if(cp > 66) {
-                cp = 66;
+            else if(cp > 100) {
+                cp = 100;
             }
-            this.set('cpAttackSpeed', cp)
+            this.set('cpAttackSpeed', cp);
             
             this.send("calculateStats");
         },
         calculateStats() {
             var heroes = this.get("filteredHeroes");
             
-            var valueOfAttackSpeedPerCP = 5.5;
-            var valueOfPowerPerCP = 6;
+            var valueOfAttackSpeedPerCP = 1;
+            var valueOfPowerPerCP = 1;
 
             var heroDPS = 0;
             var heroBurst = 0;
@@ -158,12 +158,12 @@ export default Ember.Controller.extend({
 
             for (var i = 0; i < heroes.length; i++) {
                 //Set Attacks per second
-                var aps = 1 / (heroes[i]._data.attributesByLevel[heroLevel]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[heroLevel]['AttackSpeedRating'] + attackSpeed) / 100))
-                if(aps <= 2.5) {
+                var aps = 1 / (heroes[i]._data.attributesByLevel[heroLevel]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[heroLevel]['AttackSpeedRating'] + attackSpeed) / 100));
+                if(aps <= 4) {
                     Ember.set(heroes[i],'_data.AttacksPerSecond', aps.toFixed(2));
                 }
                 else {
-                    Ember.set(heroes[i],'_data.AttacksPerSecond', (2.50).toFixed(2));
+                    Ember.set(heroes[i],'_data.AttacksPerSecond', (4.0).toFixed(2));
                 }
                 
                 //DPS with basic attacks only
@@ -181,13 +181,13 @@ export default Ember.Controller.extend({
                 //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
                 for(var j = 1; j < 4; j++){
                     //If the specific ability has a valid damage and cooldown
-                    if(heroes[i]._data.name.toLowerCase() == "countess"){
+                    if(heroes[i]._data.name.toLowerCase() === "countess"){
                         debugger;
                     }
                     // the following works out to -1, which messed up the line abilityLevelArray[j - 1]
                     if (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage && heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].cooldown) {
                         //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
-                        if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
+                        if(heroes[i]._data.name.toLowerCase() === "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
                             heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].duration;
                         }
                         else {
@@ -197,9 +197,9 @@ export default Ember.Controller.extend({
                         heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power);
                     }
                     //If the ability is not leveled up
-                    else if (abilityLevelArray[j-1] == 0) {
+                    else if (abilityLevelArray[j-1] === 0) {
                         //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
-                        if(heroes[i]._data.name.toLowerCase() == "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
+                        if(heroes[i]._data.name.toLowerCase() === "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
                             heroDPS += 0;
                         }
                         else {
@@ -245,7 +245,7 @@ export default Ember.Controller.extend({
                 Ember.set(heroes[i],'_data.CurrentAbilityArmour', heroAbilityArmour);
             }
 
-            this.set("updatedStats", (this.get("updatedStats") + 1))
+            this.set("updatedStats", (this.get("updatedStats") + 1));
         },
         removeHero() {
             var element = Ember.$(event.target);
@@ -253,7 +253,7 @@ export default Ember.Controller.extend({
             var name = element.siblings(".basics").find(".name").find("p").text();
 
             for(var i = 0; i < heroes.length; i++){
-                if (heroes[i]._data.name == name){
+                if (heroes[i]._data.name === name){
                     Ember.set(heroes[i],'_data.Active', false);
                 }
             }
@@ -289,7 +289,7 @@ export default Ember.Controller.extend({
             var heroLevel = this.get('heroLevel') - 1;
             
             for(var i = 0; i < heroes.length; i++){
-                if (heroes[i]._data.name == name){
+                if (heroes[i]._data.name === name){
                     Ember.set(heroes[i], "_data.currentBasicDamage", heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage);
                     this.set('selectedHero', heroes[i]);
                 }

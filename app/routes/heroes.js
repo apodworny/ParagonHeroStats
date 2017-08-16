@@ -109,7 +109,7 @@ export default Ember.Route.extend({
 
         }
 
-        highestAPS = 2.5;
+        highestAPS = 4;
         lowestAPS = 0.5;
         highestDamagePerSecond = 800;
         lowestDamagePerSecond = 0;

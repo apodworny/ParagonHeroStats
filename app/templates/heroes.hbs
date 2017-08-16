@@ -53,7 +53,7 @@
                     <p>RMB</p>
                 </div>
                 <div class="hotkey hotkey--potato">
-                    <p>?</p>
+                    <p>L2</p>
                 </div>
             </div>
             <div class="ability__icon">
@@ -83,7 +83,7 @@
                     <p>Q</p>
                 </div>
                 <div class="hotkey hotkey--potato">
-                    <p>?</p>
+                    <p>R1</p>
                 </div>
             </div>
             <div class="ability__icon">
@@ -113,7 +113,7 @@
                     <p>E</p>
                 </div>
                 <div class="hotkey hotkey--potato">
-                    <p>?</p>
+                    <p>L1</p>
                 </div>
             </div>
             <div class="ability__icon">
@@ -143,7 +143,7 @@
                     <p>R</p>
                 </div>
                 <div class="hotkey hotkey--potato">
-                    <p>?</p>
+                    <p>L1+R1</p>
                 </div>
             </div>
             <div class="ability__icon">
@@ -172,18 +172,18 @@
 <div class="sliders">
     <div class="slider slider--level">
         <p>Hero Level:</p>
-        <input type="range" value={{heroLevel}} min="1" max="15" step="1" oninput={{action 'heroLevelSlider' value="target.value"}} onchange={{action 'heroLevelSlider' value="target.value"}}>
-        <div class="value">{{input value=heroLevel min="1" max="15" enter="heroLevelSlider"}}</div>
+        <input type="range" value={{heroLevel}} min="1" max="20" step="1" oninput={{action 'heroLevelSlider' value="target.value"}} onchange={{action 'heroLevelSlider' value="target.value"}}>
+        <div class="value">{{input value=heroLevel min="1" max="20" enter="heroLevelSlider"}}</div>
     </div>
     <div class="slider slider--power">
         <p>Power CP:</p>
-        <input type="range" value={{cpPower}} min="0" max="66" step="1" oninput={{action 'cpPowerSlider' value="target.value"}} onchange={{action 'cpPowerSlider' value="target.value"}}>
-        <div class="value">{{input value=cpPower maxlength="2" min="0" max="66" enter="cpPowerSlider"}}</div>
+        <input type="range" value={{cpPower}} min="0" max="100" step="1" oninput={{action 'cpPowerSlider' value="target.value"}} onchange={{action 'cpPowerSlider' value="target.value"}}>
+        <div class="value">{{input value=cpPower maxlength="3" min="0" max="100" enter="cpPowerSlider"}}</div>
     </div>
     <div class="slider slider--attack-speed">
         <p>Attack Speed CP:</p>
-        <input type="range" value={{cpAttackSpeed}} min="0" max="66" step="1" oninput={{action 'cpAttackSpeedSlider' value="target.value"}} onchange={{action 'cpAttackSpeedSlider' value="target.value"}}>
-        <div class="value">{{input value=cpAttackSpeed maxlength="2" min="0" max="66" enter="cpAttackSpeedSlider"}}</div>
+        <input type="range" value={{cpAttackSpeed}} min="0" max="100" step="1" oninput={{action 'cpAttackSpeedSlider' value="target.value"}} onchange={{action 'cpAttackSpeedSlider' value="target.value"}}>
+        <div class="value">{{input value=cpAttackSpeed maxlength="3" min="0" max="100" enter="cpAttackSpeedSlider"}}</div>
     </div>
 </div>
 <div class="filter">
