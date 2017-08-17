@@ -129,11 +129,37 @@ export default Ember.Route.extend({
         //Unfiltered for the first call
         controller.set("filteredHeroes", heroes);
 
-        Ember.set(heroes[0], '_data.currentBasicDamage', heroes[0]._data.abilities[0].modifiersByLevel[14].damage);
-        Ember.set(heroes[0], '_data.currentAbility1Damage', heroes[0]._data.abilities[1].modifiersByLevel[3].damage);
-        Ember.set(heroes[0], '_data.currentAbility2Damage', heroes[0]._data.abilities[2].modifiersByLevel[3].damage);
-        Ember.set(heroes[0], '_data.currentAbility3Damage', heroes[0]._data.abilities[3].modifiersByLevel[3].damage);
-        Ember.set(heroes[0], '_data.currentUltimateDamage', heroes[0]._data.abilities[1].modifiersByLevel[2].damage);
+        //if the damage of the ability is more than 1
+        if(heroes[0]._data.abilities[0].modifiersByLevel[19].damage > 1) {
+            Ember.set(heroes[0], '_data.currentBasicDamage', Math.round(heroes[0]._data.abilities[0].modifiersByLevel[19].damage));
+        }
+        else {
+            Ember.set(heroes[0], '_data.currentBasicDamage', 0);
+        }
+        if(heroes[0]._data.abilities[1].modifiersByLevel[3].damage > 1) {
+            Ember.set(heroes[0], '_data.currentAbility1Damage', Math.round(heroes[0]._data.abilities[1].modifiersByLevel[3].damage));
+        }
+        else {
+            Ember.set(heroes[0], '_data.currentAbility1Damage', 0);
+        }
+        if(heroes[0]._data.abilities[2].modifiersByLevel[3].damage > 1) {
+            Ember.set(heroes[0], '_data.currentAbility2Damage', Math.round(heroes[0]._data.abilities[2].modifiersByLevel[3].damage));
+        }
+        else {
+            Ember.set(heroes[0], '_data.currentAbility2Damage', 0);
+        }
+        if(heroes[0]._data.abilities[3].modifiersByLevel[3].damage > 1) {
+            Ember.set(heroes[0], '_data.currentAbility3Damage', Math.round(heroes[0]._data.abilities[3].modifiersByLevel[3].damage));
+        }
+        else {
+            Ember.set(heroes[0], '_data.currentAbility3Damage', 0);
+        }
+        if(heroes[0]._data.abilities[4].modifiersByLevel[2].damage > 1) {
+            Ember.set(heroes[0], '_data.currentUltimateDamage', Math.round(heroes[0]._data.abilities[4].modifiersByLevel[2].damage));
+        }
+        else {
+            Ember.set(heroes[0], '_data.currentUltimateDamage', 0);
+        }
 
         //Default selected hero
         controller.set('selectedHero', heroes[0]);

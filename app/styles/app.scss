@@ -42,8 +42,7 @@ html, body {
         }
         .portrait {
             img {
-                width: 15px;
-                height: 15px;
+                //width: 15px; height: 15px;
             }
         }
     }
@@ -173,12 +172,12 @@ html, body {
     }
     .basics {
         .portrait {
-            //width: 80px; height: 80px;
-            width: 15px; height: 15px;
+            width: 80px; height: 80px;
+            //width: 15px; height: 15px;
             margin: 0 auto;
             img {
-                //width: 80px;
-                width: 15px;
+                width: 80px;
+                //width: 15px;
             }
         }
         .name {

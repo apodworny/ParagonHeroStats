@@ -97,9 +97,6 @@ export default Ember.Controller.extend({
         },
         calculateStats() {
             var heroes = this.get("filteredHeroes");
-            
-            var valueOfAttackSpeedPerCP = 1;
-            var valueOfPowerPerCP = 1;
 
             var heroDPS = 0;
             var heroBurst = 0;
@@ -111,8 +108,8 @@ export default Ember.Controller.extend({
             var heroBasicArmour = 0;
             var heroAbilityArmour = 0;
 
-            var attackSpeed = this.get('cpAttackSpeed') * valueOfAttackSpeedPerCP;
-            var power = this.get('cpPower') * valueOfPowerPerCP;
+            var attackSpeed = this.get('cpAttackSpeed');
+            var power = this.get('cpPower');
             var heroLevel = this.get('heroLevel') - 1;
             var ability1Level = this.get('ability1Level') - 1;
             var ability2Level = this.get('ability2Level') - 1;
@@ -128,32 +125,32 @@ export default Ember.Controller.extend({
             //only when the ability is not leveled up at all
 
             var selectedHero = this.get('selectedHero');
-            var currentBasicDamage = selectedHero._data.abilities[0].modifiersByLevel[heroLevel].damage;
+            var currentBasicDamage = selectedHero._data.abilities[0].modifiersByLevel[heroLevel].damage + (selectedHero._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power);
 
-            //For each ability, if the ability has no levels, set the damage to 0, otherwise set it appropriately
-            if (ability1Level < 0) {
+            //For each ability, if the ability has no levels or no attack rating coefficient, or the damage is 1, set the damage to 0, otherwise set it appropriately
+            if (ability1Level < 0 || !selectedHero._data.abilities[1].modifiersByLevel[ability1Level].attackratingcoefficient || selectedHero._data.abilities[1].modifiersByLevel[ability1Level].damage <= 1) {
                 var currentAbility1Damage = 0;
             }
             else {
-                var currentAbility1Damage = selectedHero._data.abilities[1].modifiersByLevel[ability1Level].damage;
+                var currentAbility1Damage = selectedHero._data.abilities[1].modifiersByLevel[ability1Level].damage + (selectedHero._data.abilities[1].modifiersByLevel[ability1Level].attackratingcoefficient * power);
             }
-            if (ability2Level < 0) {
+            if (ability2Level < 0 || !selectedHero._data.abilities[2].modifiersByLevel[ability2Level].attackratingcoefficient || selectedHero._data.abilities[2].modifiersByLevel[ability2Level].damage <= 1) {
                 var currentAbility2Damage = 0;
             }
             else {
-                var currentAbility2Damage = selectedHero._data.abilities[2].modifiersByLevel[ability2Level].damage;
+                var currentAbility2Damage = selectedHero._data.abilities[2].modifiersByLevel[ability2Level].damage + (selectedHero._data.abilities[2].modifiersByLevel[ability2Level].attackratingcoefficient * power);
             }
-            if (ability3Level < 0) {
+            if (ability3Level < 0 || !selectedHero._data.abilities[3].modifiersByLevel[ability3Level].attackratingcoefficient || selectedHero._data.abilities[3].modifiersByLevel[ability3Level].damage <= 1) {
                 var currentAbility3Damage = 0;
             }
             else {
-                var currentAbility3Damage = selectedHero._data.abilities[3].modifiersByLevel[ability3Level].damage;
+                var currentAbility3Damage = selectedHero._data.abilities[3].modifiersByLevel[ability3Level].damage + (selectedHero._data.abilities[3].modifiersByLevel[ability3Level].attackratingcoefficient * power);
             }
-            if (ultimateLevel < 0) {
+            if (ultimateLevel < 0 || !selectedHero._data.abilities[4].modifiersByLevel[ultimateLevel].attackratingcoefficient || selectedHero._data.abilities[4].modifiersByLevel[ultimateLevel].damage <= 1) {
                 var currentUltimateDamage = 0;
             }
             else {
-                var currentUltimateDamage = selectedHero._data.abilities[4].modifiersByLevel[ultimateLevel].damage;
+                var currentUltimateDamage = selectedHero._data.abilities[4].modifiersByLevel[ultimateLevel].damage + (selectedHero._data.abilities[4].modifiersByLevel[ultimateLevel].attackratingcoefficient * power);
             }
 
             for (var i = 0; i < heroes.length; i++) {
@@ -170,40 +167,32 @@ export default Ember.Controller.extend({
                 heroDPS = (heroes[i]._data.AttacksPerSecond * ((heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage) + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power)));
 
                 //Set current basic attack and ability damages
-                this.set('selectedHero._data.currentBasicDamage', currentBasicDamage);
-                this.set('selectedHero._data.currentAbility1Damage', currentAbility1Damage);
-                this.set('selectedHero._data.currentAbility2Damage', currentAbility2Damage);
-                this.set('selectedHero._data.currentAbility3Damage', currentAbility3Damage);
-                this.set('selectedHero._data.currentUltimateDamage', currentUltimateDamage);
+                this.set('selectedHero._data.currentBasicDamage', Math.round(currentBasicDamage));
+                this.set('selectedHero._data.currentAbility1Damage', Math.round(currentAbility1Damage));
+                this.set('selectedHero._data.currentAbility2Damage', Math.round(currentAbility2Damage));
+                this.set('selectedHero._data.currentAbility3Damage', Math.round(currentAbility3Damage));
+                this.set('selectedHero._data.currentUltimateDamage', Math.round(currentUltimateDamage));
 
                 //Damage from one basic attack
                 heroBurst = heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage + (heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].attackratingcoefficient * power);
                 //If both damage and cooldown exists per ability, calculate dps and then burst damage for first three abilities
                 for(var j = 1; j < 4; j++){
                     //If the specific ability has a valid damage and cooldown
-                    if(heroes[i]._data.name.toLowerCase() === "countess"){
-                        debugger;
+                    // if(heroes[i]._data.name.toLowerCase() === "countess"){
+                    //     debugger;
+                    // }
+
+                    //If the ability is not leveled up
+                    if (abilityLevelArray[j-1] < 1) {
+                        //skip this ability
                     }
-                    // the following works out to -1, which messed up the line abilityLevelArray[j - 1]
-                    if (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage && heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].cooldown) {
+                    else if (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage && heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].cooldown) {
                         //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
                         if(heroes[i]._data.name.toLowerCase() === "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
                             heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].duration;
                         }
                         else {
                             heroDPS += (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power)) / heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].cooldown;
-                        }
-
-                        heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power);
-                    }
-                    //If the ability is not leveled up
-                    else if (abilityLevelArray[j-1] === 0) {
-                        //Have to account for iggy's turret duration instead of cooldown, since it's a deployable with a short cooldown that does damage
-                        if(heroes[i]._data.name.toLowerCase() === "iggy & scorch" && heroes[i]._data.abilities[j].modifiersByLevel[3].hasOwnProperty("duration")) {
-                            heroDPS += 0;
-                        }
-                        else {
-                            heroDPS += 0;
                         }
 
                         heroBurst += heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].damage + (heroes[i]._data.abilities[j].modifiersByLevel[abilityLevelArray[j-1]].attackratingcoefficient * power);
@@ -220,9 +209,7 @@ export default Ember.Controller.extend({
                     else {
                         heroDPS += (heroes[i]._data.abilities[4].modifiersByLevel[2].damage / heroes[i]._data.abilities[4].modifiersByLevel[2].cooldown);
                         heroBurst += heroes[i]._data.abilities[4].modifiersByLevel[2].damage;
-                    }
-
-                    
+                    }                    
                 }
 
                 //Rounding for formatting purposes
@@ -286,14 +273,13 @@ export default Ember.Controller.extend({
             var element = Ember.$(event.target);
             var heroes = this.get('filteredHeroes');
             var name = element.closest(".hero").find(".name").find("p").text();
-            var heroLevel = this.get('heroLevel') - 1;
-            
+
             for(var i = 0; i < heroes.length; i++){
                 if (heroes[i]._data.name === name){
-                    Ember.set(heroes[i], "_data.currentBasicDamage", heroes[i]._data.abilities[0].modifiersByLevel[heroLevel].damage);
                     this.set('selectedHero', heroes[i]);
                 }
             }
+            this.send("calculateStats");
         },
         decrementAbilityLevel(ability) {
             var element = Ember.$(event.target);
