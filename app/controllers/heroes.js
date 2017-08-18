@@ -80,7 +80,7 @@ export default Ember.Controller.extend({
             else if(cp > 100) {
                 cp = 100;
             }
-            this.set('cpPower', cp);
+            this.set('cpPower', Number(cp));
 
             this.send("calculateStats");
         },
@@ -91,8 +91,7 @@ export default Ember.Controller.extend({
             else if(cp > 100) {
                 cp = 100;
             }
-            this.set('cpAttackSpeed', cp);
-            
+            this.set('cpAttackSpeed', Number(cp));
             this.send("calculateStats");
         },
         calculateStats() {
@@ -155,6 +154,7 @@ export default Ember.Controller.extend({
 
             for (var i = 0; i < heroes.length; i++) {
                 //Set Attacks per second
+
                 var aps = 1 / (heroes[i]._data.attributesByLevel[heroLevel]['BaseAttackTime'] / ((heroes[i]._data.attributesByLevel[heroLevel]['AttackSpeedRating'] + attackSpeed) / 100));
                 if(aps <= 4) {
                     Ember.set(heroes[i],'_data.AttacksPerSecond', aps.toFixed(2));
